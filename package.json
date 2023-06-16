@@ -1,8 +1,8 @@
 {
-    "name": "ghost-starter-theme",
-    "description": "A starter theme for Ghost theme development",
+    "name": "scout-systems",
+    "description": "Scout Systems Ghost theme",
     "demo": "https://starter.ghost.io",
-    "version": "2.0.1",
+    "version": "1.0.0",
     "engines": {
         "ghost": ">=5.0.0"
     },
@@ -18,9 +18,9 @@
         "pretest": "npm run build"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Vladyslav Medvediev",
+        "email": "medvedev3678@gmail.com",
+        "url": "https://www.upwork.com/freelancers/~01ffc114a80e1e2e90"
     },
     "gpm": {
         "type": "theme",
@@ -36,7 +36,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Starter.git"
+        "url": "https://github.com/misshgan/custom-ghost-theme_scout-systems"
     },
     "bugs": "https://github.com/TryGhost/Starter/issues",
     "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",

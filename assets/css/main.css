@@ -1,1 +1,359 @@
+html {
+  font-size: 62.5% !important;
+  scroll-behavior: smooth;
+}
+
 /* Colors */
+/* Fonts */
+* {
+  font-family: "Source Sans 3";
+}
+
+.green-arrow {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.w-1340 {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+/* Swiper.js */
+.swiper-button-prev {
+  top: 96% !important;
+  left: 40% !important;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next {
+  top: 96% !important;
+  right: 40% !important;
+}
+.swiper-button-next::after {
+  display: none;
+}
+
+/* HEADER */
+.header {
+  max-width: 1340px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.4rem 0;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__link {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.28;
+  text-transform: uppercase;
+  /* white/100 */
+  color: #FFFFFF !important;
+}
+.header__link:not(:last-child) {
+  margin-right: 2rem;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  border-radius: 0 0 4.2rem 4.2rem;
+  padding-bottom: 8.6rem;
+  overflow: hidden;
+}
+.hero__shadow {
+  background: linear-gradient(180deg, rgba(51, 52, 71, 0.46) 0%, #333447 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+}
+.hero__background {
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 10;
+}
+.hero .hero-content {
+  position: relative;
+  z-index: 20;
+  max-width: 1340px;
+  margin: 0 auto;
+}
+.hero__title {
+  margin: 20rem 0 2rem;
+  font-weight: 600;
+  font-size: 7.2rem;
+  line-height: 1.11;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  max-width: 90rem;
+}
+.hero__subtitle {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.4;
+  color: #C7C8DA;
+  max-width: 90rem;
+}
+
+.hero__buttons {
+  margin-top: 4.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.hero__button {
+  margin-right: 2rem;
+  padding: 1.6rem 2.4rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.28;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF !important;
+  border: 1px solid #FFFFFF;
+}
+
+.hero__button_green {
+  border-color: #14BD84;
+  background: #14BD84;
+}
+
+.home {
+  position: relative;
+  overflow: hidden;
+  /* SHADOWS, IMAGE */
+  /* POPULAR */
+  /* BECOME */
+  /* BIG VIDEO */
+  /* CTA */
+  /* TESTIMONIALS */
+}
+.home .home-w1340 {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+.home .home-shadow-1 {
+  position: absolute;
+  right: 0;
+  top: 11rem;
+}
+.home .home-shadow-2 {
+  position: absolute;
+  top: 65.8rem;
+  left: 0;
+}
+.home .home-factory {
+  position: absolute;
+  top: 54.7rem;
+  right: 0;
+}
+.home .popular {
+  padding: 10rem 0;
+  position: relative;
+  z-index: 10;
+}
+.home .popular__title {
+  max-width: 57.5rem;
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 1;
+  /* or 100% */
+  text-transform: uppercase;
+  color: #333447;
+  margin-bottom: 3.5rem;
+}
+.home .popular__cards {
+  display: flex;
+  justify-content: space-between;
+}
+.home .popular__card {
+  max-width: 19%;
+  width: 100%;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid #D9D9D9;
+  background: #FFFFFF;
+}
+.home .popular__card-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home .popular__card-title {
+  margin: 2rem 0 2rem 1.2rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.33;
+  text-transform: capitalize;
+  color: #333447;
+}
+.home .become {
+  padding: 12.5rem 0 25rem;
+  max-width: 57rem;
+  position: relative;
+  z-index: 10;
+}
+.home .become__title {
+  margin-bottom: 2.4rem;
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #333447;
+}
+.home .become__subtitle {
+  margin-bottom: 3.5rem;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.4;
+  color: #333447;
+}
+.home .become__button {
+  width: -moz-max-content;
+  width: max-content;
+  padding-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.28;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #333447;
+  border-bottom: 1px solid #333447;
+}
+.home .become__button span {
+  margin-left: 2.4rem;
+}
+.home .home-big-video iframe {
+  width: 100%;
+  height: 65rem;
+  border-radius: 4.2rem;
+  position: relative;
+  z-index: 10;
+}
+.home .home-big-video {
+  position: relative;
+  margin-bottom: 10rem;
+}
+.home .video-shadow {
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+  max-width: 100%;
+}
+.home .video-shadow svg {
+  max-width: 100%;
+}
+.home .cta {
+  background: #0D6547;
+  position: relative;
+  border-radius: 0px 0px 42px 42px;
+  overflow: hidden;
+  padding: 15.2rem 0;
+}
+.home .cta .cta-content {
+  max-width: 1340px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 10;
+}
+.home .cta__ellipse1 {
+  position: absolute;
+  top: 0;
+  left: 12.8rem;
+}
+.home .cta__ellipse2 {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+}
+.home .cta__factory {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.home .cta__text {
+  max-width: 65.5rem;
+}
+.home .cta__title {
+  margin-bottom: 2.4rem;
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.home .cta__subtitle {
+  margin-bottom: 3.2rem;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.4;
+  color: #B4DED0;
+}
+.home .testimonials {
+  padding: 10rem 0 13rem;
+  max-width: 83rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 42px 42px;
+}
+.home .testimonials__title {
+  margin-bottom: 5rem;
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #333447;
+}
+.home .testimonials .t-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home .testimonials .t-card__photo {
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  margin-bottom: 1.6rem;
+}
+.home .testimonials .t-card__title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.28;
+  text-align: center;
+  color: #333447;
+  margin-bottom: 0.4rem;
+}
+.home .testimonials .t-card__company {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.28;
+  color: #757575;
+  margin-bottom: 2rem;
+}
+.home .testimonials .t-card__text {
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 1.25;
+  text-align: center;
+  color: #333447;
+  margin-bottom: 1.6rem;
+}

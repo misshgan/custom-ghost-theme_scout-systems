@@ -35,3 +35,22 @@ const swiper = new Swiper('.swiper', {
 	//   el: '.swiper-scrollbar',
 	// },
   });
+
+  //Dropdown menu 
+
+  let dropdownTarget = document.querySelector('.header-dropdown-target');
+  let dropdown = document.querySelector('.h-dropdown')
+
+  dropdownTarget.addEventListener('click', function() {
+	if (!dropdown.classList.contains('active')) {
+		dropdown.classList.add('active')
+	} else if (dropdown.classList.contains('active')) {
+		dropdown.classList.remove('active')
+	}
+  })
+
+  document.addEventListener('click', function(e) {
+	if (e.target != dropdownTarget) {
+		dropdown.classList.remove('active')
+	}
+  })

@@ -1,7 +1,23 @@
 <header class="header">
 	<a href="{{@site.url}}" class="header__logo">{{>icons/logo-white}}</a>
 	<nav class="header__nav">
-		<a href="#" class="header__link">technology</a>
+		<div class="header__link header-dropdown-target">technology{{>icons/small-arrow-down}}
+			<div class="header__dropdown h-dropdown">
+				<a href="#" class="h-dropdown__banner">
+					{{>icons/dropdown-logo}}
+					<span class="h-dropdown__banner-title">Tech overview</span>
+					{{>icons/arrow-right}}
+				</a>
+				<div class="h-dropdown__links">
+					<a href="#" class="h-dropdown__link">Features</a>
+					<a href="#" class="h-dropdown__link">Work instructions</a>
+					<a href="#" class="h-dropdown__link">Shop floor management</a>
+					<a href="#" class="h-dropdown__link">Data collection</a>
+					<a href="#" class="h-dropdown__link">Root cause analysis</a>
+					<a href="#" class="h-dropdown__link">industrial iot</a>
+				</div>
+			</div>
+		</div>
 		<a href="#" class="header__link">resources</a>
 		<a href="#" class="header__link">about us</a>
 	</nav>

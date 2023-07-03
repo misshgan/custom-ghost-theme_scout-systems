@@ -1,0 +1,147 @@
+.footer {
+	background: $black_100;
+	margin-top: -40px;
+    padding-top: 40px;
+
+	.w1340 {
+		max-width: 1400px;
+		padding-left: 30px;
+		padding-right: 30px;
+		margin: 0 auto;
+		width: 100%;
+
+		@media (min-width:1800px) {
+			max-width: 1500px;
+		}
+
+		@media (max-width:450px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	&__body {
+		display: flex;
+		padding: 8.5rem 0 9.2rem;
+		flex-wrap: wrap;
+
+		@media (max-width:900px) {
+			padding: 8.5rem 0 3rem;
+		}
+
+		@media (max-width:900px) {
+			padding: 4rem 0 1rem;
+		}
+	}
+	&__logo {
+		margin-right: 6rem;
+		margin-bottom: 6rem;
+
+		@media (max-width:500px) {
+			width: 100%;
+		}
+	}
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		width: 17%;
+		margin-right: 2rem;
+		margin-bottom: 6rem;
+
+		@media (max-width:600px) {
+			width: 30%;
+		}
+
+		@media (max-width:500px) {
+			width: 45%;
+			margin-right: 0;
+			margin-bottom: 3rem;
+		}
+	}
+	&__nav-title {
+		font-size: 1.2rem;
+		line-height: 1.28;
+		
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		
+		color: $grey_90;
+
+		margin-bottom: 1.6rem;
+
+		@media (max-width:600px) {
+			font-size: 2rem;
+		}
+	}
+	&__nav-link {
+		max-width: 16.5rem;
+
+		font-weight: 400;
+		font-size: 1.4rem;
+		line-height: 1.28;
+		
+		color: $grey_20 !important;
+
+		transition:  all .3s;
+
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+
+		&:hover {
+			color: $grey_50 !important;
+		}
+
+		@media (max-width:600px) {
+			font-size: 1.8rem;
+		}
+	}
+
+	&__nav-social {
+		display: flex;
+		width: 4rem;
+		height: 4rem;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background: $black_90;
+
+		&:not(:last-child) {
+			margin-right: 1.6rem;
+		}
+	}
+
+	&__copy {
+		padding: 2.4rem 0;
+		border-top: 1px solid $grey_90;
+
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width:475px) {
+			flex-direction: column;
+		}
+	}
+	&__copy-text {
+
+		font-weight: 400;
+		font-size: 1.4rem;
+		line-height: 1.28;
+		
+		color: $grey_90;
+
+		&:last-child {
+			margin-left: 1.6rem;
+		}
+
+		@media (max-width:475px) {
+			display: flex;
+			flex-direction: column;
+
+			font-size: 1.6rem;
+
+			&:last-child {
+				margin-left: 0;
+			}
+		}
+	}
+}

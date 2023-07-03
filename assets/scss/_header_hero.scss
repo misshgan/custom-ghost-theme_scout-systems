@@ -1,12 +1,23 @@
 /* HEADER */ 
 
 .header {
-	max-width: 1340px;
+	max-width: 1400px;
+	padding-left: 30px;
+	padding-right: 30px;
 	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	@media (min-width:1800px) {
+		max-width: 1500px;
+	}
+
+	@media (max-width:450px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 
 	padding: 2.4rem 0;
 
@@ -15,6 +26,11 @@
 	&__nav {
 		display: flex;
 		align-items: center;
+
+		@include respond(600px) {
+			display: none;
+		}
+	
 	}
 	&__link {
 		font-weight: 600;
@@ -61,8 +77,19 @@
 	.hero-content {
 		position: relative;
 		z-index: 20;
-		max-width: 1340px;
+		max-width: 1400px;
+		padding-left: 30px;
+		padding-right: 30px;
 		margin: 0 auto;
+
+		@media (min-width:1800px) {
+			max-width: 1500px;
+		}
+
+		@media (max-width:450px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 
 	&__title {
@@ -76,6 +103,14 @@
 		color: $white;
 
 		max-width: 90rem;
+
+		@include respond(600px) {
+			font-size: 5.2rem;
+		}
+
+		@media (max-width:500px) {
+			margin: 15rem 0 2rem;
+		}
 	}
 	&__subtitle {
 		font-weight: 400;
@@ -84,6 +119,10 @@
 
 		color: $grey_50;
 		max-width: 90rem;
+
+		@include respond(600px) {
+			font-size: 1.6rem;
+		}
 	}
 }
 
@@ -91,8 +130,48 @@
 	margin-top: 4.2rem;
 	display: flex;
 	align-items: center;
+
+	@media (max-width:450px) {
+		flex-direction: column;
+	}
+}
+.hero__button_green {
+	min-width: max-content;
+	margin-right: 2rem;
+	padding: 1.6rem 2.4rem;
+
+	font-weight: 700;
+	font-size: 1.4rem;
+	line-height: 1.28;
+
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+
+	color: $white !important;
+	border: 1px solid $green_100;
+	background: $green_100;
+
+	transition: all .3s;
+
+	&:hover {
+		background: #039664;
+		border-color: #039664;
+	}
+
+	&:active {
+		background: #0A8058;
+		border-color: #0A8058;
+	}
+
+	@media (max-width:450px) {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 2.4rem;
+		margin-right: 0;
+	}
 }
 .hero__button {
+	min-width: max-content;
 	margin-right: 2rem;
 	padding: 1.6rem 2.4rem;
 
@@ -105,8 +184,154 @@
 
 	color: $white !important;
 	border: 1px solid $white;
+
+	transition: all .3s;
+	
+	&:hover {
+		color: $green_100 !important;
+		border-color: $green_100;
+		background: #D2FFF0;
+	}
+
+	&:active {
+		color: #0A8058 !important;
+		background: #98E4CB;
+		border-color: #0A8058;
+	}
+
+	@media (max-width:450px) {
+		width: 100%;
+		text-align: center;
+		margin-right: 0;
+	}
 }
-.hero__button_green {
-	border-color: $green_100;
-	background: $green_100;
+
+
+/* Dropdown Menu */
+
+.header-dropdown-target {
+	position: relative;
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+
+	transition: all .3s;
+
+	& > svg {
+		margin-left: 0.6rem;
+	}
+
+	&:hover {
+		color: $white !important;
+	}
+}
+
+.h-dropdown {
+	position: absolute;
+	top: 225%;
+	left: -100%;
+
+	cursor:default;
+
+	background: $white;
+	border-radius: 12px;
+	padding: 1.6rem;
+
+	display: flex;
+	flex-direction: column;
+
+	max-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s;
+
+	&.active {
+		max-height: 350px;
+		visibility: visible;
+		opacity: 1;
+		overflow: visible;
+
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 22px;
+		height: 22px;
+		background: $white;
+		transform: rotate(45deg);
+		top: -11px;
+		left: calc(50% - 11px);
+		transition: all .4s;
+		opacity: 0;
+	}
+
+	&__banner {
+		cursor: pointer;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.2rem;
+
+		background: $grey_20;
+		border-radius: 6px;
+
+		&:hover {
+			background: $green_10;
+		}
+	}
+	&__banner-title {
+		margin: 0 1.2rem;
+		width: max-content;
+
+		font-weight: 700;
+		font-size: 1.4rem;
+		line-height: 1.28;
+		
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		
+		color: $black_100;
+	}
+	&__links {
+		max-height: 0;
+		margin-top: 1.6rem;
+		opacity: 0;
+		overflow: hidden;
+
+		display: flex;
+		flex-direction: column;
+		transition: all .3s;
+	}
+
+	&.active &__links {
+		opacity: 1;
+		max-height: 300px;
+	}
+	&__link {
+		font-weight: 400;
+		font-size: 1.6rem;
+		line-height: 1.28;
+		text-transform: capitalize;
+		
+		color: $black_100 !important;
+
+		transition: all .3s;
+
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+
+		&:hover {
+			color: $grey_100 !important;
+		}
+	}
 }

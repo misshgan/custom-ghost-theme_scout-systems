@@ -1,28 +1,29 @@
 .home {
 	position: relative;
 	overflow: hidden;
+	padding-bottom: 13rem;
 
-	.home-w1340 {
-		max-width: 1340px;
+	@media (max-width:600px) {
+		padding-bottom: 4rem;
+	}
+
+	background: $white;
+	border-radius: 0 0 42px 42px;
+
+	.w1340 {
+		max-width: 1400px;
 		margin: 0 auto;
-	}
+		padding-left: 30px;
+		padding-right: 30px;
 
-	/* SHADOWS, IMAGE */ 
+		@media (min-width:1800px) {
+			max-width: 1500px;
+		}
 
-	.home-shadow-1 {
-		position: absolute;
-		right: 0;
-		top: 11rem;
-	}
-	.home-shadow-2 {
-		position: absolute;
-		top: 65.8rem;
-		left: 0;
-	}
-	.home-factory {
-		position: absolute;
-		top: 54.7rem;
-		right: 0;
+		@media (max-width:450px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 
 	/* POPULAR */
@@ -31,6 +32,14 @@
 		padding: 10rem 0;
 		position: relative;
 		z-index: 10;
+
+		@media (max-width:768px) {
+			padding: 10rem 0 0;
+		}
+
+		@media (max-width:500px) {
+			padding: 5rem 0 0;
+		}
 
 		&__title {
 			max-width: 57.5rem;
@@ -45,18 +54,51 @@
 			color: $black_100;
 
 			margin-bottom: 3.5rem;
+
+			@media (max-width:500px) {
+				font-size: 4.8rem;
+			}
 		}
 		&__cards {
 			display: flex;
-			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 2.4rem;
+
+			@media (max-width:500px) {
+				gap: 1.4rem;
+			}
+
+			@media (max-width:380px) {
+				gap: 1rem;
+			}
 		}
 		&__card {
-			max-width: 19%;
-			width: 100%;
+			width: 18%;
 			border-radius: 1.2rem;
 			overflow: hidden;
 			border: 1px solid #D9D9D9;
 			background: $white;
+
+			@media (min-width:1800px) {
+				width: 18.4%;
+			}
+
+			@media (max-width:1100px) {
+				width: 22.5%;
+			}
+
+			@media (max-width:900px) {
+				width: 31.5%;
+			}
+
+			@media (max-width:768px) {
+				width: 47.5%;
+			}
+
+			@media (max-width:500px) {
+				width: 48.4%;
+			}
+			
 		}
 		&__card-img {
 			width: 100%;
@@ -78,13 +120,125 @@
 
 	/* BECOME */
 
-	.become {
-		padding: 12.5rem 0 25rem;
-		max-width: 57rem;
+	.home-shadow-1 {
+		position: absolute;
+		right: -22rem;
+		top: -42.4rem;
+		width: 60rem;
+
+		svg {
+			width: 100%;
+		}
+
+
+		@media (max-width:900px) {
+			width: 45rem;
+			top: -50rem;
+		}
+
+		@media (max-width:600px) {
+			right: unset;
+			left: -22rem;
+		}
+	}
+	.home-shadow-2 {
+		position: absolute;
+		bottom: -65%;
+		left: -20rem;
+
+		width: 50rem;
+
+		svg {
+			width: 100%;
+		}
+
+		@media (max-width:900px) {
+			bottom: -70%;
+		}
+
+		@media (max-width:600px) {
+			left: unset;
+			right: -22rem;
+		}
+	}
+	.home-factory {
+		position: absolute;
+		right: -35%;
+		top: -7.5rem;
+		width: 94%;
+
+		img {
+			width: 100%;
+		}
+
+		@media (min-width:1800px) {
+			right: -35%;
+			top: 0;
+		}
+
+		@media (max-width:1350px) {
+			right: -36%;
+			top: 0;
+		}
+		@media (max-width:1200px) {
+			top: unset;
+			bottom: -20rem;
+		}
+
+		@media (max-width:1100px) {
+			right: -42%;
+			bottom: -12rem;
+		}
+		
+		@media (max-width:600px) {
+			right: -14rem;
+			width: 80rem;
+			bottom: -35rem;
+		}
+
+		@media (max-width:500px) {
+			width: 68rem;
+			right: -13rem;
+			bottom: -30rem;
+		}
+
+		@media (max-width:400px) {
+			right: -21rem;
+			width: 70rem;
+			bottom: -32rem;
+		}
+	}
+
+	.become-content {
+		padding: 12.5rem 0 20rem;
 		position: relative;
 		z-index: 10;
 
+		@media (max-width:900px) {
+			// padding-top: 3rem;
+			// margin-bottom: 10.2rem;
+		}
+
+		@media (max-width:500px) {
+			
+		}
+
+		@media (max-width:768px) {
+			margin-bottom: 5rem;
+		}
+
+		@media (max-width:600px) {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 23rem;
+		}
+	}
+
+	.become {
+		position: relative;
+
 		&__title {
+			max-width: 57rem;
 			margin-bottom: 2.4rem;
 
 			font-weight: 600;
@@ -94,8 +248,13 @@
 			text-transform: uppercase;
 		
 			color: $black_100;
+
+			@media (max-width:500px) {
+				font-size: 4.8rem;
+			}
 		}
 		&__subtitle {
+			max-width: 57rem;
 			margin-bottom: 3.5rem;
 
 			font-weight: 400;
@@ -105,6 +264,7 @@
 			color: $black_100;
 		}
 		&__button {
+			max-width: 57rem;
 			width: max-content;
 			padding-bottom: 1.2rem;
 
@@ -113,6 +273,8 @@
 
 			span {
 				margin-left: 2.4rem;
+
+				transition: all .3s;
 			}
 
 			font-weight: 700;
@@ -124,6 +286,12 @@
 			
 			color: $black_100;
 			border-bottom: 1px solid $black_100;
+
+			transition: all .3s;
+
+			&:hover span{
+				margin-left: 3rem;
+			}
 		}
 	}
 	
@@ -137,16 +305,37 @@
 
 		position: relative;
 		z-index: 10;
+
+		@media (max-width:900px) {
+			height: 55rem;
+		}
+		@media (max-width:800px) {
+			height: 45rem;
+		}
+		@media (max-width:700px) {
+			height: 40rem;
+		}
+		@media (max-width:600px) {
+			height: 30rem;
+		}
 	}
 
 	.home-big-video {
 		position: relative;
 		margin-bottom: 10rem;
+
+		@media (max-width:768px) {
+			margin-bottom: 3rem;
+		}
+
+		.w1340 {
+			position: relative;
+		}
 	}
 
 	.video-shadow {
 		position: absolute;
-		bottom: -200px;
+		bottom: -300px;
 		left: 0;
 		max-width: 100%;
 
@@ -165,34 +354,127 @@
 
 		padding: 15.2rem 0;
 
+		@media (max-width:768px) {
+			padding-bottom: 40rem;
+		}
+
+		@media (max-width:500px) {
+			padding-top: 8rem;
+		}
+
 		.cta-content {
 			max-width: 1340px;
 			margin: 0 auto;
+			padding-right: 50px;
 
 			display: flex;
 			justify-content:  flex-end;
 			position: relative;
 			z-index: 10;
+
+			@media (min-width:1800px) {
+				max-width: 1440px;
+			}
+
+			@media (max-width:768px) {
+				justify-content: center;
+				padding-right: 0;
+			}
 		}
 
 		&__ellipse1 {
 			position: absolute;
-			top: 0;
-			left: 12.8rem;
+			top: -40%;
+			right: 50%;
+
+			max-width: 37.7%;
+
+			svg {
+				width: 100%;
+			}
+
+			@media (max-width:768px) {
+				right: -22.5rem;
+				top: -40%;
+				max-width: 55rem;
+				transform: rotate(-60deg);
+			}
 		}
 		&__ellipse2 {
 			position: absolute;
-			bottom: -10px;
-			right: 0;
+			bottom: -35%;
+			right: -5%;
+
+			max-width: 29%;
+
+			svg {
+				width: 100%;
+			}
+
+			@media (max-width:768px) {
+				right: unset;
+				left: -15rem;
+				max-width: 40rem
+			}
 		}
 		&__factory {
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: -4rem;
+			left: -24%;
+			
+			width: 69%;
+
+			svg {
+				width: 100%;
+			}
+
+			@media (max-width:1300px) {
+				top: 0;
+				left: -20%;
+			}
+
+			@media (max-width:900px) {
+				top: 4rem;
+				left: -28%;
+			}
+
+			@media (max-width:768px) {
+				top: unset;
+				bottom: -12rem;
+				left: 20%;
+				width: 65rem;
+			}
+
+			@media (max-width:600px) {
+				left: 7%;
+			}
+
+			@media (max-width:600px) {
+				left: 5%;
+				width: 55rem;
+				bottom: -5rem;
+			}
+
 		}
 
 		&__text {
 			max-width: 65.5rem;
+
+			@media (min-width:1800px) {
+				max-width: 55rem;
+			}
+
+			@media (max-width:1300px) {
+				max-width: 50rem;
+			}
+
+			@media (max-width:768px) {
+				max-width: 80%;
+			}
+
+			@media (max-width:500px) {
+				max-width: 90%;
+			}
 		}
 		&__title {
 			margin-bottom: 2.4rem;
@@ -204,6 +486,10 @@
 			text-transform: uppercase;
 			
 			color: #FFFFFF;
+
+			@media (max-width:500px) {
+				font-size: 4.8rem;
+			}
 		}
 		&__subtitle {
 			margin-bottom: 3.2rem;
@@ -219,13 +505,16 @@
 	/* TESTIMONIALS */
 
 	.testimonials {
-		padding: 10rem 0 13rem;
+		padding: 10rem 0 7rem;
 		max-width: 83rem;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		border-radius: 0 0 42px 42px;
+
+		@media (max-width:600px) {
+			padding: 5rem 0 7rem;
+		}
 
 		&__title {
 			margin-bottom: 5rem;
@@ -236,7 +525,15 @@
 			
 			text-transform: uppercase;
 			
-			color: $black_100
+			color: $black_100;
+
+			@media (max-width:600px) {
+				font-size: 4.4rem;
+			}
+
+			@media (max-width:450px) {
+				font-size: 3.2rem;
+			}
 		}
 		&__body {
 		}
@@ -283,6 +580,10 @@
 			color: $black_100;
 
 			margin-bottom: 1.6rem;
+
+			@media (max-width:450px) {
+				font-size: 1.8rem;
+			}
 		}
 	}
 }

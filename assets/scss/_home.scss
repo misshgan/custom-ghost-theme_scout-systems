@@ -2,6 +2,7 @@
 	position: relative;
 	overflow: hidden;
 	padding-bottom: 13rem;
+	margin-bottom: -40px;
 
 	@media (max-width:600px) {
 		padding-bottom: 4rem;
@@ -9,22 +10,6 @@
 
 	background: $white;
 	border-radius: 0 0 42px 42px;
-
-	.w1340 {
-		max-width: 1400px;
-		margin: 0 auto;
-		padding-left: 30px;
-		padding-right: 30px;
-
-		@media (min-width:1800px) {
-			max-width: 1500px;
-		}
-
-		@media (max-width:450px) {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-	}
 
 	/* POPULAR */
 

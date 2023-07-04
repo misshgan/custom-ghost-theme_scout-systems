@@ -44,13 +44,17 @@ const swiper = new Swiper('.swiper', {
   dropdownTarget.addEventListener('click', function() {
 	if (!dropdown.classList.contains('active')) {
 		dropdown.classList.add('active')
+		dropdownTarget.classList.add('active')
 	} else if (dropdown.classList.contains('active')) {
 		dropdown.classList.remove('active')
+		dropdownTarget.classList.remove('active')
 	}
   })
 
   document.addEventListener('click', function(e) {
 	if (e.target != dropdownTarget) {
 		dropdown.classList.remove('active')
+		dropdownTarget.classList.remove('active')
+
 	}
   })

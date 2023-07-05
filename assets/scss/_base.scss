@@ -262,3 +262,34 @@ $font_1: 'Source Sans 3';
 		margin-right: 0;
 	}
 }
+
+.learn-more-button {
+	max-width: 57rem;
+	width: max-content;
+	padding-bottom: 1.2rem;
+
+	display: flex;
+	align-items: center;
+
+	span {
+		margin-left: 2.4rem;
+
+		transition: all .3s;
+	}
+
+	font-weight: 700;
+	font-size: 1.4rem;
+	line-height: 1.28;
+	
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	
+	color: $black_100;
+	border-bottom: 1px solid $black_100;
+
+	transition: all .3s;
+
+	&:hover span{
+		margin-left: 3rem;
+	}
+}

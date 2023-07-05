@@ -1,0 +1,40 @@
+.tech-big-photo {
+	position: relative;
+	background: #414254;
+	padding: 10rem 0;
+	overflow: hidden;
+
+	&__ellipse {
+		position: absolute;
+		bottom: 0;
+		right: -2%;
+		z-index: 0;
+	}
+	.w1340 {
+	}
+	&__img {
+		margin-bottom: 4.2rem;
+		border-radius: 42px;
+		overflow: hidden;
+		position: relative;
+		z-index: 5;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__text {
+		position: relative;
+		z-index: 5;
+
+		color: $white;
+		text-align: center;
+		font-size: 3.2rem;
+		font-weight: 600;
+
+		a {
+			color: $white !important;
+		}
+	}
+}

@@ -65,6 +65,7 @@ const swiper = new Swiper('.swiper', {
 window.addEventListener('load', function() {
 	const uDropdownTargetList = document.querySelectorAll('.tech-u-accordion__item-header');
 	const uAccordionImages = document.querySelectorAll('.tech-u-accordion__img');
+	const uDropdownWideTargetList = document.querySelectorAll('.tech-u-accordion-wide__item-header');
   
 	if (uDropdownTargetList) {
 	  uDropdownTargetList.forEach((element, index) => {
@@ -88,5 +89,16 @@ window.addEventListener('load', function() {
 		});
 	  });
 	}
+
+	if (uDropdownWideTargetList) {
+		uDropdownWideTargetList.forEach((element, index) => {
+		  element.addEventListener('click', function() {
+			if (!element.classList.contains('active')) {
+			  uDropdownWideTargetList.forEach(el => el.classList.remove('active'));
+			  element.classList.add('active');
+			}
+		  });
+		});
+	  }
   });
   

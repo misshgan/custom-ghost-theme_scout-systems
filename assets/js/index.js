@@ -58,3 +58,35 @@ const swiper = new Swiper('.swiper', {
 
 	}
   })
+
+
+/* Unordered accordion */
+
+window.addEventListener('load', function() {
+	const uDropdownTargetList = document.querySelectorAll('.tech-u-accordion__item-header');
+	const uAccordionImages = document.querySelectorAll('.tech-u-accordion__img');
+  
+	if (uDropdownTargetList) {
+	  uDropdownTargetList.forEach((element, index) => {
+		element.addEventListener('click', function() {
+		  if (!element.classList.contains('active')) {
+			uDropdownTargetList.forEach(el => el.classList.remove('active'));
+			element.classList.add('active');
+		  }
+		});
+	  });
+	}
+  
+	if (uAccordionImages) {
+	  uDropdownTargetList.forEach((element, index) => {
+		element.addEventListener('click', function() {
+		  uAccordionImages.forEach(el => el.classList.remove('active'));
+		  const targetImage = document.querySelector(`.tech-u-accordion__img-${index + 1}`);
+		  if (targetImage) {
+			targetImage.classList.add('active');
+		  }
+		});
+	  });
+	}
+  });
+  

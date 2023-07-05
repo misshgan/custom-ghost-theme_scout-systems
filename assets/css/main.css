@@ -1187,7 +1187,7 @@ html {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 .tech-green-stats__right {
   max-width: 40%;
@@ -1217,4 +1217,89 @@ html {
   color: #FFFFFF;
   font-size: 1.8rem;
   font-weight: 400;
+}
+
+.tech-u-accordion .w1340 {
+  display: flex;
+  justify-content: space-between;
+}
+.tech-u-accordion__left {
+  width: 42.83%;
+}
+.tech-u-accordion__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4.8rem;
+}
+.tech-u-accordion__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+  cursor: pointer;
+}
+.tech-u-accordion__title {
+  color: #333447;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.56;
+  text-transform: uppercase;
+}
+.tech-u-accordion__item-header.active .tech-u-accordion__indicator svg:last-child {
+  display: none;
+}
+.tech-u-accordion__item-header.active .tech-u-accordion__indicator svg:first-child {
+  display: block;
+}
+.tech-u-accordion__indicator svg:last-child {
+  display: block;
+}
+.tech-u-accordion__indicator svg:first-child {
+  display: none;
+}
+.tech-u-accordion__body {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #C7C8DA;
+  padding-bottom: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.tech-u-accordion__item-header.active + .tech-u-accordion__body {
+  max-height: 300px;
+  padding-bottom: 2.8rem;
+}
+.tech-u-accordion__list-item {
+  display: flex;
+  align-items: center;
+}
+.tech-u-accordion__list-item:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+.tech-u-accordion__list-item svg {
+  margin-right: 1.2rem;
+}
+.tech-u-accordion__list-title {
+  color: #333447;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.33;
+  text-transform: capitalize;
+}
+.tech-u-accordion__right {
+  width: 53.88%;
+}
+.tech-u-accordion__img {
+  border-radius: 42px;
+  overflow: hidden;
+  display: none;
+}
+.tech-u-accordion__img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tech-u-accordion__img.active {
+  display: block;
 }

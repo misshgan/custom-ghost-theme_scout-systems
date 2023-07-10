@@ -9,18 +9,39 @@
 		top: -20%;
 		left: -12%;
 		z-index: 0;
+		width: 54.3rem;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 	&__ellipse2 {
 		position: absolute;
 		right: -15%;
 		top: 30%;
 		z-index: 0;
+		width: 43.1rem;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 	&__ellipse3 {
 		position: absolute;
 		z-index: 0;
-		bottom: -28%;
-		left: -14%;
+		bottom: -21%;
+		left: -12%;
+		width: 43.1rem;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 
 	.w1340 {

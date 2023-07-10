@@ -13,7 +13,9 @@ import "../css/index.css";
 // infiniteScroll();
 
 //Swiper.js
-const swiper = new Swiper('.swiper', {
+
+//Swiper instance 1
+const swiper1 = new Swiper('.testimonials', {
 	// Optional parameters
 	direction: 'horizontal',
 	loop: true,
@@ -35,7 +37,27 @@ const swiper = new Swiper('.swiper', {
 	//   el: '.swiper-scrollbar',
 	// },
   });
+  
+//Swiper instance 2
 
+const swiper2 = new Swiper('.tech-big-slider__content', {
+	slidesPerView: "auto",
+	spaceBetween: 40,
+	// Optional parameters
+	direction: 'horizontal',
+	autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+	loop: true,
+
+	// If we need pagination
+	pagination: {
+	  el: '.swiper-pagination',
+	  dynamicBullets: true,
+	},
+
+  });
   //Dropdown menu 
 
   let dropdownTarget = document.querySelector('.header-dropdown-target');
@@ -78,7 +100,7 @@ window.addEventListener('load', function() {
 	  });
 	}
   
-	if (uAccordionImages) {
+	if (uAccordionImages && document.querySelector(`.tech-u-accordion__img-1`)) {
 	  uDropdownTargetList.forEach((element, index) => {
 		element.addEventListener('click', function() {
 		  uAccordionImages.forEach(el => el.classList.remove('active'));
@@ -101,4 +123,3 @@ window.addEventListener('load', function() {
 		});
 	  }
   });
-  

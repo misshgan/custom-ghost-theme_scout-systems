@@ -144,6 +144,13 @@ $font_1: 'Source Sans 3';
 	}
 }
 
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: 50px !important;
+}
+.swiper-pagination-bullet-active {
+	background: #039664 !important;
+}
+
 /* Breadcrumbs */
 
 .breadcrumbs {

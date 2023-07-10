@@ -1,0 +1,89 @@
+.contact-us {
+	padding: 10rem 0;
+	position: relative;
+	background: #EFEFEF;
+	overflow: hidden;
+
+	&__shadow1 {
+		position: absolute;
+		top: -50%;
+		left: -15%;
+		width: 36.8rem;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__shadow2 {
+		position: absolute;
+		bottom: -44%;
+		right: 5%;
+		width: 36.8rem;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.w1340 {
+		position: relative;
+		z-index: 5;
+	}
+	&__left {
+		width: 28.13%;
+	}
+	&__title {
+		margin-bottom: 2.4rem;
+	
+		color: $black_100;
+		font-size: 6rem;
+		font-weight: 600;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+	&__subtitle {
+		margin-bottom: 3.2rem;
+
+		color: $black_90;
+		font-size: 2rem;
+		font-weight: 400;
+		line-height: 1.4;
+	}
+	&__cards {
+		display: flex;
+		flex-direction: column;
+	}
+	&__card {
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 3.2rem;
+		}
+	}
+	&__card-img {
+		width: 2.4rem;
+		height: 2.4rem;
+		margin-right: 1.6rem;
+	}
+	&__card-text {
+		display: flex;
+		flex-direction: column;
+	}
+	&__card-title {
+		margin-bottom: .8rem;
+
+		color: $black_100;
+		font-size: 3.2rem;
+		font-weight: 600;
+		line-height: 0.8;
+	}
+	&__card-description {
+		color: $black_90;
+		font-size: 1.8rem;
+		font-weight: 400;
+	}
+	&__right {
+	}
+}

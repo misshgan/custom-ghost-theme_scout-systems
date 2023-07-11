@@ -1,0 +1,191 @@
+{{!< default}}
+
+<div class="tech-hero">
+	<div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
+	<div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
+	<div class="w1340">
+		{{> structure/header}}
+		{{!-- <div class="breadcrumbs">
+			<a href="{{@site.url}}" class="breadcrumbs__link breadcrumbs__previous">Main page</a>
+			<span class="breadcrumbs__bullet"></span>
+			<a href="#" class="breadcrumbs__link breadcrumbs__current">Tech overview</a>
+		</div> --}}
+		<div class="tech-hero__text">
+			<h1 class="tech-hero__title">Optimize Production with Real-Time Data</h1>
+			<p class="tech-hero__subtitle">Track every Operator and Machine in your facility, from anywhere in the world, 24/7. Know when a station will complete an order, if and why it has stopped, and receive alerts to improve decision making.</p>
+		</div>
+	</div>
+</div>
+
+<div class="tech-u-accordion" style="padding: 10rem 0;">
+	<div class="w1340">
+		<div class="tech-u-accordion__left">
+			<div class="tech-u-accordion__item">
+				<div class="tech-u-accordion__item-header active">
+					<h2 class="tech-u-accordion__title">Production KPIs</h2>
+					<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
+				</div>
+
+				<div class="tech-u-accordion__body">
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Track your First Pass Yield</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">See where your labor is most invested</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Visualize production stops</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Monitor your Overall Effectiveness</h3>
+					</div>
+				</div>
+			</div>
+			<div class="tech-u-accordion__item">
+				<div class="tech-u-accordion__item-header">
+					<h2 class="tech-u-accordion__title">ANDON Dashboard</h2>
+					<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
+				</div>
+
+				<div class="tech-u-accordion__body">
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Know all statuses of every cell</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Color-code production stops</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Monitor daily waste and worst offenders</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Reduce the time it takes to resolve stops</h3>
+					</div>
+				</div>
+			</div>
+			<div class="tech-u-accordion__item">
+				<div class="tech-u-accordion__item-header">
+					<h2 class="tech-u-accordion__title">Live Production</h2>
+					<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
+				</div>
+
+				<div class="tech-u-accordion__body">
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Access all Production Orders and their statuses</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Know the estimated completion time</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Set and/or modify the daily schedule</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Monitor the productivity of every cell</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tech-u-accordion__right">
+			<div class="tech-u-accordion__img tech-u-accordion__img-1 active"><img src="{{asset "assets/images/floor-management/Dashboard Still Photo 1.png"}}" alt="dashboard still image"></div>
+			<div class="tech-u-accordion__img tech-u-accordion__img-2"><img src="{{asset "assets/images/floor-management/ANDON for Manufacturing.png"}}" alt="ANDON image"></div>
+			<div class="tech-u-accordion__img tech-u-accordion__img-3"><img src="{{asset "assets/images/floor-management/Production Scheduling.png"}}" alt="product scheduling image"></div>
+		</div>
+	</div>
+</div>
+
+<div class="tech-green-cards">
+	<div class="tech-green-cards__ellipse1">{{> images/tech-green-cards-ellipse1}}</div>
+	<div class="tech-green-cards__ellipse2">{{> images/tech-green-cards-ellipse2}}</div>
+	<div class="tech-green-cards__ellipse3">{{> images/tech-green-cards-ellipse2}}</div>
+	<div class="w1340">
+		<div class="tech-green-cards__card">
+			<img src="{{asset "assets/images/floor-management/image 40.jpg"}}" alt="machine monitoring image" class="tech-green-cards__card-img">
+			<div class="tech-green-cards__card-text">
+				<h2 class="tech-green-cards__card-title">MACHINE MONITORING</h2>
+				<p class="tech-green-cards__card-description">Utilizing our edge device (Tracker) you can connect Compass to new and legacy equipment. Measure a machine’s usage to improve preventative maintenance or verify a machine is used for a particular process to ensure quality.</p>
+				<a class="learn-more-button" href="{{@site.url}}/industrial-iot/">Learn more <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+			</div>
+		</div>
+		<div class="tech-green-cards__card">
+			<div class="tech-green-cards__card-text">
+				<h2 class="tech-green-cards__card-title">EXCEPTIONAL DATA</h2>
+				<p class="tech-green-cards__card-description">Analytics are only as good as the data you collect. With our platform you will collect information on every person and machine in your facility. All data is processed using Lean Six Sigma industry standards to flag and remove errors.</p>
+				<a class="learn-more-button" href="{{@site.url}}/data-collection/">Learn more <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+			</div>
+			<img src="{{asset "assets/images/floor-management/image 41.jpg"}}" alt="exceptional data image" class="tech-green-cards__card-img">
+		</div>
+	</div>
+</div>
+
+<div class="tech-white-cards-1" style="padding: 10rem 0;">
+	<div class="w1340">
+		<div class="tech-white-cards-1__left">
+			<h2 class="tech-white-cards-1__title">BENEFITS</h2>
+			<p class="tech-white-cards-1__subtitle">Embrace digitalization and witness the rapid, tangible benefits it brings to your factory.</p>
+		</div>
+		<div class="tech-white-cards-1__right">
+			<div class="tech-white-cards-1__card">
+				<div class="tech-white-cards-1__card-img">{{> icons/tech-cards1-icon1}}</div>
+				<h3 class="tech-white-cards-1__card-title">Less Down-Time</h3>
+				<p class="tech-white-cards-1__card-description">Most companies experience a 5-15% increase in their capacity.</p>
+			</div>
+			<div class="tech-white-cards-1__card">
+				<div class="tech-white-cards-1__card-img">{{> icons/tech-cards1-icon2}}</div>
+				<h3 class="tech-white-cards-1__card-title">Lower Costs</h3>
+				<p class="tech-white-cards-1__card-description">Eliminate manual time studies, data entry, paper travelers and expensive quality checkpoints.</p>
+			</div>
+			<div class="tech-white-cards-1__card">
+				<div class="tech-white-cards-1__card-img">{{> icons/tech-cards1-icon3}}</div>
+				<h3 class="tech-white-cards-1__card-title">On-Time Delivery</h3>
+				<p class="tech-white-cards-1__card-description">Adapt quickly if a production order is falling behind, improve scheduling with accurate data.</p>
+			</div>
+			<div class="tech-white-cards-1__card">
+				<div class="tech-white-cards-1__card-img">{{> icons/tech-cards1-icon4}}</div>
+				<h3 class="tech-white-cards-1__card-title">Higher Confidence</h3>
+				<p class="tech-white-cards-1__card-description">Impress your customers when they tour your facility with world class practices.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="tech-track">
+	<div class="w1340">
+		<h2 class="tech-track__title">Rapidly Transform Your Shop Floor</h2>
+		<p class="tech-track__subtitle">Catch up with innovation and impress customers. Our Accelerator Program has over a 90% success rate and takes only 3 months.</p>
+		<div class="tech-track__img" style="box-shadow: none; width:100%">
+			<img src="{{asset "assets/images/floor-management/timeline.png"}}" alt="timeline image">
+		</div>
+		<a class="learn-more-button" href="{{@site.url}}/data-collection/">Learn more <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+		{{!-- <div class="tech-track__cards">
+			<div class="tech-track__card">
+				<div class="tech-track__card-icon">{{> icons/tech-track-icon1}}</div>
+				<h3 class="tech-track__card-title">Intelligent Work Instructions</h3>
+				<p class="tech-track__card-description">Don’t just inform Operators what to do, monitor their actions and verify quality.</p>
+				<a class="learn-more-button" href="#">Learn more <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+			</div>
+			<div class="tech-track__card">
+				<div class="tech-track__card-icon">{{> icons/tech-track-icon2}}</div>
+				<h3 class="tech-track__card-title">100% <br> Time Studies</h3>
+				<p class="tech-track__card-description">Eliminate the need for manual time studies. Every action is automatically recorded and analyzed.</p>
+				<a class="learn-more-button" href="#">Learn more <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+			</div>
+			<div class="tech-track__card">
+				<div class="tech-track__card-icon">{{> icons/tech-track-icon3}}</div>
+				<h3 class="tech-track__card-title">Integrate <br> Modern Tools</h3>
+				<p class="tech-track__card-description">Elevate your error-proofing capabilities by integrating tool communication with your instructions.</p>
+				<a class="learn-more-button" href="#">Learn more <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+			</div>
+		</div> --}}
+	</div>
+</div>

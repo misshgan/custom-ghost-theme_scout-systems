@@ -1,0 +1,106 @@
+.tech-o-accordion {
+	padding: 10rem 0;
+
+	.w1340 {
+	}
+	&__title {
+		margin-bottom: 5rem;
+
+		color: $black_100;
+		font-size: 6rem;
+		font-weight: 600;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__left {
+		width: 45%;
+	}
+	&__img {
+		display: none;
+		width: 100%;
+		height: 60rem;
+		border-radius: 42px;
+		overflow: hidden;
+
+		object-fit: cover;
+		transition: all .3s;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__img.active {
+		display: block;
+	}
+	&__right {
+		width: 45%;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		border-left: 1px solid $black_100;
+		padding-left: 5.2rem;
+
+		&:not(:last-child) {
+			padding-bottom: 3.2rem;
+		}
+	}
+	&__item-header {
+		cursor: pointer;
+	}
+	&__item-title {
+		color: $black_100;
+		font-size: 3.2rem;
+		font-weight: 600;
+	}
+	&__item-header.active > &__item-indicator {
+		background: $green_100;
+		border-color: $green_100;
+		color: $white;
+	}
+	&__item-indicator {
+		position: absolute;
+		width: 4.2rem;
+		height: 4.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $white;
+		top: 0;
+		left: -2.1rem;
+
+		color: $black_100;
+		font-size: 2.4rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		border: 1px solid $black_100;
+
+		transition: all .3s;
+	}
+	&__item-body {
+		color: $grey_100;
+		font-size: 1.8rem;
+		font-weight: 400;
+
+		max-height: 0;
+		padding: 0;
+		overflow: hidden;
+		
+		transition: all .3s;
+	}
+	&__item-header.active + &__item-body {
+		max-height: 500px;
+		padding-top: 1.5rem;
+	}
+	&__item-description {
+	}
+}

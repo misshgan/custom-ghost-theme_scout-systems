@@ -122,4 +122,34 @@ window.addEventListener('load', function() {
 		  });
 		});
 	  }
+
+	
+	//Ordered accordion
+
+	const oDropdownTargetList = document.querySelectorAll('.tech-o-accordion__item-header');
+	const oAccordionImages = document.querySelectorAll('.tech-o-accordion__img')
+
+	if (oDropdownTargetList) {
+		oDropdownTargetList.forEach((element, index) => {
+		  element.addEventListener('click', function() {
+			if (!element.classList.contains('active')) {
+			  oDropdownTargetList.forEach(el => el.classList.remove('active'));
+			  element.classList.add('active');
+			}
+		  });
+		});
+	  }
+
+	  if (oAccordionImages && document.querySelector(`.tech-o-accordion__img-1`)) {
+		oDropdownTargetList.forEach((element, index) => {
+		  element.addEventListener('click', function() {
+			oAccordionImages.forEach(el => el.classList.remove('active'));
+			const targetImage = document.querySelector(`.tech-o-accordion__img-${index + 1}`);
+			if (targetImage) {
+			  targetImage.classList.add('active');
+			}
+		  });
+		});
+	  }
   });
+

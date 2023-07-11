@@ -111,3 +111,44 @@
 		}
 	}
 }
+
+/* WHITE STYLED */
+
+.tech-green-photos.white {
+	background: #EFEFEF;
+
+	.tech-green-photos__shadow {
+		position: absolute;
+		bottom: -10%;
+		left: -10%;
+		width: 36.8rem;
+		height: 56.9rem;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.w1340 {
+	}
+	&__left {
+	}
+	.tech-green-photos__title {
+		color: $black_100;
+	}
+	.tech-green-photos__subtitle {
+		color: $black_100;
+	}
+	.learn-more-button {
+		color: $black_100;
+		border-bottom-color: $black_100;;
+	}
+	.green-arrow {
+	}
+	&__right {
+	}
+	&__img {
+	}
+}
+

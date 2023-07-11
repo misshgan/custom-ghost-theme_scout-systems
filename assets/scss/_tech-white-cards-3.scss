@@ -1,0 +1,106 @@
+.tech-white-cards-3 {
+
+
+	.w1340 {
+	}
+	&__title {
+		margin-bottom: 2.4rem;
+
+		color:$black_100;
+		text-align: center;
+		font-size: 3.2rem;
+		font-weight: 600;
+	}
+	&__subtitle {
+		margin-bottom: 5rem;
+
+		color: $black_90;
+		text-align: center;
+		font-size: 2rem;
+		font-weight: 400;
+		line-height: 1.4;
+	}
+	&__cards {
+		display: flex;
+		column-gap: 2rem;
+		padding-top: 8rem;
+	}
+	&__card {
+		width: 24%;
+		padding: 6rem 2.5rem;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		border-radius: 12px;
+		border: 1px solid $grey_20;
+	}
+	&__card-iterator {
+		position: absolute;
+		top: -3rem;
+		left: 2.5rem;
+		width: 6rem;
+		height: 6rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		background: $green_100;
+
+		color: $white;
+		font-size: 3.2rem;
+		font-weight: 600;
+
+		border-radius: 50%;
+	}
+	&__card-title {
+		margin-bottom: 2.4rem;
+
+		color: $black_100;
+		font-size: 3.2rem;
+		font-weight: 600;
+	}
+	&__card-subtitle {
+		margin-bottom: 2rem;
+		margin-top: auto;
+
+		color: $black_90;
+		font-size: 1.4rem;
+		font-weight: 400;
+	}
+	&__card-list {
+		display: flex;
+		flex-direction: column;
+	}
+	&__card-list-round {
+		display: block;
+		min-width: 1.6rem;
+		min-height: 1.6rem;
+		background: $green_100;
+		border-radius: 50%;
+		margin-right: 1.6rem;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 0.6rem;
+			height: 0.6rem;
+			background: $green_10;
+			border-radius: 50%;
+			top: calc(50% - 0.3rem);
+			left: calc(50% - 0.3rem);
+		}
+	}
+	&__card-list-item {
+		display: flex;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+
+		color: $black_90;
+		font-size: 1.4rem;
+		font-weight: 600;
+	}
+}

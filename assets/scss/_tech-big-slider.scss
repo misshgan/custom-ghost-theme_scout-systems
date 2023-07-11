@@ -1,5 +1,9 @@
 .tech-big-slider {
 
+	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+		bottom: 50px;
+	}
+
 	.w1340 {
 		padding: 10rem 0;
 	}

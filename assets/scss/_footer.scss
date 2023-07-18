@@ -81,6 +81,7 @@
 		
 		color: $grey_20 !important;
 
+		text-transform: capitalize;
 		transition:  all .3s;
 
 		&:not(:last-child) {

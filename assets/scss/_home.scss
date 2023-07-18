@@ -14,7 +14,7 @@
 	/* POPULAR */
 
 	.popular {
-		padding: 10rem 0;
+		padding: 10rem 0 7rem;
 		position: relative;
 		z-index: 10;
 
@@ -63,6 +63,13 @@
 			overflow: hidden;
 			border: 1px solid #D9D9D9;
 			background: $white;
+
+			transition: all .3s;
+
+			&:hover {
+				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+				transform: scale(1.0075);
+			}
 
 			@media (min-width:1800px) {
 				width: 18.4%;

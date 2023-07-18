@@ -60,26 +60,56 @@ const swiper2 = new Swiper('.tech-big-slider__content', {
   });
   //Dropdown menu 
 
-  let dropdownTarget = document.querySelector('.header-dropdown-target');
-  let dropdown = document.querySelector('.h-dropdown')
+//   let dropdownTarget = document.querySelector('.header-dropdown-target');
+//   let dropdown = document.querySelector('.h-dropdown')
 
-  dropdownTarget.addEventListener('click', function() {
-	if (!dropdown.classList.contains('active')) {
-		dropdown.classList.add('active')
-		dropdownTarget.classList.add('active')
-	} else if (dropdown.classList.contains('active')) {
-		dropdown.classList.remove('active')
-		dropdownTarget.classList.remove('active')
-	}
-  })
+//   dropdownTarget.addEventListener('click', function() {
+// 	if (!dropdown.classList.contains('active')) {
+// 		dropdown.classList.add('active')
+// 		dropdownTarget.classList.add('active')
+// 	} else if (dropdown.classList.contains('active')) {
+// 		dropdown.classList.remove('active')
+// 		dropdownTarget.classList.remove('active')
+// 	}
+//   })
 
-  document.addEventListener('click', function(e) {
-	if (e.target != dropdownTarget) {
-		dropdown.classList.remove('active')
-		dropdownTarget.classList.remove('active')
+//   document.addEventListener('click', function(e) {
+// 	if (e.target != dropdownTarget) {
+// 		dropdown.classList.remove('active')
+// 		dropdownTarget.classList.remove('active')
 
-	}
-  })
+// 	}
+//   })
+
+
+ // Target all dropdown elements using their shared class name
+const dropdownTargets = document.querySelectorAll('.header-dropdown-target');
+const dropdowns = document.querySelectorAll('.h-dropdown');
+
+// Function to toggle active class on a dropdown and its target
+function toggleDropdown(index) {
+    dropdowns[index].classList.toggle('active');
+    dropdownTargets[index].classList.toggle('active');
+}
+
+// Add event listeners to all dropdowns
+dropdownTargets.forEach((dropdownTarget, index) => {
+    dropdownTarget.addEventListener('click', function () {
+        toggleDropdown(index);
+    });
+});
+
+// Add global click event listener to close dropdowns when clicking outside
+document.addEventListener('click', function (e) {
+    dropdownTargets.forEach((dropdownTarget, index) => {
+        if (!dropdownTarget.contains(e.target)) {
+            dropdowns[index].classList.remove('active');
+            dropdownTargets[index].classList.remove('active');
+        }
+    });
+});
+
+  
 
 
 /* Unordered accordion */

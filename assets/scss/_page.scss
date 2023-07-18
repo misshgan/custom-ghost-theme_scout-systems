@@ -1,0 +1,14 @@
+.page {
+
+	* {
+		color: $black_100;
+	}
+
+	&__header {
+		background: $black_90;
+	}
+
+	h1 {
+		font-size: 6rem;
+	}
+}

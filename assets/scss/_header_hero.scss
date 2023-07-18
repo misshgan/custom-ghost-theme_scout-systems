@@ -171,7 +171,6 @@
 .h-dropdown {
 	position: absolute;
 	top: 225%;
-	left: -100%;
 
 	cursor:default;
 
@@ -272,5 +271,32 @@
 		&:hover {
 			color: $grey_100 !important;
 		}
+	}
+}
+
+
+.tech-dropdown {
+	left: -90%;
+}
+
+.resources-dropdown {
+	left: -38%;
+	width: 175%;
+
+	.h-dropdown__links {
+		margin-top: 0;
+	}
+}
+
+.about-us-dropdown {
+	width: 200%;
+	right: 0;
+
+	.h-dropdown__links {
+		margin-top: 0;
+	}
+
+	&::before {
+		left: calc(75% - 11px);
 	}
 }

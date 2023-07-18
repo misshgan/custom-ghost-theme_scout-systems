@@ -21,7 +21,7 @@ html {
 /* Colors */
 /* Fonts */
 * {
-  font-family: "Source Sans 3";
+  font-family: "Source Sans 3" !important;
 }
 
 .green-arrow {
@@ -347,7 +347,6 @@ html {
 .h-dropdown {
   position: absolute;
   top: 225%;
-  left: -100%;
   cursor: default;
   background: #FFFFFF;
   border-radius: 12px;
@@ -426,6 +425,29 @@ html {
   color: #757575 !important;
 }
 
+.tech-dropdown {
+  left: -90%;
+}
+
+.resources-dropdown {
+  left: -38%;
+  width: 175%;
+}
+.resources-dropdown .h-dropdown__links {
+  margin-top: 0;
+}
+
+.about-us-dropdown {
+  width: 200%;
+  right: 0;
+}
+.about-us-dropdown .h-dropdown__links {
+  margin-top: 0;
+}
+.about-us-dropdown::before {
+  left: calc(75% - 11px);
+}
+
 .home {
   position: relative;
   overflow: hidden;
@@ -445,7 +467,7 @@ html {
   }
 }
 .home .popular {
-  padding: 10rem 0;
+  padding: 10rem 0 7rem;
   position: relative;
   z-index: 10;
 }
@@ -495,6 +517,11 @@ html {
   overflow: hidden;
   border: 1px solid #D9D9D9;
   background: #FFFFFF;
+  transition: all 0.3s;
+}
+.home .popular__card:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: scale(1.0075);
 }
 @media (min-width: 1800px) {
   .home .popular__card {
@@ -1029,6 +1056,7 @@ html {
   font-size: 1.4rem;
   line-height: 1.28;
   color: #EBEBEB !important;
+  text-transform: capitalize;
   transition: all 0.3s;
 }
 .footer__nav-link:not(:last-child) {
@@ -2248,4 +2276,14 @@ html {
 }
 .tech-white-cards-3__card-list-item:not(:last-child) {
   margin-bottom: 1.2rem;
+}
+
+.page * {
+  color: #333447;
+}
+.page__header {
+  background: #3D3E52;
+}
+.page h1 {
+  font-size: 6rem;
 }

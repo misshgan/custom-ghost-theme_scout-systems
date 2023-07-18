@@ -108,7 +108,7 @@ $white: #FFFFFF;
 $font_1: 'Source Sans 3';
 
 * {
-	font-family: $font_1;
+	font-family: $font_1 !important;
 }
 
 .green-arrow {

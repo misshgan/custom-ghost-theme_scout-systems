@@ -1,93 +1,92 @@
 {{!< default}}
 
+
+
 {{#post}}
 
-<article class="gh-article {{post_class}}">
+	<div class="tech-hero post-hero">
+		<div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
+		<div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
+		<div class="w1340">
+			{{> structure/header}}
+			<div class="post-hero__main">
+				{{#if feature_image}}
+					<img src="{{feature_image}}" alt="feature image" class="post-hero__image">
+				{{else}}
+					<img src="{{asset "assets/images/placeholder.png"}}" alt="feature image" class="post-hero__image">
+				{{/if}}
+				<div class="post-hero__text">
+					<div class="post-hero__tags">{{tags}}</div>
+					<h1 class="post-hero__title">{{title}}</h1>
+					<div class="post-hero__footer">
+						Author <span class="post-hero__footer-bold">{{authors}}</span>
+						{{> icons/clock}}
+						<span class="post-hero__footer-bold">{{reading_time}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="post-body">
+		<div class="w1340">
+			<div class="post-body__left side-panel">
+				<h2 class="side-panel__title">On this page</h2>
+				<nav id="scrollToLinks" class="side-panel__nav">
 
-    <header class="gh-header gh-canvas">
-        <span class="gh-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-        <h1 class="gh-title">{{title}}</h1>
-
-        {{#if custom_excerpt}}
-        <p class="gh-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
-
-        {{#if feature_image}}
-        <figure class="gh-feature-image">
-            <picture>
-              <source 
-                srcset="
-                {{img_url feature_image size="xxs" format="avif"}} 30w,
-                {{img_url feature_image size="xs" format="avif"}} 100w,
-                {{img_url feature_image size="s" format="avif"}} 300w,
-                {{img_url feature_image size="m" format="avif"}} 600w,
-                {{img_url feature_image size="l" format="avif"}} 1200w,
-                {{img_url feature_image size="xl" format="avif"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                type="image/avif"
-              >
-              <source 
-                srcset="
-                {{img_url feature_image size="xxs" format="webp"}} 30w,
-                {{img_url feature_image size="xs" format="webp"}} 100w,
-                {{img_url feature_image size="s" format="webp"}} 300w,
-                {{img_url feature_image size="m" format="webp"}} 600w,
-                {{img_url feature_image size="l" format="webp"}} 1200w,
-                {{img_url feature_image size="xl" format="webp"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                type="image/webp"
-              >
-              <img
-                srcset="
-                {{img_url feature_image size="xxs"}} 30w,
-                {{img_url feature_image size="xs"}} 100w,
-                {{img_url feature_image size="s"}} 300w,
-                {{img_url feature_image size="m"}} 600w,
-                {{img_url feature_image size="l"}} 1200w,
-                {{img_url feature_image size="xl"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                src="{{img_url feature_image size="l"}}"
-                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-              >
-            </picture>
-            {{#if feature_image_caption}}
-                <figcaption>{{feature_image_caption}}</figcaption>
-            {{/if}}
-        </figure>
-        {{/if}}
-    </header>
-
-    <div class="gh-content gh-canvas">
-        {{content}}
-    </div>
-
-    <footer class="gh-footer gh-canvas">
-
-        <div class="gh-post-authors">
-            Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
-        </div>
-
-        {{#if comments}}
-        <section class="gh-post-comments">
-            {{comments}}
-        </section>
-        {{/if}}
-
-    </footer>
-
-</article>
-
-<aside class="gh-readmore">
-    <div class="gh-readmore-inner gh-container">
-        <div class="gh-readmore-next">
-            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>{{/next_post}}
-        </div>
-        <div class="gh-readmore-prev">
-            {{#prev_post}}<a href="{{url}}">
-                <h4>{{title}}</h4> {{> "icons/arrow-right"}}
-            </a>{{/prev_post}}
-        </div>
-    </div>
-</aside>
+				</nav>
+				<h2 class="side-panel__title">Share This Post</h2>
+				<div class="side-panel__links">
+					<div class="side-panel__link">{{> icons/post-twitter}}</div>
+					<div class="side-panel__link">{{> icons/post-threads}}</div>
+					<div class="side-panel__link">{{> icons/post-linkedin}}</div>
+					<div class="side-panel__link">{{> icons/post-facebook}}</div>
+					<div class="side-panel__link">{{> icons/post-email}}</div>
+					<div id="copyLinkButton" class="side-panel__link">{{> icons/post-copy}}<span>Copy link</span></div>
+				</div>
+			</div>
+			<div class="post-body__right">
+				<div id="post-nav-container" class="post-body__content">
+					{{content}}
+				</div>
+				<div class="post-body__right-footer">
+					{{#get "authors"}}
+						{{#foreach authors limit='1'}}
+							<div class="post-body__author-card">
+								<div class="post-body__author-image">
+									{{#if profile_image}}
+										<img src="{{profile_image}}" alt="author image">
+									{{else}}
+										<img src="{{asset "/assets/images/post/author-placholder.webp"}}" alt="author image">
+									{{/if}}
+								</div>
+								<div class="post-body__author-description">
+									<h2 class="post-body__author-name">{{name}}</h2>
+									{{#if bio}}
+										<p class="post-body__author-bio">{{bio}}</p>
+									{{else}}
+										<p class="post-body__author-bio">This author doesn't have any BIO for now.</p>
+									{{/if}}
+								</div>
+							</div>
+						{{/foreach}}
+					{{/get}}
+				</div>
+			</div>
+		</div>
+	</div>
+	{{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}" as |related|}}
+	{{#if related}}
+	<div class="post-footer">
+		<div class="w1340">
+			<h2 class="post-footer__title">Read next</h2>
+			<div class="post-footer__cards">
+				{{#foreach related}}
+					{{> card}}
+				{{/foreach}}
+			</div>
+		</div>
+	</div>
+	{{/if}}
+	{{/get}}
 
 {{/post}}

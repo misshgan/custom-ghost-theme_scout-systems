@@ -183,3 +183,123 @@ window.addEventListener('load', function() {
 	  }
   });
 
+
+/* POST NAVIGATION */
+
+function generateScrollToLinks() {
+	const container = document.getElementById('post-nav-container');
+	const h2Titles = container.querySelectorAll('h2');
+	let linksHTML = '';
+  
+	h2Titles.forEach((h2) => {
+	  const sectionId = h2.getAttribute('id');
+	  linksHTML += `<a class="side-panel__nav-item" href="#${sectionId}">${h2.textContent}</a>`;
+	});
+  
+	const scrollToLinksContainer = document.getElementById('scrollToLinks');
+	scrollToLinksContainer.innerHTML = linksHTML;
+  
+	let prevScrollPos = window.pageYOffset;
+	let scrollDirection = null;
+  
+	const scrollHandler = () => {
+	  const currentScrollPos = window.pageYOffset;
+  
+	  // Determine the scroll direction
+	  if (currentScrollPos > prevScrollPos) {
+		scrollDirection = 'down';
+	  } else if (currentScrollPos < prevScrollPos) {
+		scrollDirection = 'up';
+	  }
+  
+	  prevScrollPos = currentScrollPos;
+  
+	  // Logic for scrolling from top to bottom
+	  if (scrollDirection === 'down') {
+		let activeH2 = null;
+		let minDistance = 50;
+  
+		// Find the h2 element with the minimum distance to the top of the viewport
+		h2Titles.forEach((h2) => {
+		  const distance = Math.abs(h2.getBoundingClientRect().top);
+		  if (distance < minDistance) {
+			minDistance = distance;
+			activeH2 = h2;
+		  }
+		});
+  
+		if (activeH2 !== null) {
+		  const sectionId = activeH2.getAttribute('id');
+		  const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
+  
+		  // Remove active class from any other links and add it to the relevant link
+		  document.querySelectorAll('.side-panel__nav-item').forEach((link) => {
+			link.classList.remove('active');
+		  });
+		  activeLink.classList.add('active');
+		}
+	  } else if (scrollDirection === 'up') {
+		// Logic for scrolling from bottom to top
+		let activeH2 = null;
+  
+		// Find the h2 element where boundingClientRect.bottom distance is less than 0
+		h2Titles.forEach((h2) => {
+		  const distance = h2.getBoundingClientRect().bottom;
+		  if (distance < 500) {
+			activeH2 = h2;
+		  }
+		});
+  
+		if (activeH2 !== null) {
+		  const sectionId = activeH2.getAttribute('id');
+		  const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
+  
+		  // Remove active class from any other links and add it to the relevant link
+		  document.querySelectorAll('.side-panel__nav-item').forEach((link) => {
+			link.classList.remove('active');
+		  });
+		  activeLink.classList.add('active');
+		}
+	  }
+	};
+  
+	// Attach the scroll event listener to the window
+	window.addEventListener('scroll', scrollHandler);
+  }
+  
+  generateScrollToLinks();
+
+
+/* COPY LINK */ 
+
+// Get the reference to the "Copy Link" div element
+const copyLinkButton = document.getElementById('copyLinkButton');
+
+// Add a click event listener to the button
+copyLinkButton.addEventListener('click', () => {
+  // Create a temporary textarea element to hold the link text
+  const tempTextarea = document.createElement('textarea');
+  const currentURL = window.location.href;
+
+  // Set the current URL as the value of the temporary textarea
+  tempTextarea.value = currentURL;
+
+  // Append the textarea to the document (it needs to be in the DOM to execute 'copy' command)
+  document.body.appendChild(tempTextarea);
+
+  // Select the content of the textarea
+  tempTextarea.select();
+
+  // Execute the 'copy' command to copy the selected content to the clipboard
+  document.execCommand('copy');
+
+  // Remove the temporary textarea from the DOM
+  document.body.removeChild(tempTextarea);
+
+  // Optionally, you can give some visual feedback to the user
+  copyLinkButton.querySelector('span').textContent = 'Link Copied!';
+  setTimeout(() => {
+    copyLinkButton.querySelector('span').textContent = 'Copy link';
+  }, 1500); // Reset the button text after 1.5 seconds
+});
+

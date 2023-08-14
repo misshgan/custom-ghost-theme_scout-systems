@@ -1,0 +1,25 @@
+{{!< default}}
+
+{{#contentFor "title"}}{{@site.title}} - Accelerator{{plural pagination.page empty='' singular='' plural=' – (Page %)'}}{{/contentFor}}
+
+<div class="page-accelerator">
+	<div class="page-accelerator__shadow1">{{> images/shadow1}}</div>
+	<div class="page-accelerator__shadow2">{{> images/shadow1}}</div>
+	<div class="page-accelerator__shadow3">{{> images/shadow1}}</div>
+	<div class="page-accelerator__shadow4">{{> images/shadow1}}</div>
+
+
+	<div class="page-accelerator__blocks">
+		{{> structure/technology/accelerator-block-1}}
+
+		{{> structure/technology/accelerator-block-2}}
+
+		{{> structure/technology/accelerator-block-3}}
+
+		{{> structure/technology/accelerator-block-4}}
+
+		{{> structure/technology/accelerator-block-5}}
+
+		{{> structure/technology/accelerator-block-6}}
+	</div>
+</div>

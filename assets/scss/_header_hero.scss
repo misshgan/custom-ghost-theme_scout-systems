@@ -1,16 +1,17 @@
 /* HEADER */ 
 
 .header {
+	padding: 2.4rem 0;
+	padding-left: 3rem;
+	padding-right: 3rem;
 	max-width: 1400px;
-	padding-left: 30px;
-	padding-right: 30px;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto -11.689rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	position: relative;
-	z-index: 5;
+	z-index: 15;
 
 
 	@media (min-width:1800px) {
@@ -21,8 +22,6 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-
-	padding: 2.4rem 0;
 
 	&__logo {
 	}
@@ -79,7 +78,7 @@
 
 	.hero-content {
 		position: relative;
-		z-index: 20;
+		z-index: 10;
 		max-width: 1400px;
 		padding-left: 30px;
 		padding-right: 30px;
@@ -96,7 +95,7 @@
 	}
 
 	&__title {
-		margin: 20rem 0 2rem;
+		margin: 30rem 0 2rem;
 		font-weight: 600;
 		font-size: 7.2rem;
 		line-height: 1.11;
@@ -127,15 +126,19 @@
 			font-size: 1.6rem;
 		}
 	}
+}
 
-	.hero__buttons {
-		margin-top: 4.2rem;
-		display: flex;
-		align-items: center;
-	
-		@media (max-width:450px) {
-			flex-direction: column;
-		}
+.hero__buttons {
+	display: flex;
+	width: max-content;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 4.2rem;
+	display: flex;
+	align-items: center;
+
+	@media (max-width:450px) {
+		flex-direction: column;
 	}
 }
 
@@ -280,16 +283,12 @@
 }
 
 .resources-dropdown {
-	left: -38%;
-	width: 175%;
-
-	.h-dropdown__links {
-		margin-top: 0;
-	}
+	left: -135%;
+    width: max-content;
 }
 
 .about-us-dropdown {
-	width: 200%;
+	width: 205%;
 	right: 0;
 
 	.h-dropdown__links {

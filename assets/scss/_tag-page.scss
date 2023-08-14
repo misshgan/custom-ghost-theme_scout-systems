@@ -1,0 +1,11 @@
+.gh-postfeed {
+
+	.post-card {
+		width: 100%;
+	}
+	
+}
+
+.gh-postfeed>:first-child {
+	grid-column: unset !important;
+}

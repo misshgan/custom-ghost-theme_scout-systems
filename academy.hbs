@@ -1,0 +1,34 @@
+{{!< default}}
+
+{{#contentFor "title"}}{{@site.title}} - Academia{{plural pagination.page empty='' singular='' plural=' – (Page %)'}}{{/contentFor}}
+
+<div class="tech-hero academy">
+	<div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
+	<div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
+	<div class="w1340">
+		<div class="tech-hero__text">
+			<h1 class="tech-hero__title">Academy</h1>
+			<p class="tech-hero__subtitle">A depository of tutorial blogs on how to use our software</p>
+		</div>
+		<div class="tech-hero__categories" style="color: #fff;">
+			<div data-tag="all" class="tech-hero__category active">All</div>
+			<div data-tag="compass" class="tech-hero__category">Compass</div>
+			<div data-tag="hq-admin" class="tech-hero__category">HQ Admin</div>
+			<div data-tag="hq-designer" class="tech-hero__category">HQ Designer</div>
+			<div data-tag="hq-live-production" class="tech-hero__category">HQ Live Production</div>
+			<div data-tag="hq-reports" class="tech-hero__category">HQ Reports</div>
+			<div data-tag="hq-dashboards" class="tech-hero__category">HQ Dashboards</div>
+			<div data-tag="tracker" class="tech-hero__category">Tracker</div>
+			<div data-tag="api-portal" class="tech-hero__category">API Portal</div>
+		</div>
+	</div>
+</div>
+
+<div class="page-academy">
+	<div class="w1340">
+		<div id="posts-container" class="page-academy__feed">
+			
+		</div>
+		<div id="pagination" class="page-academy__pagination pagination"></div>
+	</div>
+</div>

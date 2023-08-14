@@ -9,7 +9,7 @@
 					{{>icons/arrow-right}}
 				</a>
 				<div class="h-dropdown__links">
-					<a href="#" class="h-dropdown__link">Features</a>
+					<a href="{{@site.url}}/platform-capabilities/" class="h-dropdown__link">Features</a>
 					<a href="{{@site.url}}/work-instructions/" class="h-dropdown__link">Work instructions</a>
 					<a href="{{@site.url}}/shop-floor-management/" class="h-dropdown__link">Shop floor management</a>
 					<a href="{{@site.url}}/data-collection/" class="h-dropdown__link">Data collection</a>
@@ -20,41 +20,26 @@
 		</div>
 		<div class="header__link header-dropdown-target">resources <span class="dropdown-target-arrow">{{>icons/small-arrow-down}}</span>
 			<div class="header__dropdown h-dropdown resources-dropdown">
+				<a href="{{@site.url}}/accelerator/" class="h-dropdown__banner">
+					{{>icons/dropdown-logo}}
+					<span class="h-dropdown__banner-title">Accelerator Program</span>
+					{{>icons/arrow-right}}
+				</a>
 				<div class="h-dropdown__links">
-					<a href="#" class="h-dropdown__link">Blog</a>
-					<a href="#" class="h-dropdown__link">PSMEA Toolkit</a>
-					<a href="#" class="h-dropdown__link">Glossary</a>
+					<a href="{{@site.url}}/blog" class="h-dropdown__link">Blog</a>
+					<a href="{{@site.url}}/academy" class="h-dropdown__link">Academy</a>
+					<a href="{{@site.url}}/manufacturing-glossary/" class="h-dropdown__link">Glossary</a>
 				</div>
 			</div>
 		</div>
+		<a href="{{@site.url}}/pricing" class="header__link">PRICING</a>
 		<div class="header__link header-dropdown-target">about us <span class="dropdown-target-arrow">{{>icons/small-arrow-down}}</span>
 			<div class="header__dropdown h-dropdown about-us-dropdown">
 				<div class="h-dropdown__links">
-					<a href="#" class="h-dropdown__link">Our Customers</a>
-					<a href="#" class="h-dropdown__link">Our Process</a>
+					<a href="{{@site.url}}/industries-served/" class="h-dropdown__link">Industries Served</a>
 					<a href="#" class="h-dropdown__link">Contact Us</a>
 				</div>
 			</div>
 		</div>
-
-		{{!-- <div class="header__link header-dropdown-target">technology <span class="dropdown-target-arrow">{{>icons/small-arrow-down}}</span>
-			<div class="header__dropdown h-dropdown">
-				<a href="{{@site.url}}/tech-overview" class="h-dropdown__banner">
-					{{>icons/dropdown-logo}}
-					<span class="h-dropdown__banner-title">Tech overview</span>
-					{{>icons/arrow-right}}
-				</a>
-				<div class="h-dropdown__links">
-					<a href="#" class="h-dropdown__link">Features</a>
-					<a href="{{@site.url}}/work-instructions/" class="h-dropdown__link">Work instructions</a>
-					<a href="{{@site.url}}/shop-floor-management/" class="h-dropdown__link">Shop floor management</a>
-					<a href="{{@site.url}}/data-collection/" class="h-dropdown__link">Data collection</a>
-					<a href="{{@site.url}}/root-cause-analysis/" class="h-dropdown__link">Root cause analysis</a>
-					<a href="{{@site.url}}/industrial-iot/" class="h-dropdown__link">industrial iot</a>
-				</div>
-			</div>
-		</div>
-		<a href="#" class="header__link">resources</a>
-		<a href="#" class="header__link">about us</a> --}}
 	</nav>
 </header>

@@ -3,18 +3,10 @@
 // Import CSS
 import "../css/index.css";
 
-// // Import JS
-// import menuOpen from "./menuOpen";
-// import infiniteScroll from "./infiniteScroll";
-
-
-// Call the menu and infinite scroll functions
-// menuOpen();
-// infiniteScroll();
-
 //Swiper.js
 
-//Swiper instance 1
+if (window.location.pathname === '/') {
+	//Swiper instance 1
 const swiper1 = new Swiper('.testimonials', {
 	// Optional parameters
 	direction: 'horizontal',
@@ -30,12 +22,7 @@ const swiper1 = new Swiper('.testimonials', {
 	navigation: {
 	  nextEl: '.swiper-button-next',
 	  prevEl: '.swiper-button-prev',
-	},
-  
-	// // And if we need scrollbar
-	// scrollbar: {
-	//   el: '.swiper-scrollbar',
-	// },
+	}
   });
   
 //Swiper instance 2
@@ -58,29 +45,8 @@ const swiper2 = new Swiper('.tech-big-slider__content', {
 	},
 
   });
+}
   //Dropdown menu 
-
-//   let dropdownTarget = document.querySelector('.header-dropdown-target');
-//   let dropdown = document.querySelector('.h-dropdown')
-
-//   dropdownTarget.addEventListener('click', function() {
-// 	if (!dropdown.classList.contains('active')) {
-// 		dropdown.classList.add('active')
-// 		dropdownTarget.classList.add('active')
-// 	} else if (dropdown.classList.contains('active')) {
-// 		dropdown.classList.remove('active')
-// 		dropdownTarget.classList.remove('active')
-// 	}
-//   })
-
-//   document.addEventListener('click', function(e) {
-// 	if (e.target != dropdownTarget) {
-// 		dropdown.classList.remove('active')
-// 		dropdownTarget.classList.remove('active')
-
-// 	}
-//   })
-
 
  // Target all dropdown elements using their shared class name
 const dropdownTargets = document.querySelectorAll('.header-dropdown-target');
@@ -148,6 +114,8 @@ window.addEventListener('load', function() {
 			if (!element.classList.contains('active')) {
 			  uDropdownWideTargetList.forEach(el => el.classList.remove('active'));
 			  element.classList.add('active');
+			} else if (element.classList.contains('active')) {
+				element.classList.remove('active')
 			}
 		  });
 		});
@@ -187,119 +155,291 @@ window.addEventListener('load', function() {
 /* POST NAVIGATION */
 
 function generateScrollToLinks() {
-	const container = document.getElementById('post-nav-container');
-	const h2Titles = container.querySelectorAll('h2');
-	let linksHTML = '';
-  
-	h2Titles.forEach((h2) => {
-	  const sectionId = h2.getAttribute('id');
-	  linksHTML += `<a class="side-panel__nav-item" href="#${sectionId}">${h2.textContent}</a>`;
+    const container = document.getElementById('post-nav-container');
+
+    if (container) {
+        const headings = container.querySelectorAll('h2, h3'); // Select both h2 and h3 headings
+        let linksHTML = '';
+
+        headings.forEach((heading) => {
+            const sectionId = heading.getAttribute('id');
+            linksHTML += `<a class="side-panel__nav-item" href="#${sectionId}">${heading.textContent}</a>`;
+        });
+
+        const scrollToLinksContainer = document.getElementById('scrollToLinks');
+        scrollToLinksContainer.innerHTML = linksHTML;
+
+        let prevScrollPos = window.pageYOffset;
+        let scrollDirection = null;
+
+        const scrollHandler = () => {
+            const currentScrollPos = window.pageYOffset;
+
+            // Determine the scroll direction
+            if (currentScrollPos > prevScrollPos) {
+                scrollDirection = 'down';
+            } else if (currentScrollPos < prevScrollPos) {
+                scrollDirection = 'up';
+            }
+
+            prevScrollPos = currentScrollPos;
+
+            // Logic for scrolling from top to bottom
+            if (scrollDirection === 'down') {
+                let activeHeading = null;
+                let minDistance = 50;
+
+                // Find the heading element with the minimum distance to the top of the viewport
+                headings.forEach((heading) => {
+                    const distance = Math.abs(heading.getBoundingClientRect().top);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        activeHeading = heading;
+                    }
+                });
+
+                if (activeHeading !== null) {
+                    const sectionId = activeHeading.getAttribute('id');
+                    const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
+
+                    // Remove active class from any other links and add it to the relevant link
+                    document.querySelectorAll('.side-panel__nav-item').forEach((link) => {
+                        link.classList.remove('active');
+                    });
+                    activeLink.classList.add('active');
+                }
+            } else if (scrollDirection === 'up') {
+                // Logic for scrolling from bottom to top
+                let activeHeading = null;
+
+                // Find the heading element where boundingClientRect.bottom distance is less than 0
+                headings.forEach((heading) => {
+                    const distance = heading.getBoundingClientRect().bottom;
+                    if (distance < 500) {
+                        activeHeading = heading;
+                    }
+                });
+
+                if (activeHeading !== null) {
+                    const sectionId = activeHeading.getAttribute('id');
+                    const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
+
+                    // Remove active class from any other links and add it to the relevant link
+                    document.querySelectorAll('.side-panel__nav-item').forEach((link) => {
+                        link.classList.remove('active');
+                    });
+                    activeLink.classList.add('active');
+                }
+            }
+        };
+
+        // Attach the scroll event listener to the window
+        window.addEventListener('scroll', scrollHandler);
+
+        /* COPY LINK */
+
+        // Get the reference to the "Copy Link" div element
+        const copyLinkButton = document.getElementById('copyLinkButton');
+
+        // Add a click event listener to the button
+        copyLinkButton.addEventListener('click', () => {
+            // Create a temporary textarea element to hold the link text
+            const tempTextarea = document.createElement('textarea');
+            const currentURL = window.location.href;
+
+            // Set the current URL as the value of the temporary textarea
+            tempTextarea.value = currentURL;
+
+            // Append the textarea to the document (it needs to be in the DOM to execute 'copy' command)
+            document.body.appendChild(tempTextarea);
+
+            // Select the content of the textarea
+            tempTextarea.select();
+
+            // Execute the 'copy' command to copy the selected content to the clipboard
+            document.execCommand('copy');
+
+            // Remove the temporary textarea from the DOM
+            document.body.removeChild(tempTextarea);
+
+            // Optionally, you can give some visual feedback to the user
+            copyLinkButton.querySelector('span').textContent = 'Link Copied!';
+            setTimeout(() => {
+                copyLinkButton.querySelector('span').textContent = 'Copy link';
+            }, 1500); // Reset the button text after 1.5 seconds
+        });
+    }
+}
+
+generateScrollToLinks();
+
+
+
+/* ACADEMY PAGE POSTS LOAD */
+
+if (window.location.pathname.includes('/academy/') || window.location.pathname.includes('/blog/')) {
+	const postsContainer = document.getElementById('posts-container');
+	const categoryButtons = document.querySelectorAll('.tech-hero__category');
+	const paginationContainer = document.getElementById('pagination');
+
+	const postsPerPage = 9; // Number of posts per page
+	let currentPage = 1;
+
+	function formatDate(dateString) {
+		const date = new Date(dateString);
+		const year = date.getFullYear();
+		const month = (date.getMonth() + 1).toString().padStart(2, '0');
+		const day = date.getDate().toString().padStart(2, '0');
+	
+		return `${year}-${month}-${day}`;
+	}
+
+	function fetchPostsByTag(tag, page, limit) {
+		let tagFilter = '';
+		if (tag) {
+		tagFilter = `tag:${tag}`
+		} else if (window.location.pathname.includes('/academy/')){
+			tagFilter = `tag:academy`;
+		} else if (window.location.pathname.includes('/blog/')){
+			tagFilter = `tag:hash-blog`;
+		}
+		const apiKey = '4c6802d178d7a0d297d9cc7e4b'; // Replace with your actual API key
+		const apiUrl = 'https://scout-systems-inc.ghost.io/ghost/api/v3/content/';
+		const url = `${apiUrl}posts/?key=${apiKey}&limit=${limit}&page=${page}&filter=${tagFilter}&include=authors,tags`;
+	
+		const headers = {
+		'Content-Type': 'application/json',
+		Accept: 'application/json'
+		};
+	
+		fetch(url, { headers })
+		.then(response => response.json())
+		.then(data => {
+			const posts = data.posts;
+			if (posts.length === 0) {
+			postsContainer.innerHTML = ''; // Clear existing posts
+			const notFound = document.createElement('h1');
+			notFound.className = 'page-academy__404';
+			notFound.innerText = "We don't have any of these articles yet...";
+			postsContainer.appendChild(notFound)
+			return;
+		}
+	
+		postsContainer.innerHTML = ''; // Clear existing posts
+		posts.forEach(post => {
+			const tagsHtml = post.tags
+				.filter(tag => !tag.name.startsWith('#'))
+				.map(tag => `<a href="${tag.url}" class="post-card__tag">${tag.name}</a>`)
+				.join('');
+	
+			const postElement = document.createElement('div');
+			postElement.className = 'post-footer__card post-card'; // Apply your existing class
+			postElement.innerHTML = `
+			<a href='${post.url}' class="post-card__image">
+			<img src="${post.feature_image || '/assets/images/placeholder.png'}" alt="feature image">
+			</a>
+			<div class="post-card__header">
+				<div class="post-card__tags">${tagsHtml}</div>
+			</div>
+			<div class="post-card__body">
+				<h3 class="post-card__title"><a href="${post.url}">${post.title}</a></h3>
+				<div class="post-card__description">${post.html || ''}</div>
+			</div>
+			<div class="post-card__header-info">
+				${post.reading_time ? `<div class="post-card__read-time"> <img src="/assets/images/post/time.png" alt="reading time icon"> ${post.reading_time} minute read</div>` : ''}
+				${post.tags.some(tag => tag.name === '#blog') ? `<div class="post-card__publication-date"> <img src="/assets/images/post/date.png" alt="date icon"> <time datetime="${formatDate(post.published_at)}">${formatDate(post.published_at)}</time></div>` : ''}
+			</div>
+			<div class="post-card__footer">
+				${post.authors.map(author => `
+					<div class="post-card__author">
+						<div class="post-card__author-img">
+							<img src="${author.profile_image}" alt="author image">
+						</div>
+						<div class="post-card__author-info">
+							<span class="post-card__author-name">${author.name}</span>
+							${author.location ? `<span class="post-card__author-location">${author.location}</span>` : ''}
+						</div>
+					</div>
+				`).join('')}
+				<a href="${post.url}" class="post-card__link">Read article <img style="margin-left:1rem" src="/assets/images/post/arrow-up.svg" alt="arrow top icon"></a>
+			</div>
+			`;
+			postsContainer.appendChild(postElement);
+		});
+			// Update pagination controls
+			updatePagination(data.meta.pagination);
+		})
+		.catch(error => {
+			console.error('Error fetching data:', error);
+		});
+	}
+
+	function updatePagination(pagination) {
+	// Clear existing pagination
+	paginationContainer.innerHTML = '';
+
+	const totalPages = pagination.pages;
+
+	// Previous button
+	if (pagination.prev) {
+		const prevLink = document.createElement('a');
+		prevLink.href = '#';
+		prevLink.className = 'pagination__prev'
+		prevLink.innerHTML = '<img src="/assets/images/post/arrow-right.svg" alt="arrow right icon">';
+		prevLink.addEventListener('click', (event) => {
+		event.preventDefault();
+		currentPage = currentPage - 1;
+		const selectedTag = document.querySelector('.tech-hero__category.active').getAttribute('data-tag');
+		selectedTag === 'all' ? fetchPostsByTag(null, currentPage, postsPerPage) : fetchPostsByTag(selectedTag, currentPage, postsPerPage);
+		});
+		paginationContainer.appendChild(prevLink);
+	}
+
+	for (let i = 1; i <= totalPages; i++) {
+		const pageLink = document.createElement('a');
+		pageLink.href = '#';
+		pageLink.textContent = i;
+
+		if (i === currentPage) {
+		pageLink.classList.add('active');
+		}
+
+		pageLink.addEventListener('click', (event) => {
+		event.preventDefault();
+		currentPage = i;
+		const selectedTag = document.querySelector('.tech-hero__category.active').getAttribute('data-tag');
+		selectedTag === 'all' ? fetchPostsByTag(null, currentPage, postsPerPage) : fetchPostsByTag(selectedTag, currentPage, postsPerPage);
+		});
+
+		paginationContainer.appendChild(pageLink);
+	}
+
+	// Next button
+	if (pagination.next) {
+		const nextLink = document.createElement('a');
+		nextLink.href = '#';
+		nextLink.className = 'pagination__next'
+		nextLink.innerHTML = '<img src="/assets/images/post/arrow-right.svg" alt="arrow right icon">';
+		nextLink.addEventListener('click', (event) => {
+		event.preventDefault();
+		currentPage = currentPage + 1;
+		const selectedTag = document.querySelector('.tech-hero__category.active').getAttribute('data-tag');
+		selectedTag === 'all' ? fetchPostsByTag(null, currentPage, postsPerPage) : fetchPostsByTag(selectedTag, currentPage, postsPerPage);
+		});
+		paginationContainer.appendChild(nextLink);
+	}
+	}
+
+	categoryButtons.forEach(button => {
+		button.addEventListener('click', (event) => {
+			const selectedTag = event.target.getAttribute('data-tag');
+			categoryButtons.forEach(btn => btn.classList.remove('active'));
+			event.target.classList.add('active');
+			currentPage = 1; // Reset page when switching tags
+			selectedTag === 'all' ? fetchPostsByTag(null, currentPage, postsPerPage) : fetchPostsByTag(selectedTag, currentPage, postsPerPage);
+		});
 	});
-  
-	const scrollToLinksContainer = document.getElementById('scrollToLinks');
-	scrollToLinksContainer.innerHTML = linksHTML;
-  
-	let prevScrollPos = window.pageYOffset;
-	let scrollDirection = null;
-  
-	const scrollHandler = () => {
-	  const currentScrollPos = window.pageYOffset;
-  
-	  // Determine the scroll direction
-	  if (currentScrollPos > prevScrollPos) {
-		scrollDirection = 'down';
-	  } else if (currentScrollPos < prevScrollPos) {
-		scrollDirection = 'up';
-	  }
-  
-	  prevScrollPos = currentScrollPos;
-  
-	  // Logic for scrolling from top to bottom
-	  if (scrollDirection === 'down') {
-		let activeH2 = null;
-		let minDistance = 50;
-  
-		// Find the h2 element with the minimum distance to the top of the viewport
-		h2Titles.forEach((h2) => {
-		  const distance = Math.abs(h2.getBoundingClientRect().top);
-		  if (distance < minDistance) {
-			minDistance = distance;
-			activeH2 = h2;
-		  }
-		});
-  
-		if (activeH2 !== null) {
-		  const sectionId = activeH2.getAttribute('id');
-		  const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
-  
-		  // Remove active class from any other links and add it to the relevant link
-		  document.querySelectorAll('.side-panel__nav-item').forEach((link) => {
-			link.classList.remove('active');
-		  });
-		  activeLink.classList.add('active');
-		}
-	  } else if (scrollDirection === 'up') {
-		// Logic for scrolling from bottom to top
-		let activeH2 = null;
-  
-		// Find the h2 element where boundingClientRect.bottom distance is less than 0
-		h2Titles.forEach((h2) => {
-		  const distance = h2.getBoundingClientRect().bottom;
-		  if (distance < 500) {
-			activeH2 = h2;
-		  }
-		});
-  
-		if (activeH2 !== null) {
-		  const sectionId = activeH2.getAttribute('id');
-		  const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
-  
-		  // Remove active class from any other links and add it to the relevant link
-		  document.querySelectorAll('.side-panel__nav-item').forEach((link) => {
-			link.classList.remove('active');
-		  });
-		  activeLink.classList.add('active');
-		}
-	  }
-	};
-  
-	// Attach the scroll event listener to the window
-	window.addEventListener('scroll', scrollHandler);
-  }
-  
-  generateScrollToLinks();
 
-
-/* COPY LINK */ 
-
-// Get the reference to the "Copy Link" div element
-const copyLinkButton = document.getElementById('copyLinkButton');
-
-// Add a click event listener to the button
-copyLinkButton.addEventListener('click', () => {
-  // Create a temporary textarea element to hold the link text
-  const tempTextarea = document.createElement('textarea');
-  const currentURL = window.location.href;
-
-  // Set the current URL as the value of the temporary textarea
-  tempTextarea.value = currentURL;
-
-  // Append the textarea to the document (it needs to be in the DOM to execute 'copy' command)
-  document.body.appendChild(tempTextarea);
-
-  // Select the content of the textarea
-  tempTextarea.select();
-
-  // Execute the 'copy' command to copy the selected content to the clipboard
-  document.execCommand('copy');
-
-  // Remove the temporary textarea from the DOM
-  document.body.removeChild(tempTextarea);
-
-  // Optionally, you can give some visual feedback to the user
-  copyLinkButton.querySelector('span').textContent = 'Link Copied!';
-  setTimeout(() => {
-    copyLinkButton.querySelector('span').textContent = 'Copy link';
-  }, 1500); // Reset the button text after 1.5 seconds
-});
-
+	// Initial fetch all posts
+	fetchPostsByTag(null, currentPage, postsPerPage);
+}

@@ -1,15 +1,11 @@
 {{!< default}}
 
+{{#contentFor "title"}}{{@site.title}} - Root cause analysis{{plural pagination.page empty='' singular='' plural=' – (Page %)'}}{{/contentFor}}
+
 <div class="tech-hero">
 	<div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
 	<div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
 	<div class="w1340">
-		{{> structure/header}}
-		{{!-- <div class="breadcrumbs">
-			<a href="{{@site.url}}" class="breadcrumbs__link breadcrumbs__previous">Main page</a>
-			<span class="breadcrumbs__bullet"></span>
-			<a href="#" class="breadcrumbs__link breadcrumbs__current">Tech overview</a>
-		</div> --}}
 		<div class="tech-hero__text">
 			<h1 class="tech-hero__title">Eliminate Production Waste</h1>
 			<p class="tech-hero__subtitle">Empower your continuous improvement team with advanced Lean Six Sigma statistical tools. Our technology utilizes logic to analyze real-time data, detecting discrepancies and pinpointing root causes, even in the face of human error. With our advanced solution, your staff can achieve superior performance with minimal effort.</p>
@@ -118,19 +114,19 @@
 				<div class="tech-track__card-icon">{{> icons/tech-track-icon1}}</div>
 				<h3 class="tech-track__card-title">Production Gaps</h3>
 				<p class="tech-track__card-description">A common source of waste is the time it takes in between work orders.</p>
-				<a class="learn-more-button" href="#">Read about <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+				<a class="learn-more-button" href="{{@site.url}}/reducing-production-gaps/">Read about <span class="green-arrow">{{>icons/arrow-right}}</span></a>
 			</div>
 			<div class="tech-track__card">
 				<div class="tech-track__card-icon">{{> icons/tech-track-icon2}}</div>
 				<h3 class="tech-track__card-title">Operator Inactivity</h3>
 				<p class="tech-track__card-description">Discover when Operators are idle at their station, or abandoning it altogether.</p>
-				<a class="learn-more-button" href="#">Read about <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+				<a class="learn-more-button" href="{{@site.url}}/operator-inactivity-types-and-causes/">Read about <span class="green-arrow">{{>icons/arrow-right}}</span></a>
 			</div>
 			<div class="tech-track__card">
 				<div class="tech-track__card-icon">{{> icons/tech-track-icon3}}</div>
 				<h3 class="tech-track__card-title">Priority Changes</h3>
 				<p class="tech-track__card-description">Rush jobs can destroy productivity by adding unnecessary setup time.</p>
-				<a class="learn-more-button" href="#">Read about <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+				<a class="learn-more-button" href="{{@site.url}}/preserving-quality-with-rush-jobs/">Read about <span class="green-arrow">{{>icons/arrow-right}}</span></a>
 			</div>
 		</div>
 	</div>
@@ -142,7 +138,7 @@
 		<div class="tech-green-photos__left">
 			<h2 class="tech-green-photos__title">Your Strategic Partner</h2>
 			<p class="tech-green-photos__subtitle">Change is always great on paper, but tough to make real in a factory stuck in the last century. Our team of experts do nothing but assist manufacturers transform their factory to the digital world. They listen to your challenges, limitations, and organizational goals to assist you in creating a data-driven roadmap.</p>
-			<a class="learn-more-button" href="#">Learn more <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+			<a class="learn-more-button" href="{{@site.url}}/accelerator/">Learn more <span class="green-arrow">{{>icons/arrow-right}}</span></a>
 		</div>
 		<div class="tech-green-photos__right">
 			<div class="tech-green-photos__img">

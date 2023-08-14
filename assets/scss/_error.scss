@@ -1,0 +1,60 @@
+.tech-hero.page-404 {
+	padding: 0;
+	height: 103vh;
+	border-radius: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.tech-hero__ellipse1 {
+		top: -38%;
+	}
+	.tech-hero__ellipse2 {
+		bottom: -13%;
+		right: -6%;
+	}
+	.w1340 {
+	}
+	.tech-hero__text {
+	}
+	.tech-hero__title {
+		margin-bottom: 0;
+
+		font-size: 25rem;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	.tech-hero__subtitle {
+		color: $white;
+		font-size: 3.2rem;
+		font-weight: 400;
+	}
+	.default-button_green {
+		display: block;
+		margin: 0 auto;
+		margin-top: 5rem;
+	}
+}
+
+
+/* THANK YOU */
+
+.tech-hero.thank-you {
+
+	.tech-hero__ellipse1 {
+	}
+	.tech-hero__ellipse2 {
+	}
+	.w1340 {
+	}
+	.tech-hero__text {
+	}
+	.tech-hero__title {
+		font-size: 12rem;
+	}
+	.tech-hero__subtitle {
+	}
+	.default-button_green {
+	}
+}

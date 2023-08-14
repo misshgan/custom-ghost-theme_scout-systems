@@ -1,26 +1,27 @@
-<div class="post-footer__card post-card">
+<div class="post-footer__card post-card" data-tags="{{#primary_tag}}{{name}}{{/primary_tag}}">
 	{{#if feature_image}}
-		<div class="post-card__image">
+		<a href="{{url}}" class="post-card__image">
 			<img src="{{feature_image}}" alt="feature image">
-		</div>
+		</a>
 	{{else}}
-		<div class="post-card__image">
+		<a href="{{url}}" class="post-card__image">
 			<img src="{{asset "assets/images/placeholder.png"}}" alt="feature image">
-		</div>
+		</a>
 	{{/if}}
 	<div class="post-card__header">
 		<div class="post-card__tags">{{tags separator=""}}</div>
-		<div class="post-card__header-info">
-			{{#if reading_time}}
-				<div class="post-card__read-time">{{reading_time}}</div>
-				<span class="post-card__header-bullet"></span>
-			{{/if}}
-			<div class="post-card__publication-date"><time datetime="{{date format="MMM YYYY"}}">{{date format="MMM YYYY"}}</time></div>
-		</div>
 	</div>
 	<div class="post-card__body">
-		<h3 class="post-card__title">{{title}}</h3>
+		<h3 class="post-card__title"><a href="{{url}}">{{title}}</a></h3>
 		<div class="post-card__description">{{content}}</div>
+	</div>
+	<div class="post-card__header-info">
+		{{#if reading_time}}
+			<div class="post-card__read-time"> <img src="{{asset "assets/images/post/time.png"}}" alt="reading time icon"> {{reading_time}}</div>
+		{{/if}}
+		{{#has tag="#blog"}}
+			<div class="post-card__publication-date"> <img src="{{asset "assets/images/post/date.png"}}" alt="date icon"> <time datetime="{{date format="MMM YYYY"}}">{{date format="MMM YYYY"}}</time></div>
+		{{/has}}
 	</div>
 	<div class="post-card__footer">
 		{{#foreach authors}}
@@ -39,4 +40,3 @@
 		<a href="{{url}}" class="post-card__link">Read article {{> icons/arrow-up-right}}</a>
 	</div>
 </div>
-

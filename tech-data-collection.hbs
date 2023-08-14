@@ -1,15 +1,11 @@
 {{!< default}}
 
+{{#contentFor "title"}}{{@site.title}} - Data collection{{plural pagination.page empty='' singular='' plural=' – (Page %)'}}{{/contentFor}}
+
 <div class="tech-hero">
 	<div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
 	<div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
 	<div class="w1340">
-		{{> structure/header}}
-		{{!-- <div class="breadcrumbs">
-			<a href="{{@site.url}}" class="breadcrumbs__link breadcrumbs__previous">Main page</a>
-			<span class="breadcrumbs__bullet"></span>
-			<a href="#" class="breadcrumbs__link breadcrumbs__current">Tech overview</a>
-		</div> --}}
 		<div class="tech-hero__text">
 			<h1 class="tech-hero__title">Superior Data Accuracy</h1>
 			<p class="tech-hero__subtitle">Gain a comprehensive and holistic view of your operations. Through advanced analysis, we delve into equipment, people, and overall processes, ensuring no aspect is overlooked. Our platform employs advanced statistical techniques to continuously monitor data, identifying any potential errors or anomalies.</p>
@@ -49,7 +45,7 @@
 		<div class="tech-green-photos__left">
 			<h2 class="tech-green-photos__title">Your Strategic Partner</h2>
 			<p class="tech-green-photos__subtitle">Change is always great on paper, but tough to make real in a factory stuck in the last century. Our team of experts do nothing but assist manufacturers transform their factory to the digital world. They listen to your challenges, limitations, and organizational goals to assist you in creating a data-driven roadmap.</p>
-			<a class="learn-more-button" href="#">Learn more <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+			<a class="learn-more-button" href="{{@site.url}}/accelerator/">Learn more <span class="green-arrow">{{>icons/arrow-right}}</span></a>
 		</div>
 		<div class="tech-green-photos__right">
 			<div class="tech-green-photos__img">

@@ -1,0 +1,29 @@
+{{!< default}}
+
+{{#contentFor "title"}}{{@site.title}} - Blog{{plural pagination.page empty='' singular='' plural=' – (Page %)'}}{{/contentFor}}
+
+<div class="tech-hero academy">
+	<div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
+	<div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
+	<div class="w1340">
+		<div class="tech-hero__text">
+			<h1 class="tech-hero__title">Blog</h1>
+			<p class="tech-hero__subtitle">Our blogs about useful things</p>
+		</div>
+		<div class="tech-hero__categories" style="color: #fff;">
+			<div data-tag="all" class="tech-hero__category active">All</div>
+			<div data-tag="cost-reduction" class="tech-hero__category">Cost Reduction</div>
+			<div data-tag="culture" class="tech-hero__category">Culture</div>
+			<div data-tag="manufacturing-resources" class="tech-hero__category">Manufacturing Resources</div>
+		</div>
+	</div>
+</div>
+
+<div class="page-academy">
+	<div class="w1340">
+		<div id="posts-container" class="page-academy__feed">
+			
+		</div>
+		<div id="pagination" class="page-academy__pagination pagination"></div>
+	</div>
+</div>

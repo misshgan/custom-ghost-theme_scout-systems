@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{asset "built/index.css"}}" />
+    <script src="{{asset "built/index.js"}}" defer></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+   <title>{{@site.title}} - Thank you!</title>
+
+    {{ghost_head}}
+    {{!-- Outputs important meta data and settings, should always be in <head> --}}
+
+</head>
+
+<body class="{{body_class}}">
+<div class="gh-viewport">
+
+{{> structure/header}}
+
+<div class="tech-hero page-404 thank-you">
+	<div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
+	<div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
+	<div class="w1340">
+		<div class="tech-hero__text">
+			<h1 class="tech-hero__title">Thank you!</h1>
+			<p class="tech-hero__subtitle">for submitting for more information</p>
+			<a href="{{@site.url}}" class="default-button_green">go to homepage</a>
+		</div>
+	</div>
+</div>
+
+</div>
+
+{{!-- <foot> --}}
+{{ghost_foot}}
+{{!-- Outputs important scripts - should always be included before closing body tag --}}
+
+</body>
+</html>

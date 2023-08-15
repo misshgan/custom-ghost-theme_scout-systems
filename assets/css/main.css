@@ -1,3 +1,7 @@
+body.not-scroll {
+  overflow: hidden;
+}
+
 html {
   font-size: 62.5% !important;
   scroll-behavior: smooth;
@@ -191,6 +195,38 @@ html {
 }
 .learn-more-button:hover span {
   margin-left: 3rem;
+}
+
+/* TECH OVERVIEW FORM */
+.hbspt-form {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  -webkit-backdrop-filter: brightness(0.5) blur(11px);
+          backdrop-filter: brightness(0.5) blur(11px);
+  align-items: center;
+  justify-content: center;
+  padding-left: 45rem;
+  padding-right: 27rem;
+}
+.hbspt-form::after {
+  position: absolute;
+  content: "";
+  top: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  background: url(/assets/images/icons8-close.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+#hs-form-iframe-0 form {
+  width: 100% !important;
 }
 
 /* HEADER */
@@ -442,14 +478,47 @@ html {
 }
 
 .about-us-dropdown {
-  width: 205%;
+  width: 400%;
   right: 0;
+}
+.about-us-dropdown .h-dropdown__link.contact {
+  font-size: 2rem;
+  background: #C7C8DA;
+  padding: 0.8rem;
+  margin-bottom: 0;
+}
+.about-us-dropdown .h-dropdown__link.contact:hover {
+  color: #333447 !important;
 }
 .about-us-dropdown .h-dropdown__links {
   margin-top: 0;
 }
 .about-us-dropdown::before {
-  left: calc(75% - 11px);
+  left: calc(87% - 11px);
+}
+.about-us-dropdown .default-button_green {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-top: 1.6rem;
+  margin-right: 0;
+}
+
+.contact-us__cards.dropdown {
+  background: #EBEBEB;
+  padding: 1.4rem;
+}
+.contact-us__cards.dropdown .contact-us__card:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+.contact-us__cards.dropdown .contact-us__card-img {
+  margin-right: 1rem;
+}
+.contact-us__cards.dropdown .contact-us__card-title {
+  font-size: 1.8rem;
+}
+.contact-us__cards.dropdown .contact-us__card-description {
+  font-size: 1.4rem;
 }
 
 .home {
@@ -1195,7 +1264,6 @@ html {
   width: 100%;
   border-radius: 4.2rem;
   position: relative;
-  z-index: 10;
 }
 @media (max-width: 900px) {
   .tech-video-white video {

@@ -65,6 +65,10 @@
 	}
 }
 
+body.not-scroll {
+	overflow: hidden;
+}
+
 html {
 	// This defines what 1 rem is 
 	font-size: 62.5% !important; // 1rem = 10px; 10px/16px = 62.5%
@@ -299,3 +303,35 @@ $font_1: 'Source Sans 3';
 	}
 }
 
+/* TECH OVERVIEW FORM */ 
+
+.hbspt-form {
+	position: fixed;
+	z-index: 1000;
+	display: flex;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	backdrop-filter: brightness(0.5) blur(11px);
+	align-items: center;
+	justify-content: center;
+	padding-left: 45rem;
+	padding-right: 27rem;
+
+	&::after {
+		position: absolute;
+		content: '';
+		top: 50px;
+		right: 50px;
+		width: 50px;
+		height: 50px;
+		background: url(/assets/images/icons8-close.svg);
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+#hs-form-iframe-0 form{
+	width: 100% !important;
+}

@@ -288,14 +288,57 @@
 }
 
 .about-us-dropdown {
-	width: 205%;
+	width: 400%;
 	right: 0;
+
+	.h-dropdown__link.contact {
+		font-size: 2rem;
+		background: $grey_50;
+		padding: 0.8rem;
+		margin-bottom: 0;
+
+		&:hover {
+			color: $black_100 !important;
+		}
+	}
 
 	.h-dropdown__links {
 		margin-top: 0;
 	}
 
 	&::before {
-		left: calc(75% - 11px);
+		left: calc(87% - 11px);
+	}
+
+	.default-button_green {
+		width: 100%;
+		text-align: center;
+		display: block;
+		margin-top: 1.6rem;
+		margin-right: 0;
+	}
+}
+
+.contact-us__cards.dropdown {
+	background: $grey_20;
+	padding: 1.4rem;
+
+	.contact-us__card {
+	
+		&:not(:last-child) {
+			margin-bottom: 1.8rem;
+		}
+	}
+	.contact-us__card-img {
+		margin-right: 1rem;
+	}
+	.contact-us__card-text {
+		
+	}
+	.contact-us__card-title {
+		font-size: 1.8rem;
+	}
+	.contact-us__card-description {
+		font-size: 1.4rem;
 	}
 }

@@ -159,6 +159,17 @@ function generateScrollToLinks() {
 
     if (container) {
         const headings = container.querySelectorAll('h2, h3'); // Select both h2 and h3 headings
+		console.log(headings)
+
+		if (headings.length != 0) {
+			const sideNav = document.querySelector('.post-body__left')
+			const sideNavTitle = document.createElement('h2');
+			sideNavTitle.className = 'side-panel__title';
+			sideNavTitle.innerText = 'On this page';
+
+			sideNav.insertBefore(sideNavTitle, sideNav.firstChild)
+		}
+
         let linksHTML = '';
 
         headings.forEach((heading) => {
@@ -443,3 +454,16 @@ if (window.location.pathname.includes('/academy/') || window.location.pathname.i
 	// Initial fetch all posts
 	fetchPostsByTag(null, currentPage, postsPerPage);
 }
+
+
+// /* TECH OVERVIEW FORM */ 
+
+// window.addEventListener('load', function(){
+// 	const runFormBtn = document.getElementById('runScriptButton');
+
+// 	runFormBtn.addEventListener('click', function() {
+// 		document.body.classList.add('not-scroll')
+// 	})
+
+	
+// })

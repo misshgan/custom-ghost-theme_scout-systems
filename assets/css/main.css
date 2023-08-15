@@ -34,8 +34,12 @@ html {
 }
 
 /* Swiper.js */
+.swiper-pagination {
+  top: 90% !important;
+}
+
 .swiper-button-prev {
-  top: 96% !important;
+  top: 92.3% !important;
   left: 40% !important;
 }
 .swiper-button-prev::after {
@@ -48,7 +52,7 @@ html {
 }
 
 .swiper-button-next {
-  top: 96% !important;
+  top: 92.3% !important;
   right: 40% !important;
 }
 .swiper-button-next::after {

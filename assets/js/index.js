@@ -10,12 +10,15 @@ if (window.location.pathname === '/') {
 const swiper1 = new Swiper('.testimonials', {
 	// Optional parameters
 	direction: 'horizontal',
+	autoplay: {
+		delay: 10000,
+		disableOnInteraction: false,
+	},
 	loop: true,
   
 	// If we need pagination
 	pagination: {
 	  el: '.swiper-pagination',
-	  dynamicBullets: true,
 	},
   
 	// Navigation arrows
@@ -456,14 +459,15 @@ if (window.location.pathname.includes('/academy/') || window.location.pathname.i
 }
 
 
-// /* TECH OVERVIEW FORM */ 
+/* TECH OVERVIEW FORM */ 
 
-// window.addEventListener('load', function(){
-// 	const runFormBtn = document.getElementById('runScriptButton');
+window.addEventListener('load', function(){
+	const runFormBtn = document.getElementById('runScriptButton');
 
-// 	runFormBtn.addEventListener('click', function() {
-// 		document.body.classList.add('not-scroll')
-// 	})
+	if (runFormBtn) {
+		runFormBtn.addEventListener('click', function() {
+			document.body.classList.add('not-scroll')
+		})
+	}
 
-	
-// })
+})

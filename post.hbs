@@ -91,6 +91,14 @@
 		</div>
 		{{/if}}
 		{{/get}}
+
+		<chat-bot platform_id="cfa51ac4-c913-4621-823c-588ea399ba0b" user_id="65e721a0-6df2-428e-b3f3-c9262477969f" chatbot_id="31adc5d1-bc97-4d80-b759-74297692d725"><a href="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral">[chatbot]</a></chat-bot>
+
+		<style>
+			.post-hero__tags > a:not(:first-child) {
+				pointer-events: none;
+			}
+		</style>
 	{{/has}}
 
 	{{#has tag="#blog"}}
@@ -108,10 +116,12 @@
 		</div>
 		{{/if}}
 		{{/get}}
-	{{/has}}
 
-	{{#has tag="academy"}}
-		<chat-bot platform_id="cfa51ac4-c913-4621-823c-588ea399ba0b" user_id="65e721a0-6df2-428e-b3f3-c9262477969f" chatbot_id="31adc5d1-bc97-4d80-b759-74297692d725"><a href="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral">[chatbot]</a></chat-bot>
+		<style>
+			.post-hero__tags > a {
+				pointer-events: none;
+			}
+		</style>
 	{{/has}}
 
 {{/post}}

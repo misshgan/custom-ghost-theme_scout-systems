@@ -79,8 +79,6 @@ document.addEventListener('click', function (e) {
 });
 
   
-
-
 /* Unordered accordion */
 
 window.addEventListener('load', function() {
@@ -466,17 +464,21 @@ window.addEventListener('load', function(){
 
 	if (runFormBtn) {
 		const formContainer = document.querySelector('.popup-form-container')
+		let outsideClickListener;
 
 		runFormBtn.addEventListener('click', function() {
 			document.body.classList.add('not-scroll')
 			formContainer.classList.add('active')
 
-			window.addEventListener('click', (e) => {
+			outsideClickListener = function(e){
 				if (e.target === formContainer) {
 					formContainer.classList.remove('active')
 					document.body.classList.remove('not-scroll')
+					window.removeEventListener('click', outsideClickListener);
 				}
-			})
+			};
+
+			window.addEventListener('click', outsideClickListener);
 		})
 	}
 

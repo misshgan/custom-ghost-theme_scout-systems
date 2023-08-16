@@ -309,33 +309,73 @@ $font_1: 'Source Sans 3';
 
 /* TECH OVERVIEW FORM */ 
 
-.hbspt-form {
+.popup-form-container {
 	position: fixed;
-	z-index: 1000;
-	display: flex;
 	top: 0;
 	left: 0;
-	height: 100vh;
-	width: 100vw;
-	backdrop-filter: brightness(0.5) blur(11px);
+	width: 100%;
+	height: 100%;
+
+	visibility: hidden;
+	display: none;
 	align-items: center;
 	justify-content: center;
-	padding-left: 45rem;
-	padding-right: 27rem;
 
-	&::after {
-		position: absolute;
-		content: '';
-		top: 50px;
-		right: 50px;
-		width: 50px;
-		height: 50px;
-		background: url(/assets/images/icons8-close.svg);
-		background-position: center;
-		background-size: cover;
+	backdrop-filter: blur(10px) brightness(0.5);
+	z-index: 50;
+	transition: all .2s;
+
+	&.active {
+		display: flex;
+		visibility: visible;
 	}
 }
 
-#hs-form-iframe-0 form{
-	width: 100% !important;
+.popup-form {
+	width: 30%;
+	padding: 3rem;
+	border-radius: 32px;
+	background: #0A8058;
+
+	&__title {
+		margin-bottom: 2rem;
+
+		color: $white;
+		font-weight: 700;
+		font-size: 4.2rem;
+		line-height: 1.28;
+	}
 }
+
+
+
+// .hbspt-form {
+// 	position: fixed;
+// 	z-index: 1000;
+// 	display: flex;
+// 	top: 0;
+// 	left: 0;
+// 	height: 100vh;
+// 	width: 100vw;
+// 	backdrop-filter: brightness(0.5) blur(11px);
+// 	align-items: center;
+// 	justify-content: center;
+// 	padding-left: 45rem;
+// 	padding-right: 27rem;
+
+// 	&::after {
+// 		position: absolute;
+// 		content: '';
+// 		top: 50px;
+// 		right: 50px;
+// 		width: 50px;
+// 		height: 50px;
+// 		background: url(/assets/images/icons8-close.svg);
+// 		background-position: center;
+// 		background-size: cover;
+// 	}
+// }
+
+// #hs-form-iframe-0 form{
+// 	width: 100% !important;
+// }

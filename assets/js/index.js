@@ -465,8 +465,18 @@ window.addEventListener('load', function(){
 	const runFormBtn = document.getElementById('runScriptButton');
 
 	if (runFormBtn) {
+		const formContainer = document.querySelector('.popup-form-container')
+
 		runFormBtn.addEventListener('click', function() {
 			document.body.classList.add('not-scroll')
+			formContainer.classList.add('active')
+
+			window.addEventListener('click', (e) => {
+				if (e.target === formContainer) {
+					formContainer.classList.remove('active')
+					document.body.classList.remove('not-scroll')
+				}
+			})
 		})
 	}
 

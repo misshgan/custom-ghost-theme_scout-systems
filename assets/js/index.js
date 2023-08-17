@@ -460,25 +460,28 @@ if (window.location.pathname.includes('/academy/') || window.location.pathname.i
 /* TECH OVERVIEW FORM */ 
 
 window.addEventListener('load', function(){
-	const runFormBtn = document.getElementById('runScriptButton');
+	const runFormBtns = document.querySelectorAll('.runScriptButton');
 
-	if (runFormBtn) {
+	if (runFormBtns) {
 		const formContainer = document.querySelector('.popup-form-container')
 		let outsideClickListener;
 
-		runFormBtn.addEventListener('click', function() {
-			document.body.classList.add('not-scroll')
-			formContainer.classList.add('active')
-
-			outsideClickListener = function(e){
-				if (e.target === formContainer) {
-					formContainer.classList.remove('active')
-					document.body.classList.remove('not-scroll')
-					window.removeEventListener('click', outsideClickListener);
-				}
-			};
-
-			window.addEventListener('click', outsideClickListener);
+		runFormBtns.forEach(btn => {
+			btn.addEventListener('click', function() {
+				document.body.classList.add('not-scroll')
+				formContainer.classList.add('active')
+				const closeButton = document.querySelector('.popup-close')
+	
+				outsideClickListener = function(e){
+					if (e.target === formContainer || e.target === closeButton) {
+						formContainer.classList.remove('active')
+						document.body.classList.remove('not-scroll')
+						window.removeEventListener('click', outsideClickListener);
+					}
+				};
+	
+				window.addEventListener('click', outsideClickListener);
+			})
 		})
 	}
 

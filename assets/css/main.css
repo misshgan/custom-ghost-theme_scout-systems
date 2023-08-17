@@ -236,6 +236,22 @@ html {
   line-height: 1.28;
 }
 
+.popup-close {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  width: 6rem;
+  height: 6rem;
+  background-image: url(/assets/images/icons8-close.svg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.popup-close:hover {
+  transform: scale(0.9);
+}
+
 /* HEADER */
 .header {
   padding: 2.4rem 0;

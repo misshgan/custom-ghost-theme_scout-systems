@@ -347,35 +347,20 @@ $font_1: 'Source Sans 3';
 	}
 }
 
+.popup-close {
+	position: absolute;
+	top: 5rem;
+	right: 5rem;
+	width: 6rem;
+	height: 6rem;
 
+	background-image: url(/assets/images/icons8-close.svg);
+	background-position: center;
+	background-size: cover;
+	cursor: pointer;
+	transition: all .3s;
 
-// .hbspt-form {
-// 	position: fixed;
-// 	z-index: 1000;
-// 	display: flex;
-// 	top: 0;
-// 	left: 0;
-// 	height: 100vh;
-// 	width: 100vw;
-// 	backdrop-filter: brightness(0.5) blur(11px);
-// 	align-items: center;
-// 	justify-content: center;
-// 	padding-left: 45rem;
-// 	padding-right: 27rem;
-
-// 	&::after {
-// 		position: absolute;
-// 		content: '';
-// 		top: 50px;
-// 		right: 50px;
-// 		width: 50px;
-// 		height: 50px;
-// 		background: url(/assets/images/icons8-close.svg);
-// 		background-position: center;
-// 		background-size: cover;
-// 	}
-// }
-
-// #hs-form-iframe-0 form{
-// 	width: 100% !important;
-// }
+	&:hover {
+		transform: scale(0.9);
+	}
+}

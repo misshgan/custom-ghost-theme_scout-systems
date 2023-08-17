@@ -3829,6 +3829,11 @@ html {
   margin-right: 1.2rem;
   padding-top: 0.4rem;
 }
+@media (min-width: 1800px) {
+  .pricing-card__feature-left {
+    font-size: 1.5rem;
+  }
+}
 .pricing-card__feature-right {
   width: 45%;
   color: #3D3E52;
@@ -3837,16 +3842,21 @@ html {
   line-height: 1.33; /* 133.333% */
   text-transform: capitalize;
 }
+@media (min-width: 1800px) {
+  .pricing-card__feature-right {
+    font-size: 1.5rem;
+  }
+}
 
 .pricing-card.active {
-  border: 2px solid #14BD84;
+  border: 3px solid #14BD84;
   padding: 4.2rem;
   width: 35%;
-  margin: -3rem 0;
+  margin: -3.2rem 0;
 }
-.pricing-card.active .default-button_green {
+.pricing-card.active .default-button.green {
   display: block;
-  margin: 4rem 0;
+  margin: 4rem 0 2rem;
   width: 100%;
   text-align: center;
 }

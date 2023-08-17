@@ -2,6 +2,8 @@
 
 {{#contentFor "title"}}{{@site.title}} - Pricing{{plural pagination.page empty='' singular='' plural=' – (Page %)'}}{{/contentFor}}
 
+{{> structure/form-popup}}
+
 <div class="tech-hero pricing">
 	<div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
 	<div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
@@ -22,7 +24,7 @@
 				<div class="tech-hero__block2-item"><div class="tech-hero__block2-icon">{{> icons/check-mark-green}}</div> Up to 20 Compass Stations</div>
 			</div>
 			<div class="tech-hero__block3">
-				<a href="#" class="default-button_green">Get started</a>
+				<div style="cursor: pointer;" class="default-button_green runScriptButton">Get started</div>
 				<div class="tech-hero__block3-description"> 
 					<div>{{> icons/info}}</div>
 					<p>We believe in the power of our program so much that we offer a money-back guarantee if you’re not completely satisfied</p>
@@ -44,7 +46,7 @@
 					<h3 class="pricing-card__title">Lean</h3>
 				</div>
 				<div class="pricing-card__price"><span class="pricing-card__price_bold">$30</span>/ mo (per Compass Station)</div>
-				<a href="#" class="default-button green">Get started</a>
+				<a href="#" class="default-button green runScriptButton">Get started</a>
 				<div class="pricing-card__features">
 					<div class="pricing-card__features-title">Includes:</div>
 					<div class="pricing-card__feature">
@@ -114,7 +116,7 @@
 					<div class="pricing-card__title-offer">best offer</div>
 				</div>
 				<div class="pricing-card__price"><span class="pricing-card__price_bold">$50</span>/ mo (per Compass Station)</div>
-				<a href="#" class="default-button_green">Get started</a>
+				<div style="cursor: pointer;" class="default-button_green runScriptButton">Get started</div>
 				<div class="pricing-card__features">
 					<div class="pricing-card__features-title">Includes:</div>
 					<div class="pricing-card__feature">
@@ -182,7 +184,7 @@
 					<h3 class="pricing-card__title">Enterprise </h3>
 				</div>
 				<div class="pricing-card__price" style="padding-top: 24px;">Let’s Chat</div>
-				<a href="#" class="default-button green">Get started</a>
+				<a href="#" class="default-button green runScriptButton">Get started</a>
 				<div class="pricing-card__features">
 					<div class="pricing-card__features-title">Includes:</div>
 					<div class="pricing-card__feature">

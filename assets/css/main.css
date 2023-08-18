@@ -1933,6 +1933,9 @@ html {
 .contact-us .w1340 {
   position: relative;
   z-index: 5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .contact-us__left {
   width: 28.13%;
@@ -1983,6 +1986,10 @@ html {
   font-size: 1.8rem;
   font-weight: 400;
 }
+.contact-us__right {
+  width: 40%;
+}
+
 .tech-white-cards-2 {
   padding: 10rem 0;
 }

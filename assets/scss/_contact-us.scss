@@ -30,6 +30,10 @@
 	.w1340 {
 		position: relative;
 		z-index: 5;
+
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
 	}
 	&__left {
 		width: 28.13%;
@@ -85,5 +89,6 @@
 		font-weight: 400;
 	}
 	&__right {
+		width: 40%;
 	}
 }

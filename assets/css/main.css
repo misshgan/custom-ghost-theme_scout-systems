@@ -3843,6 +3843,7 @@ html {
 }
 .pricing-card__feature-right {
   width: 45%;
+  padding-top: 3px;
   color: #3D3E52;
   font-size: 1.8rem;
   font-weight: 600;

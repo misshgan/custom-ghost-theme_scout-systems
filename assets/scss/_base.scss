@@ -77,9 +77,9 @@ html {
 		font-size: 56.25% !important; // 1 rem = 9 px; 9/16px = 56.25%
 	}
 
-	@include respond(1000px) {
-		font-size: 50% !important; // 1 rem = 8px; 8/16px = 50% 
-	}
+	// @include respond(1000px) {
+	// 	font-size: 50% !important; // 1 rem = 8px; 8/16px = 50% 
+	// }
 
 	// @include respond(900px) {
 	// 	font-size: 43% !important; // 1 rem = 7px; 7/16 = 43%
@@ -242,7 +242,6 @@ $font_1: 'Source Sans 3';
 }
 .default-button {
 	width: max-content;
-	margin-right: 2rem;
 	padding: 1.6rem 2.4rem;
 
 	font-weight: 700;

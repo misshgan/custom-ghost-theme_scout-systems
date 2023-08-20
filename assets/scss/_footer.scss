@@ -24,11 +24,11 @@
 		flex-wrap: wrap;
 
 		@media (max-width:900px) {
-			padding: 8.5rem 0 3rem;
+			padding: 4rem 0 1rem;
 		}
 
-		@media (max-width:900px) {
-			padding: 4rem 0 1rem;
+		@media (max-width:450px) {
+			justify-content: center;
 		}
 	}
 	&__logo {
@@ -38,6 +38,9 @@
 
 		@media (max-width:500px) {
 			width: 100%;
+			display: flex;
+			justify-content: center;
+			margin-right: 0;
 		}
 	}
 	&__nav {
@@ -119,7 +122,12 @@
 		justify-content: space-between;
 
 		@media (max-width:475px) {
-			flex-direction: column;
+			flex-direction: column-reverse;
+			align-items: center;
+
+			div {
+				margin-bottom: 2rem;
+			}
 		}
 	}
 	&__copy-text {

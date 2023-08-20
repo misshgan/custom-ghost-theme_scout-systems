@@ -59,6 +59,18 @@
 	padding-bottom: 8.6rem;
 	overflow: hidden;
 
+	@media (max-width:700px) {
+		border-radius: 0px 0px 2.2rem 2.2rem;
+	}
+
+	@media (max-width:600px) {
+		border-radius: 0px 0px 1.2rem 1.2rem;
+	}
+
+	@media (max-width:450px) {
+		padding-bottom: 6rem;
+	}
+
 	&__shadow {
 		background: linear-gradient(180deg, rgba(51, 52, 71, 0.46) 0%, #333447 100%);
 		position: absolute;
@@ -126,6 +138,22 @@
 			font-size: 1.6rem;
 		}
 	}
+
+	.hero__buttons {
+		display: flex;
+		width: max-content;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 4.2rem;
+		display: flex;
+		align-items: center;
+	
+		@media (max-width:450px) {
+			flex-direction: column;
+			width: 100%;
+			margin-top: 8rem;
+		}
+	}
 }
 
 .hero__buttons {
@@ -139,6 +167,7 @@
 
 	@media (max-width:450px) {
 		flex-direction: column;
+		width: 100%;
 	}
 }
 

@@ -365,7 +365,7 @@ html {
 }
 @media (max-width: 500px) {
   .hero__title {
-    margin: 15rem 0 2rem;
+    margin: 25rem 0 2rem;
   }
 }
 .hero__subtitle {

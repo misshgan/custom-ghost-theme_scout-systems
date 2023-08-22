@@ -4,11 +4,22 @@
 	padding: 10rem 0;
 	overflow: hidden;
 
+	@media (max-width:768px) {
+		padding: 6rem 0;
+	}
+
 	&__ellipse {
 		position: absolute;
 		bottom: 0;
 		right: -2%;
 		z-index: 0;
+
+		@media (max-width:768px) {
+			bottom: -26%;
+			right: -29%;
+			z-index: 0;
+			width: 55rem;
+		}
 	}
 	.w1340 {
 	}
@@ -22,6 +33,10 @@
 		img {
 			width: 100%;
 			object-fit: cover;
+		}
+
+		@media (max-width:768px) {
+			border-radius: 32px;
 		}
 	}
 	&__text {

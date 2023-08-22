@@ -3,12 +3,16 @@
 	border-radius: 4.2rem;
 
 	position: relative;
+	object-fit: cover;
 
 	@media (max-width:900px) {
 		height: 55rem;
 	}
 	@media (max-width:800px) {
 		height: 45rem;
+	}
+	@media (max-width:768px) {
+		border-radius: 3.2rem;
 	}
 	@media (max-width:700px) {
 		height: 40rem;

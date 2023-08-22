@@ -5,6 +5,11 @@
 	position: relative;
 	overflow: hidden;
 
+	@media (max-width:768px) {
+		padding: 19rem 0 14rem;
+		border-radius: 0px 0px 32px 32px;
+	}
+
 	&__ellipse1 {
 		position: absolute;
 		top: -50%;
@@ -34,6 +39,14 @@
 		@media (min-width:2100px) {
 			left: 18%;
 		}
+
+		@media (max-width:768px) {
+			left: 3%;
+			position: absolute;
+			top: -42%;
+			width: 39.3rem;
+			z-index: 0;
+		}
 	}
 
 	&__ellipse2 {
@@ -49,10 +62,9 @@
 			object-fit: cover;
 		}
 
-		// @media (min-width:1800px) {
-		// 	right: -8%;
-		// 	bottom: -25%;
-		// }
+		@media (max-width:768px) {
+			width: 33.1rem;
+		}
 	}
 	
 	&__text {
@@ -69,6 +81,11 @@
 		font-weight: 600;
 		line-height: 1.111;
 		text-transform: uppercase;
+
+		@media (max-width:768px) {
+			font-size: 5.2rem;
+			margin-bottom: 3rem;
+		}
 	}
 	&__subtitle {
 		color: $grey_50;

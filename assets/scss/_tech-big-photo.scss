@@ -8,6 +8,10 @@
 		padding: 6rem 0;
 	}
 
+	@media (max-width:450px) {
+		padding: 4rem 0;
+	}
+
 	&__ellipse {
 		position: absolute;
 		bottom: 0;
@@ -37,6 +41,11 @@
 
 		@media (max-width:768px) {
 			border-radius: 32px;
+		}
+
+		@media (max-width:450px) {
+			border-radius: 16px;
+			margin-bottom: 2.2rem;
 		}
 	}
 	&__text {

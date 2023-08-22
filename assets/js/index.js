@@ -49,6 +49,55 @@ const swiper2 = new Swiper('.tech-big-slider__content', {
 
   });
 }
+
+// Swiper instance 3
+if (window.location.pathname === '/tech-overview/' && window.innerWidth < 601) {
+	const techOverviewSwiper = document.querySelector('.tech-track-swiper');
+	const techOverviewSwiperWrapper = techOverviewSwiper.querySelector('.tech-track__cards');
+	const techOverviewSwiperSlides = techOverviewSwiperWrapper.querySelectorAll('.tech-track__card');
+
+	techOverviewSwiper.classList.add('swiper');
+	techOverviewSwiperWrapper.classList.add('swiper-wrapper');
+	techOverviewSwiperSlides.forEach(slide => {
+	slide.classList.add('swiper-slide')
+	})
+
+
+	if (window.innerWidth > 500) {
+		let swiper3 = new Swiper('.tech-track-swiper', {
+			// Optional parameters
+			slidesPerView: 2,
+			spaceBetween: 50,
+			direction: 'horizontal',
+			// autoplay: {
+			// 	delay: 10000,
+			// 	disableOnInteraction: false,
+			// },
+	
+			// If we need pagination
+			pagination: {
+			el: '.swiper-pagination',
+			},
+		});
+	} else if (window.innerWidth < 501) {
+		let swiper3 = new Swiper('.tech-track-swiper', {
+			// Optional parameters
+			slidesPerView: 1,
+			spaceBetween: 50,
+			direction: 'horizontal',
+			// autoplay: {
+			// 	delay: 10000,
+			// 	disableOnInteraction: false,
+			// },
+	
+			// If we need pagination
+			pagination: {
+			el: '.swiper-pagination',
+			},
+		});
+	}
+}
+	
   //Dropdown menu 
 
  // Target all dropdown elements using their shared class name

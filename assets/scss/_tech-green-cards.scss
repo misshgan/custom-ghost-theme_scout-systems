@@ -8,6 +8,14 @@
 		padding: 8rem 0;
 	}
 
+	@media (max-width:600px) {
+		padding: 6rem 0;
+	}
+
+	@media (max-width:450px) {
+		padding: 4rem 0;
+	}
+
 	&__ellipse1 {
 		position: absolute;
 		top: -20%;
@@ -79,10 +87,20 @@
 
 		&:not(:last-child) {
 			margin-bottom: 5rem;
+
+			@media (max-width:600px) {
+				flex-direction: column-reverse;
+			}
 		}
 
 		@media (max-width:768px) {
 			column-gap: 4rem;
+		}
+
+		&:last-child {
+			@media (max-width:600px) {
+				flex-direction: column;
+			}
 		}
 	}
 	&__card-img {
@@ -92,6 +110,12 @@
 		@media (max-width:768px) {
 			border-radius: 32px;
 			width: 48%;
+		}
+
+		@media (max-width:600px) {
+			width: 100%;
+			border-radius: 16px;
+			margin-top: 3rem;
 		}
 	}
 	&__card-text {
@@ -109,6 +133,10 @@
 
 		@media (max-width:768px) {
 			font-size: 4.2rem;
+		}
+
+		@media (max-width:600px) {
+			font-size: 3.8rem;
 		}
 	}
 	&__card-description {

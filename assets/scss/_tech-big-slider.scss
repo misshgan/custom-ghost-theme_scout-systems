@@ -6,14 +6,54 @@
 
 	.w1340 {
 		padding: 10rem 0;
+
+		&.swiper {
+			padding-left: 30px;
+			padding-right: 30px;
+
+			@media (max-width:450px) {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			.swiper-pagination {
+				top: 85.5%!important;
+
+				@media (max-width:768px) {
+					top: unset !important;
+					bottom: 7% !important;
+				}
+
+				// @media (min-width:1024px) {
+				// 	top: 83.5% !important;
+				// }
+			}
+
+			@media (max-width:1024px) {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
 	}
 	&__cards {
+
+		&.swiper-wrapper {
+			padding-bottom: 10rem;
+
+			@media (max-width:600px) {
+				padding-bottom: 7rem;
+			}
+		}
 	}
 	&__card {
 		border-radius: 16px;
 		width: 71.11% !important;
 		height: 62.5rem !important;
 		overflow: hidden;
+
+		@media (max-width:768px) {
+			height: unset !important;
+		}
 
 		img {
 			width: 100%;

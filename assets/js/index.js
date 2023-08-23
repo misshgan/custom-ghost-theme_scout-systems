@@ -7,51 +7,54 @@ import "../css/index.css";
 
 if (window.location.pathname === '/') {
 	//Swiper instance 1
-const swiper1 = new Swiper('.testimonials', {
-	// Optional parameters
-	direction: 'horizontal',
-	autoplay: {
-		delay: 10000,
-		disableOnInteraction: false,
-	},
-	loop: true,
+	const swiper1 = new Swiper('.testimonials', {
+		// Optional parameters
+		direction: 'horizontal',
+		autoplay: {
+			delay: 10000,
+			disableOnInteraction: false,
+		},
+		loop: true,
+	
+		// If we need pagination
+		pagination: {
+		el: '.swiper-pagination',
+		},
+	
+		// Navigation arrows
+		navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+		}
+	});
+}
   
-	// If we need pagination
-	pagination: {
-	  el: '.swiper-pagination',
-	},
-  
-	// Navigation arrows
-	navigation: {
-	  nextEl: '.swiper-button-next',
-	  prevEl: '.swiper-button-prev',
-	}
-  });
-  
-//Swiper instance 2
+if (window.location.pathname === '/industrial-iot/') {
 
-const swiper2 = new Swiper('.tech-big-slider__content', {
-	slidesPerView: "auto",
-	spaceBetween: 40,
-	// Optional parameters
-	direction: 'horizontal',
-	autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-	loop: true,
+	//Swiper instance 2
 
-	// If we need pagination
-	pagination: {
-	  el: '.swiper-pagination',
-	  dynamicBullets: true,
-	},
+	const swiper2 = new Swiper('.tech-big-slider__content', {
+		slidesPerView: "auto",
+		spaceBetween: window.innerWidth > 768 ? 30 : 20,
+		// Optional parameters
+		direction: 'horizontal',
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		loop: true,
 
-  });
+		// If we need pagination
+		pagination: {
+		el: '.swiper-pagination',
+		dynamicBullets: true,
+		},
+
+	});
 }
 
 // Swiper instance 3
-if (window.location.pathname === '/tech-overview/' && window.innerWidth < 601) {
+if ((window.location.pathname === '/tech-overview/' || window.location.pathname === '/root-cause-analysis/') && window.innerWidth < 601) {
 	const techOverviewSwiper = document.querySelector('.tech-track-swiper');
 	const techOverviewSwiperWrapper = techOverviewSwiper.querySelector('.tech-track__cards');
 	const techOverviewSwiperSlides = techOverviewSwiperWrapper.querySelectorAll('.tech-track__card');
@@ -121,6 +124,46 @@ if (window.location.pathname === '/work-instructions/' && window.innerWidth < 65
 		});
 	} else if (window.innerWidth < 551) {
 		let swiper4 = new Swiper('.tech-white-cards-2-swiper', {
+			// Optional parameters
+			slidesPerView: 1,
+			spaceBetween: 30,
+			direction: 'horizontal',
+	
+			// If we need pagination
+			pagination: {
+			el: '.swiper-pagination',
+			},
+		});
+	}
+}
+
+// Swiper instance 5
+if (window.location.pathname === '/data-collection/' && window.innerWidth < 769) {
+	const techWhiteCards2Swiper = document.querySelector('.tech-white-cards-3-swiper');
+	const techWhiteCards2SwiperWrapper = techWhiteCards2Swiper.querySelector('.tech-white-cards-3__cards');
+	const techWhiteCards2SwiperSlides = techWhiteCards2SwiperWrapper.querySelectorAll('.tech-white-cards-3__card');
+
+	techWhiteCards2Swiper.classList.add('swiper');
+	techWhiteCards2SwiperWrapper.classList.add('swiper-wrapper');
+	techWhiteCards2SwiperSlides.forEach(slide => {
+	slide.classList.add('swiper-slide')
+	})
+
+
+	if (window.innerWidth > 450) {
+		let swiper5 = new Swiper('.tech-white-cards-3-swiper', {
+			// Optional parameters
+			slidesPerView: 2,
+			spaceBetween: 20,
+			direction: 'horizontal',
+	
+			// If we need pagination
+			pagination: {
+			el: '.swiper-pagination',
+			},
+		});
+	} else if (window.innerWidth < 451) {
+		let swiper5 = new Swiper('.tech-white-cards-3-swiper', {
 			// Optional parameters
 			slidesPerView: 1,
 			spaceBetween: 30,
@@ -575,3 +618,36 @@ window.addEventListener('load', function(){
 	}
 
 })
+
+/* MOBILE NAV */
+
+if (window.innerWidth < 769) {
+	const mobileNavOpen = document.querySelector('.mobile-menu-open')
+	const mobileNav = document.querySelector('.mobile-nav');
+	const mobileNavTitles = document.querySelectorAll('.mobile-nav__title')
+	
+	if (mobileNavOpen) {
+
+		mobileNavOpen.addEventListener('click', () => {
+			mobileNav.classList.add('active')
+			document.body.classList.add('not-scroll');
+		})
+
+		const mobileNavClose = document.querySelector('.mobile-nav__close');
+			mobileNavClose.addEventListener('click', () => {
+				mobileNav.classList.remove('active')
+				document.body.classList.remove('not-scroll');
+			})
+
+		mobileNavTitles.forEach(item => {
+			item.addEventListener('click', () => {
+				if (!item.classList.contains('active')) {
+					mobileNavTitles.forEach(item => {item.classList.remove('active')})
+					item.classList.add('active')
+				} else if (item.classList.contains('active')) {
+					mobileNavTitles.forEach(item => {item.classList.remove('active')})
+				}
+			}) 
+		})
+	}
+}

@@ -13,14 +13,12 @@
 	</div>
 </div>
 
-<div style="padding:10rem 0">
-	{{> structure/technology/tech-white-cards-1 }}
-</div>
+{{> structure/technology/tech-white-cards-1 }}
 
 <div class="tech-big-photo">
 	<div class="tech-big-photo__ellipse">{{> images/tech-big-photo-ellipse}}</div>
 	<div class="w1340">
-		<div class="tech-big-photo__img" style="margin-left: auto;margin-right:auto;width:65%;">
+		<div class="tech-big-photo__img iot">
 			<img src="{{asset "assets/images/industrial-iot/hardware-tracker.png"}}" alt="tech hardware tracker">
 		</div>
 		<h3 class="tech-big-photo__text">This rugged, opto-isolated edge device is designed to handle nearly any production environment.</h3>
@@ -28,123 +26,120 @@
 </div>
 
 
-<div style="padding: 10rem 0;">
-	<div class="tech-u-accordion">
-		<div class="w1340">
-			<div class="tech-u-accordion__left">
-				<div class="tech-u-accordion__item">
-					<div class="tech-u-accordion__item-header active">
-						<h2 class="tech-u-accordion__title">Press Brakes</h2>
-						<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
-					</div>
-
-					<div class="tech-u-accordion__body">
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Sync with Work Instructions to automate progression</h3>
-						</div>
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Reduce backwards bends</h3>
-						</div>
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Improve safety</h3>
-						</div>
-					</div>
+<div class="tech-u-accordion">
+	<div class="w1340">
+		<div class="tech-u-accordion__left">
+			<div class="tech-u-accordion__item">
+				<div class="tech-u-accordion__item-header active">
+					<h2 class="tech-u-accordion__title">Press Brakes</h2>
+					<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
 				</div>
-				<div class="tech-u-accordion__item">
-					<div class="tech-u-accordion__item-header">
-						<h2 class="tech-u-accordion__title">CNC Machines</h2>
-						<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
-					</div>
 
-					<div class="tech-u-accordion__body">
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Separate machine value added time from human labor</h3>
-						</div>
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Compare performance of different machines</h3>
-						</div>
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Isolate cut time from gantry movement</h3>
-						</div>
+				<div class="tech-u-accordion__body">
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Sync with Work Instructions to automate progression</h3>
 					</div>
-				</div>
-				<div class="tech-u-accordion__item">
-					<div class="tech-u-accordion__item-header">
-						<h2 class="tech-u-accordion__title">Cutting Beds</h2>
-						<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Reduce backwards bends</h3>
 					</div>
-
-					<div class="tech-u-accordion__body">
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Track cutting time for improved preventative maintenance</h3>
-						</div>
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Detect and measure emergency stops</h3>
-						</div>
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Run lights out and accurately record production time</h3>
-						</div>
-					</div>
-				</div>
-				<div class="tech-u-accordion__item">
-					<div class="tech-u-accordion__item-header">
-						<h2 class="tech-u-accordion__title">Test Equipment</h2>
-						<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
-					</div>
-
-					<div class="tech-u-accordion__body">
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Embed with Work Instructions to require tests</h3>
-						</div>
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Avoid false test records with latching signals</h3>
-						</div>
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Create error-proof production cells</h3>
-						</div>
-					</div>
-				</div>
-				<div class="tech-u-accordion__item">
-					<div class="tech-u-accordion__item-header">
-						<h2 class="tech-u-accordion__title">Smart Tools</h2>
-						<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
-					</div>
-
-					<div class="tech-u-accordion__body">
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Set requirements in Work Instructions to verify proper actions</h3>
-						</div>
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Automatically progress through Work Instructions</h3>
-						</div>
-						<div class="tech-u-accordion__list-item">
-							{{> icons/checkmark}}
-							<h3 class="tech-u-accordion__list-title">Notify Operators of errors/fault codes</h3>
-						</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Improve safety</h3>
 					</div>
 				</div>
 			</div>
-			<div class="tech-u-accordion__right">
-				<div class="tech-u-accordion__img active"><video src="{{asset "assets/images/industrial-iot/tracker-video.mp4"}}" muted autoplay loop></div>
+			<div class="tech-u-accordion__item">
+				<div class="tech-u-accordion__item-header">
+					<h2 class="tech-u-accordion__title">CNC Machines</h2>
+					<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
+				</div>
+
+				<div class="tech-u-accordion__body">
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Separate machine value added time from human labor</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Compare performance of different machines</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Isolate cut time from gantry movement</h3>
+					</div>
+				</div>
 			</div>
+			<div class="tech-u-accordion__item">
+				<div class="tech-u-accordion__item-header">
+					<h2 class="tech-u-accordion__title">Cutting Beds</h2>
+					<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
+				</div>
+
+				<div class="tech-u-accordion__body">
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Track cutting time for improved preventative maintenance</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Detect and measure emergency stops</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Run lights out and accurately record production time</h3>
+					</div>
+				</div>
+			</div>
+			<div class="tech-u-accordion__item">
+				<div class="tech-u-accordion__item-header">
+					<h2 class="tech-u-accordion__title">Test Equipment</h2>
+					<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
+				</div>
+
+				<div class="tech-u-accordion__body">
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Embed with Work Instructions to require tests</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Avoid false test records with latching signals</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Create error-proof production cells</h3>
+					</div>
+				</div>
+			</div>
+			<div class="tech-u-accordion__item">
+				<div class="tech-u-accordion__item-header">
+					<h2 class="tech-u-accordion__title">Smart Tools</h2>
+					<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
+				</div>
+
+				<div class="tech-u-accordion__body">
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Set requirements in Work Instructions to verify proper actions</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Automatically progress through Work Instructions</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Notify Operators of errors/fault codes</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tech-u-accordion__right">
+			<div class="tech-u-accordion__img active"><video src="{{asset "assets/images/industrial-iot/tracker-video.mp4"}}" muted autoplay loop></div>
 		</div>
 	</div>
 </div>
-
 
 {{> structure/technology/tech-big-slider}}
 

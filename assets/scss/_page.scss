@@ -25,6 +25,10 @@
 	position: relative;
 	overflow: hidden;
 
+	@media (max-width:600px) {
+		padding-bottom: 4rem;
+	}
+
 	.shadow {
 		position: absolute;
 
@@ -38,21 +42,47 @@
 	&__shadow1 {
 		right: -67%;
 		top: -22%;
+
+		@media (max-width:768px) {
+			right: -25%;
+			top: -10rem;
+			width: 63%;
+			rotate: 60deg;
+		}
 	}
 
 	&__shadow2 {
 		left: -40%;
 		top: 2rem;
+
+		@media (max-width:768px) {
+			left: -26%;
+			top: 35rem;
+			width: 76%;
+		}
 	}
 
 	&__shadow3 {
 		right: -32%;
 		top: 104rem;
+
+		@media (max-width:768px) {
+			right: -32%;
+			top: 130rem;
+			width: 80%;
+		}
 	}
 
 	&__shadow4 {
 		bottom: -2rem;
 		left: -60%;
+
+		@media (max-width:768px) {
+			bottom: 25rem;
+			left: -34%;
+			width: 80%;
+			rotate: 16deg;
+		}
 	}
 
 	&__shadow5 {
@@ -64,7 +94,7 @@
 
 	.w1340 {
 		max-width: 95rem;
-		padding: 0;
+		padding: 0 3rem;
 		position: relative;
 		z-index: 10;
 	}
@@ -76,6 +106,10 @@
 		font-size: 2rem;
 		font-weight: 400;
 		line-height: 1.4;
+
+		@media (max-width:450px) {
+			margin: 7rem  0 4rem;
+		}
 	}
 }
 
@@ -86,12 +120,32 @@
 
 	.tech-hero__ellipse1 {
 		top: -80%;
+
+		@media (max-width:500px) {
+			left: 2%;
+			position: absolute;
+			top: -17rem;
+			width: 58%;
+			z-index: 0;
+		}
 	}
 	.tech-hero__ellipse2 {
 		bottom: -58%;
 		right: -2%;
+
+		@media (max-width:500px) {
+			bottom: -35%;
+			position: absolute;
+			right: -7%;
+			width: 28.1rem;
+			z-index: 0;
+		}
 	}
 	.tech-hero__title {
 		margin-bottom: 0;
+	}
+
+	@media (max-width:500px) {
+		
 	}
 }

@@ -197,7 +197,11 @@
 
 	.w1340.features {
 		max-width: 95rem;
-		padding: 0;
+		padding: 0 3rem;
+
+		@media (max-width:450px) {
+			padding: 0 1.5rem;
+		}
 	}
 
 	&__option {
@@ -210,6 +214,18 @@
 		color: $green_100;
 		font-size: 1.6rem;
 		font-weight: 700;
+
+		@media (max-width:768px) {
+			margin-right: 15.9rem;
+		}
+
+		@media (max-width:650px) {
+			margin-right: 6.9rem;
+		}
+
+		@media (max-width:500px) {
+			margin-right: 2.9rem;
+		}
 	}
 
 	&__green-header {
@@ -229,15 +245,38 @@
 		font-weight: 600;
 		text-transform: uppercase;
 
+		&:first-child {
+			margin-right: 3rem;
+		}
+
 		&:last-child {
 			margin-left: auto;
 			margin-right: 31.3rem;
+
+			@media (max-width:768px) {
+				margin-right: 17.3rem;
+			}
+
+			@media (max-width:650px) {
+				margin-right: 8.3rem;
+			}
+
+			@media (max-width:500px) {
+				margin-right: 4.3rem;
+			}
 		}
 	}
 
 	&.features {
+		padding: 0;
+
 		.tech-u-accordion-wide__title {
 			font-size: 2.2rem;
+
+			@media (max-width:600px) {
+				max-width: 50%;
+				padding-right: 0;
+			}
 		}
 		.tech-u-accordion-wide__list-title {
 			font-size: 1.8rem;
@@ -246,13 +285,10 @@
 			justify-content: unset;
 		}
 		.tech-u-accordion-wide__indicator {
-			width: 3.2rem;
-			height: 3.2rem;
 
 			svg {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				width: 3.2rem;
+				height: 3.2rem;
 			}
 		}
 	}

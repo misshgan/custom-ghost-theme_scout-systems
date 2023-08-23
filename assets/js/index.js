@@ -140,7 +140,9 @@ window.addEventListener('load', function() {
 		element.addEventListener('click', function() {
 		  if (!element.classList.contains('active')) {
 			uDropdownTargetList.forEach(el => el.classList.remove('active'));
-			element.classList.add('active');
+			setTimeout(() => {
+				element.classList.add('active');
+			}, 200);
 		  }
 		});
 	  });
@@ -163,7 +165,9 @@ window.addEventListener('load', function() {
 		  element.addEventListener('click', function() {
 			if (!element.classList.contains('active')) {
 			  uDropdownWideTargetList.forEach(el => el.classList.remove('active'));
-			  element.classList.add('active');
+			  setTimeout(() => {
+				element.classList.add('active');
+			}, 200);
 			} else if (element.classList.contains('active')) {
 				element.classList.remove('active')
 			}

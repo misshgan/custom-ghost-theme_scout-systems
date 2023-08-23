@@ -4,6 +4,14 @@
 	position: relative;
 	overflow: hidden;
 
+	@media (max-width:768px) {
+		padding: 6rem 0;
+	}
+
+	@media (max-width:450px) {
+		padding: 4rem 0;
+	}
+
 	.w1340 {
 		position: relative;
 		z-index: 5;
@@ -45,23 +53,50 @@
 		font-weight: 600;
 		line-height: 1;
 		text-transform: uppercase;
+
+		@media (max-width:768px) {
+			font-size: 4.2rem;
+		}
 	}
 	&__subtitle {
 		color: $white;
 		font-size: 2rem;
 		font-weight: 400;
 		line-height: 1.4;
+
+		@media (max-width:768px) {
+			font-size: 1.8rem;
+		}
 	}
 	&__cards {
 		margin-top: 7.5rem;
 
 		display: flex;
 		justify-content: space-between;
+
+		@media (max-width:768px) {
+			margin-top: 4.5rem;
+		}
+
+		@media (max-width:600px) {
+			flex-direction: column;
+			justify-content: unset;
+		}
 	}
 	&__card {
 		width: 49%;
 		display: flex;
 		flex-direction: column;
+
+		&:not(:last-child) {
+			@media (max-width:600px) {
+				margin-bottom: 3rem;
+			}
+		}
+
+		@media (max-width:600px) {
+			width: 100%;
+		}
 	}
 	&__card-img {
 		margin-bottom: 2.4rem;
@@ -70,10 +105,18 @@
 		height: 52.2rem;
 		object-fit: cover;
 		border-radius: 24px;
+
+		@media (max-width:768px) {
+			margin-bottom: 2rem;
+		}
 	}
 	&__card-title {
 		color: $white;
 		font-size: 3.2rem;
 		font-weight: 600;
+
+		@media (max-width:768px) {
+			font-size: 2.8rem;
+		}
 	}
 }

@@ -5,6 +5,10 @@
 		padding: 6rem 0;
 	}
 
+	@media (max-width:450px) {
+		padding: 2rem 0 4rem;
+	}
+
 	.w1340 {
 		display: flex;
 		flex-direction: column;

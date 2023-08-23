@@ -85,10 +85,46 @@ if (window.location.pathname === '/tech-overview/' && window.innerWidth < 601) {
 			slidesPerView: 1,
 			spaceBetween: 50,
 			direction: 'horizontal',
-			// autoplay: {
-			// 	delay: 10000,
-			// 	disableOnInteraction: false,
-			// },
+	
+			// If we need pagination
+			pagination: {
+			el: '.swiper-pagination',
+			},
+		});
+	}
+}
+
+// Swiper instance 4
+if (window.location.pathname === '/work-instructions/' && window.innerWidth < 651) {
+	const techWhiteCards2Swiper = document.querySelector('.tech-white-cards-2-swiper');
+	const techWhiteCards2SwiperWrapper = techWhiteCards2Swiper.querySelector('.tech-white-cards-2__cards');
+	const techWhiteCards2SwiperSlides = techWhiteCards2SwiperWrapper.querySelectorAll('.tech-white-cards-2__card');
+
+	techWhiteCards2Swiper.classList.add('swiper');
+	techWhiteCards2SwiperWrapper.classList.add('swiper-wrapper');
+	techWhiteCards2SwiperSlides.forEach(slide => {
+	slide.classList.add('swiper-slide')
+	})
+
+
+	if (window.innerWidth > 550) {
+		let swiper4 = new Swiper('.tech-white-cards-2-swiper', {
+			// Optional parameters
+			slidesPerView: 2,
+			spaceBetween: 30,
+			direction: 'horizontal',
+	
+			// If we need pagination
+			pagination: {
+			el: '.swiper-pagination',
+			},
+		});
+	} else if (window.innerWidth < 551) {
+		let swiper4 = new Swiper('.tech-white-cards-2-swiper', {
+			// Optional parameters
+			slidesPerView: 1,
+			spaceBetween: 30,
+			direction: 'horizontal',
 	
 			// If we need pagination
 			pagination: {

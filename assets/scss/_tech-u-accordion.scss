@@ -102,7 +102,7 @@
 
 		max-height: 0;
 		overflow: hidden;
-		transition: all .3s;
+		transition: all .5s;
 	}
 
 	&__item-header.active + &__body {
@@ -400,7 +400,7 @@
 
 		max-height: 0;
 		overflow: hidden;
-		transition: all .3s;
+		transition: all .5s;
 	}
 
 	&__item-header.active + &__body {

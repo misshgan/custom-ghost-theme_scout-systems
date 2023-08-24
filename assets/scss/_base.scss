@@ -328,6 +328,11 @@ $font_1: 'Source Sans 3';
 		display: flex;
 		visibility: visible;
 	}
+
+	@media (max-width:550px) {
+		backdrop-filter: none;
+		background: #0A8058;;
+	}
 }
 
 .popup-form {
@@ -343,6 +348,18 @@ $font_1: 'Source Sans 3';
 		font-weight: 700;
 		font-size: 4.2rem;
 		line-height: 1.28;
+	}
+
+	@media (max-width:1200px) {
+		width: 50%;
+	}
+
+	@media (max-width:768px) {
+		width: 70%;
+	}
+
+	@media (max-width:550px) {
+		width: 100%;
 	}
 }
 
@@ -361,5 +378,17 @@ $font_1: 'Source Sans 3';
 
 	&:hover {
 		transform: scale(0.9);
+	}
+
+	@media (max-width:550px) {
+		top: 2rem;
+		right: 2rem
+	}
+
+	@media (max-width:450px) {
+		height: 5rem;
+		right: 3rem;
+		top: 3rem;
+		width: 5rem;
 	}
 }

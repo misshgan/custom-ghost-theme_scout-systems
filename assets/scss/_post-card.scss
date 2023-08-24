@@ -1,7 +1,7 @@
 .post-footer__card {
 }
 .post-card {
-	width: 32%;
+	width: 31.9%;
 	border-radius: 12px;
 	overflow: hidden;
 	display: flex;
@@ -200,5 +200,13 @@
 			height: 1.8rem;
 			margin-left: 1rem;
 		}
+	}
+
+	@media (max-width:1024px) {
+		width: 48.5%;
+	}
+
+	@media (max-width:768px) {
+		width: 100%;
 	}
 }

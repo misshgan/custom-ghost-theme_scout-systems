@@ -3757,6 +3757,7 @@ html {
 .tech-hero.features .tech-hero__title {
   margin-bottom: 0;
 }
+
 .post-hero {
   padding: 14rem 0 8.5rem;
   border-radius: 0;
@@ -4152,7 +4153,7 @@ html {
 }
 
 .post-card {
-  width: 32%;
+  width: 31.9%;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -4332,6 +4333,16 @@ html {
   height: 1.8rem;
   margin-left: 1rem;
 }
+@media (max-width: 1024px) {
+  .post-card {
+    width: 48.5%;
+  }
+}
+@media (max-width: 768px) {
+  .post-card {
+    width: 100%;
+  }
+}
 
 .gh-postfeed .post-card {
   width: 100%;
@@ -4343,6 +4354,11 @@ html {
 
 .tech-hero.academy {
   padding: 12.5rem 0 6rem;
+}
+@media (max-width: 1440px) {
+  .tech-hero.academy {
+    padding-bottom: 1rem;
+  }
 }
 .tech-hero.academy .tech-hero__ellipse1 {
   left: -16%;
@@ -4361,6 +4377,9 @@ html {
   z-index: 0;
   transform: rotate(274deg);
 }
+.tech-hero.academy .w1340.swiper {
+  padding: 0 3rem;
+}
 .tech-hero.academy .tech-hero__categories {
   margin: 3.2rem auto 0;
   width: -moz-max-content;
@@ -4373,6 +4392,23 @@ html {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 1440px) {
+  .tech-hero.academy .tech-hero__categories {
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    width: 100%;
+  }
+}
+.tech-hero.academy .tech-hero__categories.swiper-wrapper {
+  justify-content: unset;
+  flex-wrap: unset;
+  max-width: unset;
+  width: unset;
+  -moz-column-gap: 0;
+       column-gap: 0;
+}
 .tech-hero.academy .tech-hero__category {
   color: #C7C8DA;
   font-size: 1.8rem;
@@ -4380,6 +4416,7 @@ html {
   padding: 10px 24px;
   border-radius: 24px;
   border: 1px solid #C7C8DA;
+  margin-bottom: 2rem;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -4387,9 +4424,18 @@ html {
   color: #333447;
   background: #FFFFFF;
 }
+.tech-hero.academy .tech-hero__category.swiper-slide {
+  width: -moz-max-content;
+  width: max-content;
+}
 
 .page-academy {
   padding: 6rem 0 10rem;
+}
+@media (max-width: 768px) {
+  .page-academy {
+    padding: 4rem 0;
+  }
 }
 .page-academy__feed {
   display: flex;
@@ -4397,6 +4443,11 @@ html {
   -moz-column-gap: 20px;
        column-gap: 20px;
   row-gap: 55px;
+}
+@media (max-width: 768px) {
+  .page-academy__feed {
+    row-gap: 3rem;
+  }
 }
 .page-academy__404 {
   width: 100%;

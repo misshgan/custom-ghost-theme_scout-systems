@@ -233,6 +233,63 @@ if (window.location.pathname === '/pricing/' && window.innerWidth < 1201) {
 		});
 	}
 }
+
+// Swiper instance 7
+if (window.location.pathname === '/academy/' && window.innerWidth < 769) {
+	const techWhiteCards2Swiper = document.querySelector('.academy-swiper');
+	const techWhiteCards2SwiperWrapper = techWhiteCards2Swiper.querySelector('.tech-hero__categories');
+	const techWhiteCards2SwiperSlides = techWhiteCards2SwiperWrapper.querySelectorAll('.tech-hero__category');
+
+	techWhiteCards2Swiper.classList.add('swiper');
+	techWhiteCards2SwiperWrapper.classList.add('swiper-wrapper');
+	techWhiteCards2SwiperSlides.forEach(slide => {
+	slide.classList.add('swiper-slide')
+	})
+
+	let swiper7 = new Swiper('.academy-swiper', {
+		// Optional parameters
+		slidesPerView: 'auto',
+		spaceBetween: window.innerWidth < 500 ? 10 : 25,
+		direction: 'horizontal',
+
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		  },
+
+		// If we need pagination
+		pagination: {
+		el: '.swiper-pagination',
+		},
+	});
+} else if (window.location.pathname === '/blog/' && window.innerWidth < 769) {
+	const techWhiteCards2Swiper = document.querySelector('.academy-swiper');
+	const techWhiteCards2SwiperWrapper = techWhiteCards2Swiper.querySelector('.tech-hero__categories');
+	const techWhiteCards2SwiperSlides = techWhiteCards2SwiperWrapper.querySelectorAll('.tech-hero__category');
+
+	techWhiteCards2Swiper.classList.add('swiper');
+	techWhiteCards2SwiperWrapper.classList.add('swiper-wrapper');
+	techWhiteCards2SwiperSlides.forEach(slide => {
+	slide.classList.add('swiper-slide')
+	})
+
+	let swiper7 = new Swiper('.academy-swiper', {
+		// Optional parameters
+		slidesPerView: 'auto',
+		spaceBetween: window.innerWidth < 500 ? 10 : 25,
+		direction: 'horizontal',
+
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		  },
+
+		// If we need pagination
+		pagination: {
+		el: '.swiper-pagination',
+		},
+	});
+}
 	
   //Dropdown menu 
 

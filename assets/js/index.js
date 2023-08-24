@@ -38,10 +38,10 @@ if (window.location.pathname === '/industrial-iot/') {
 		spaceBetween: window.innerWidth > 768 ? 30 : 20,
 		// Optional parameters
 		direction: 'horizontal',
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 2500,
+		// 	disableOnInteraction: false,
+		// },
 		loop: true,
 
 		// If we need pagination
@@ -164,6 +164,63 @@ if (window.location.pathname === '/data-collection/' && window.innerWidth < 769)
 		});
 	} else if (window.innerWidth < 451) {
 		let swiper5 = new Swiper('.tech-white-cards-3-swiper', {
+			// Optional parameters
+			slidesPerView: 1,
+			spaceBetween: 30,
+			direction: 'horizontal',
+	
+			// If we need pagination
+			pagination: {
+			el: '.swiper-pagination',
+			},
+		});
+	}
+}
+
+// Swiper instance 6
+if (window.location.pathname === '/pricing/' && window.innerWidth < 1201) {
+	const techWhiteCards2Swiper = document.querySelector('.pricing-swiper');
+	const techWhiteCards2SwiperWrapper = techWhiteCards2Swiper.querySelector('.page-pricing__cards');
+	const techWhiteCards2SwiperSlides = techWhiteCards2SwiperWrapper.querySelectorAll('.pricing-card');
+
+	techWhiteCards2Swiper.classList.add('swiper');
+	techWhiteCards2SwiperWrapper.classList.add('swiper-wrapper');
+	techWhiteCards2SwiperSlides.forEach(slide => {
+	slide.classList.add('swiper-slide')
+	})
+
+
+	if (window.innerWidth > 950) {
+		let swiper6 = new Swiper('.pricing-swiper', {
+			// Optional parameters
+			slidesPerView: 2,
+			spaceBetween: 50,
+			direction: 'horizontal',
+
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			  },
+	
+			// If we need pagination
+			pagination: {
+			el: '.swiper-pagination',
+			},
+		});
+	} else if (window.innerWidth < 951 && window.innerWidth > 768) {
+		let swiper6 = new Swiper('.pricing-swiper', {
+			// Optional parameters
+			slidesPerView: 1.5,
+			spaceBetween: 50,
+			direction: 'horizontal',
+	
+			// If we need pagination
+			pagination: {
+			el: '.swiper-pagination',
+			},
+		});
+	} else if (window.innerWidth < 769) {
+		let swiper6 = new Swiper('.pricing-swiper', {
 			// Optional parameters
 			slidesPerView: 1,
 			spaceBetween: 30,

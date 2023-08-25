@@ -134,6 +134,9 @@ const swiperConfigurations = [
       slidesPerView: 2,
       spaceBetween: 25,
       direction: 'horizontal',
+	  pagination: {
+        el: '.swiper-pagination',
+      },
     },
   },
   {
@@ -291,7 +294,6 @@ function generateScrollToLinks() {
 
     if (container) {
         const headings = container.querySelectorAll('h2, h3'); // Select both h2 and h3 headings
-		console.log(headings)
 
 		if (headings.length != 0) {
 			const sideNav = document.querySelector('.post-body__left')
@@ -419,173 +421,6 @@ copyLinkButtons.forEach(button => {
 })
 
 /* ACADEMY PAGE POSTS LOAD */
-
-// if (window.location.pathname.includes('/academy/') || window.location.pathname.includes('/blog/')) {
-// 	const postsContainer = document.getElementById('posts-container');
-// 	const categoryButtons = document.querySelectorAll('.tech-hero__category');
-// 	const paginationContainer = document.getElementById('pagination');
-
-// 	const postsPerPage = 9; // Number of posts per page
-// 	let currentPage = 1;
-
-// 	function formatDate(dateString) {
-// 		const date = new Date(dateString);
-// 		const year = date.getFullYear();
-// 		const month = (date.getMonth() + 1).toString().padStart(2, '0');
-// 		const day = date.getDate().toString().padStart(2, '0');
-	
-// 		return `${year}-${month}-${day}`;
-// 	}
-
-// 	function fetchPostsByTag(tag, page, limit) {
-// 		let tagFilter = '';
-// 		if (tag) {
-// 		tagFilter = `tag:${tag}`
-// 		} else if (window.location.pathname.includes('/academy/')){
-// 			tagFilter = `tag:academy`;
-// 		} else if (window.location.pathname.includes('/blog/')){
-// 			tagFilter = `tag:hash-blog`;
-// 		}
-// 		const apiKey = '4c6802d178d7a0d297d9cc7e4b'; // Replace with your actual API key
-// 		const apiUrl = 'https://scout-systems-inc.ghost.io/ghost/api/v3/content/';
-// 		const url = `${apiUrl}posts/?key=${apiKey}&limit=${limit}&page=${page}&filter=${tagFilter}&include=authors,tags`;
-	
-// 		const headers = {
-// 		'Content-Type': 'application/json',
-// 		Accept: 'application/json'
-// 		};
-	
-// 		fetch(url, { headers })
-// 		.then(response => response.json())
-// 		.then(data => {
-// 			const posts = data.posts;
-// 			if (posts.length === 0) {
-// 			postsContainer.innerHTML = ''; // Clear existing posts
-// 			const notFound = document.createElement('h1');
-// 			notFound.className = 'page-academy__404';
-// 			notFound.innerText = "We don't have any of these articles yet...";
-// 			postsContainer.appendChild(notFound)
-// 			return;
-// 		}
-	
-// 		postsContainer.innerHTML = ''; // Clear existing posts
-// 		posts.forEach(post => {
-			// const tagsHtml = post.tags
-			// 	.filter(tag => !tag.name.startsWith('#'))
-			// 	.map(tag => `<a href="${tag.url}" class="post-card__tag">${tag.name}</a>`)
-			// 	.join('');
-	
-			// const postElement = document.createElement('div');
-			// postElement.className = 'post-footer__card post-card'; // Apply your existing class
-			// postElement.innerHTML = `
-			// <a href='${post.url}' class="post-card__image">
-			// <img src="${post.feature_image || '/assets/images/placeholder.png'}" alt="feature image">
-			// </a>
-			// <div class="post-card__header">
-			// 	<div class="post-card__tags">${tagsHtml}</div>
-			// </div>
-			// <div class="post-card__body">
-			// 	<h3 class="post-card__title"><a href="${post.url}">${post.title}</a></h3>
-			// 	<div class="post-card__description">${post.html || ''}</div>
-			// </div>
-			// <div class="post-card__header-info">
-			// 	${post.reading_time ? `<div class="post-card__read-time"> <img src="/assets/images/post/time.png" alt="reading time icon"> ${post.reading_time} minute read</div>` : ''}
-			// 	${post.tags.some(tag => tag.name === '#blog') ? `<div class="post-card__publication-date"> <img src="/assets/images/post/date.png" alt="date icon"> <time datetime="${formatDate(post.published_at)}">${formatDate(post.published_at)}</time></div>` : ''}
-			// </div>
-			// <div class="post-card__footer">
-			// 	${post.authors.map(author => `
-			// 		<div class="post-card__author">
-			// 			<div class="post-card__author-img">
-			// 				<img src="${author.profile_image}" alt="author image">
-			// 			</div>
-			// 			<div class="post-card__author-info">
-			// 				<span class="post-card__author-name">${author.name}</span>
-			// 				${author.location ? `<span class="post-card__author-location">${author.location}</span>` : ''}
-			// 			</div>
-			// 		</div>
-			// 	`).join('')}
-			// 	<a href="${post.url}" class="post-card__link">Read article <img style="margin-left:1rem" src="/assets/images/post/arrow-up.svg" alt="arrow top icon"></a>
-			// </div>
-			// `;
-			// postsContainer.appendChild(postElement);
-// 		});
-// 			// Update pagination controls
-// 			updatePagination(data.meta.pagination);
-// 		})
-// 		.catch(error => {
-// 			console.error('Error fetching data:', error);
-// 		});
-// 	}
-
-// 	function updatePagination(pagination) {
-// 	// Clear existing pagination
-// 	paginationContainer.innerHTML = '';
-
-// 	const totalPages = pagination.pages;
-
-// 	// Previous button
-// 	if (pagination.prev) {
-// 		const prevLink = document.createElement('a');
-// 		prevLink.href = '#';
-// 		prevLink.className = 'pagination__prev'
-// 		prevLink.innerHTML = '<img src="/assets/images/post/arrow-right.svg" alt="arrow right icon">';
-// 		prevLink.addEventListener('click', (event) => {
-// 		event.preventDefault();
-// 		currentPage = currentPage - 1;
-// 		const selectedTag = document.querySelector('.tech-hero__category.active').getAttribute('data-tag');
-// 		selectedTag === 'all' ? fetchPostsByTag(null, currentPage, postsPerPage) : fetchPostsByTag(selectedTag, currentPage, postsPerPage);
-// 		});
-// 		paginationContainer.appendChild(prevLink);
-// 	}
-
-// 	for (let i = 1; i <= totalPages; i++) {
-// 		const pageLink = document.createElement('a');
-// 		pageLink.href = '#';
-// 		pageLink.textContent = i;
-
-// 		if (i === currentPage) {
-// 		pageLink.classList.add('active');
-// 		}
-
-// 		pageLink.addEventListener('click', (event) => {
-// 		event.preventDefault();
-// 		currentPage = i;
-// 		const selectedTag = document.querySelector('.tech-hero__category.active').getAttribute('data-tag');
-// 		selectedTag === 'all' ? fetchPostsByTag(null, currentPage, postsPerPage) : fetchPostsByTag(selectedTag, currentPage, postsPerPage);
-// 		});
-
-// 		paginationContainer.appendChild(pageLink);
-// 	}
-
-// 	// Next button
-// 	if (pagination.next) {
-// 		const nextLink = document.createElement('a');
-// 		nextLink.href = '#';
-// 		nextLink.className = 'pagination__next'
-// 		nextLink.innerHTML = '<img src="/assets/images/post/arrow-right.svg" alt="arrow right icon">';
-// 		nextLink.addEventListener('click', (event) => {
-// 		event.preventDefault();
-// 		currentPage = currentPage + 1;
-// 		const selectedTag = document.querySelector('.tech-hero__category.active').getAttribute('data-tag');
-// 		selectedTag === 'all' ? fetchPostsByTag(null, currentPage, postsPerPage) : fetchPostsByTag(selectedTag, currentPage, postsPerPage);
-// 		});
-// 		paginationContainer.appendChild(nextLink);
-// 	}
-// 	}
-
-// 	categoryButtons.forEach(button => {
-// 		button.addEventListener('click', (event) => {
-// 			const selectedTag = event.target.getAttribute('data-tag');
-// 			categoryButtons.forEach(btn => btn.classList.remove('active'));
-// 			event.target.classList.add('active');
-// 			currentPage = 1; // Reset page when switching tags
-// 			selectedTag === 'all' ? fetchPostsByTag(null, currentPage, postsPerPage) : fetchPostsByTag(selectedTag, currentPage, postsPerPage);
-// 		});
-// 	});
-
-// 	// Initial fetch all posts
-// 	fetchPostsByTag(null, currentPage, postsPerPage);
-// }
 
 if (window.location.pathname.includes('/academy/') || window.location.pathname.includes('/blog/')) {
 	const postsContainer = document.getElementById('posts-container');

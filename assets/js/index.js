@@ -128,8 +128,8 @@ const swiperConfigurations = [
   {
     condition: windowWidth < 1025 && windowWidth > 768,
     selector: '.post-swiper',
-	swiperWrapper: '.post-footer__cards',
-	slideSelector: '.post-card',
+	wrapperSelector: '.post-footer__cards',
+	slideSelector: '.post-footer__card',
     config: {
       slidesPerView: 2,
       spaceBetween: 25,
@@ -139,8 +139,8 @@ const swiperConfigurations = [
   {
     condition: windowWidth < 769,
     selector: '.post-swiper',
-	swiperWrapper: '.post-footer__cards',
-	slideSelector: '.post-card',
+	wrapperSelector: '.post-footer__cards',
+	slideSelector: '.post-footer__card',
     config: {
       slidesPerView: 1,
       spaceBetween: 25,

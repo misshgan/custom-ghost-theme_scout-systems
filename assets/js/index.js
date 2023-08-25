@@ -290,6 +290,47 @@ if (window.location.pathname === '/academy/' && window.innerWidth < 769) {
 		},
 	});
 }
+
+// Swiper instance 8
+const postSwiper = document.querySelector('.post-swiper');
+if (postSwiper && window.innerWidth < 1025 && window.innerWidth > 768) {
+	const postSwiperWrapper = postSwiper.querySelector('.post-footer__cards');
+	const postSwiperSlides = postSwiperWrapper.querySelectorAll('.post-footer__card');
+
+	postSwiper.classList.add('swiper');
+	postSwiperWrapper.classList.add('swiper-wrapper');
+	postSwiperSlides.forEach(slide => {
+	slide.classList.add('swiper-slide')
+	})
+
+	let swiper8 = new Swiper('.post-swiper', {
+		// Optional parameters
+		slidesPerView: 2,
+		spaceBetween: 25,
+		direction: 'horizontal',
+	});
+} else if (postSwiper && window.innerWidth < 769) {
+	const postSwiperWrapper = postSwiper.querySelector('.post-footer__cards');
+	const postSwiperSlides = postSwiperWrapper.querySelectorAll('.post-footer__card');
+
+	postSwiper.classList.add('swiper');
+	postSwiperWrapper.classList.add('swiper-wrapper');
+	postSwiperSlides.forEach(slide => {
+	slide.classList.add('swiper-slide')
+	})
+
+	let swiper8 = new Swiper('.post-swiper', {
+		// Optional parameters
+		slidesPerView: 1,
+		spaceBetween: 25,
+		direction: 'horizontal',
+
+		// If we need pagination
+		pagination: {
+		el: '.swiper-pagination',
+		},
+	});
+}
 	
   //Dropdown menu 
 
@@ -493,45 +534,45 @@ function generateScrollToLinks() {
 
         // Attach the scroll event listener to the window
         window.addEventListener('scroll', scrollHandler);
-
-        /* COPY LINK */
-
-        // Get the reference to the "Copy Link" div element
-        const copyLinkButton = document.getElementById('copyLinkButton');
-
-        // Add a click event listener to the button
-        copyLinkButton.addEventListener('click', () => {
-            // Create a temporary textarea element to hold the link text
-            const tempTextarea = document.createElement('textarea');
-            const currentURL = window.location.href;
-
-            // Set the current URL as the value of the temporary textarea
-            tempTextarea.value = currentURL;
-
-            // Append the textarea to the document (it needs to be in the DOM to execute 'copy' command)
-            document.body.appendChild(tempTextarea);
-
-            // Select the content of the textarea
-            tempTextarea.select();
-
-            // Execute the 'copy' command to copy the selected content to the clipboard
-            document.execCommand('copy');
-
-            // Remove the temporary textarea from the DOM
-            document.body.removeChild(tempTextarea);
-
-            // Optionally, you can give some visual feedback to the user
-            copyLinkButton.querySelector('span').textContent = 'Link Copied!';
-            setTimeout(() => {
-                copyLinkButton.querySelector('span').textContent = 'Copy link';
-            }, 1500); // Reset the button text after 1.5 seconds
-        });
     }
 }
 
 generateScrollToLinks();
 
+/* COPY LINK */
 
+// Get the reference to the "Copy Link" div element
+const copyLinkButtons = document.querySelectorAll('.copyLinkButton');
+
+// Add a click event listener to the button
+copyLinkButtons.forEach(button => {
+	button.addEventListener('click', () => {
+		// Create a temporary textarea element to hold the link text
+		const tempTextarea = document.createElement('textarea');
+		const currentURL = window.location.href;
+
+		// Set the current URL as the value of the temporary textarea
+		tempTextarea.value = currentURL;
+
+		// Append the textarea to the document (it needs to be in the DOM to execute 'copy' command)
+		document.body.appendChild(tempTextarea);
+
+		// Select the content of the textarea
+		tempTextarea.select();
+
+		// Execute the 'copy' command to copy the selected content to the clipboard
+		document.execCommand('copy');
+
+		// Remove the temporary textarea from the DOM
+		document.body.removeChild(tempTextarea);
+
+		// Optionally, you can give some visual feedback to the user
+		button.querySelector('span').textContent = 'Link Copied!';
+		setTimeout(() => {
+			button.querySelector('span').textContent = 'Copy link';
+		}, 1500); // Reset the button text after 1.5 seconds
+	});
+})
 
 /* ACADEMY PAGE POSTS LOAD */
 

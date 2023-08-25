@@ -32,18 +32,20 @@
 				<nav id="scrollToLinks" class="side-panel__nav">
 
 				</nav>
-				{{#if @custom.post_cta_image}}
-					<a href="{{@site.url}}/accelerator/" class="side-panel__cta-image">
-						<img src="{{@custom.post_cta_image}}" alt="cta banner image">
-					</a>
-				{{/if}}
-				<h2 class="side-panel__title">Share This Post</h2>
-				<div class="side-panel__links">
-					<a target="_blank" href="https://twitter.com/share?url={{@site.url}}{{url}}&via={{@site.title}}&text={{title}}" class="side-panel__link">{{> icons/post-twitter}}</a>
-					<a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url={{@site.url}}{{url}}/&title={{title}}" class="side-panel__link">{{> icons/post-linkedin}}</a>
-					<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{@site.url}}{{url}}&t={{title}}" class="side-panel__link">{{> icons/post-facebook}}</a>
-					<a target="_blank" href="mailto:?subject={{title}}&body=Check out this site: '{{@site.url}}{{url}}'" title="Share by Email';" class="side-panel__link">{{> icons/post-email}}</a>
-					<div id="copyLinkButton" class="side-panel__link">{{> icons/post-copy}}<span>Copy link</span></div>
+				<div class="side-panel__desktop">
+					{{#if @custom.post_cta_image}}
+						<a href="{{@site.url}}/accelerator/" class="side-panel__cta-image">
+							<img src="{{@custom.post_cta_image}}" alt="cta banner image">
+						</a>
+					{{/if}}
+					<h2 class="side-panel__title">Share This Post</h2>
+					<div class="side-panel__links">
+						<a target="_blank" href="https://twitter.com/share?url={{@site.url}}{{url}}&via={{@site.title}}&text={{title}}" class="side-panel__link">{{> icons/post-twitter}}</a>
+						<a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url={{@site.url}}{{url}}/&title={{title}}" class="side-panel__link">{{> icons/post-linkedin}}</a>
+						<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{@site.url}}{{url}}&t={{title}}" class="side-panel__link">{{> icons/post-facebook}}</a>
+						<a target="_blank" href="mailto:?subject={{title}}&body=Check out this site: '{{@site.url}}{{url}}'" title="Share by Email';" class="side-panel__link">{{> icons/post-email}}</a>
+						<div class="side-panel__link copyLinkButton">{{> icons/post-copy}}<span>Copy link</span></div>
+					</div>
 				</div>
 			</div>
 			<div class="post-body__right">
@@ -73,6 +75,21 @@
 						{{/foreach}}
 					{{/get}}
 				</div>
+				<div class="side-panel__mobile">
+					{{#if @custom.post_cta_image}}
+						<a href="{{@site.url}}/accelerator/" class="side-panel__cta-image">
+							<img src="{{@custom.post_cta_image}}" alt="cta banner image">
+						</a>
+					{{/if}}
+					<h2 class="side-panel__title">Share This Post</h2>
+					<div class="side-panel__links">
+						<a target="_blank" href="https://twitter.com/share?url={{@site.url}}{{url}}&via={{@site.title}}&text={{title}}" class="side-panel__link">{{> icons/post-twitter}}</a>
+						<a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url={{@site.url}}{{url}}/&title={{title}}" class="side-panel__link">{{> icons/post-linkedin}}</a>
+						<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{@site.url}}{{url}}&t={{title}}" class="side-panel__link">{{> icons/post-facebook}}</a>
+						<a target="_blank" href="mailto:?subject={{title}}&body=Check out this site: '{{@site.url}}{{url}}'" title="Share by Email';" class="side-panel__link">{{> icons/post-email}}</a>
+						<div class="side-panel__link copyLinkButton">{{> icons/post-copy}}<span>Copy link</span></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -80,13 +97,14 @@
 		{{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}+tag:academy" as |related|}}
 		{{#if related}}
 		<div class="post-footer">
-			<div class="w1340">
+			<div class="w1340 post-swiper">
 				<h2 class="post-footer__title">Read next</h2>
 				<div class="post-footer__cards">
 					{{#foreach related}}
 						{{> card}}
 					{{/foreach}}
 				</div>
+				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 		{{/if}}
@@ -105,13 +123,14 @@
 		{{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}+tag:hash-blog" as |related|}}
 		{{#if related}}
 		<div class="post-footer">
-			<div class="w1340">
+			<div class="w1340 post-swiper">
 				<h2 class="post-footer__title">Read next</h2>
 				<div class="post-footer__cards">
 					{{#foreach related}}
 						{{> card}}
 					{{/foreach}}
 				</div>
+				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 		{{/if}}

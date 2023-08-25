@@ -282,6 +282,15 @@ html {
   }
 }
 
+/* LOAD MORE BUTTON */
+.load-more-button {
+  width: -moz-max-content;
+  width: max-content;
+  margin: 4rem auto 0;
+  cursor: pointer;
+  border-radius: 32px;
+}
+
 /* HEADER */
 .header {
   padding: 2.4rem 0;

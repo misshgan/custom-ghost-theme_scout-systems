@@ -5667,13 +5667,24 @@ html {
 }
 .page-pricing .w1340 .swiper-button-next, .page-pricing .w1340 .swiper-button-prev {
   top: 99.3% !important;
+  display: none;
 }
 .page-pricing .w1340 .swiper-button-next svg, .page-pricing .w1340 .swiper-button-prev svg {
   width: 4rem;
   height: 4rem;
 }
+@media (max-width: 1200px) {
+  .page-pricing .w1340 .swiper-button-next, .page-pricing .w1340 .swiper-button-prev {
+    display: block;
+  }
+}
+@media (max-width: 950px) {
+  .page-pricing .w1340 .swiper-button-next, .page-pricing .w1340 .swiper-button-prev {
+    display: none;
+  }
+}
 .page-pricing .w1340 .swiper-pagination {
-  top: 98% !important;
+  top: 97.5% !important;
 }
 .page-pricing__title {
   text-align: center;

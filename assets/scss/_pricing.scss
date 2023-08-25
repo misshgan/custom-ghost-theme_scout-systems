@@ -242,15 +242,24 @@
 
 		.swiper-button-next, .swiper-button-prev {
 			top: 99.3% !important;
+			display: none;
 
 			svg {
 				width: 4rem;
 				height: 4rem;
 			}
+
+			@media (max-width:1200px) {
+				display: block;
+			}
+
+			@media (max-width:950px) {
+				display: none;
+			}
 		}
 
 		.swiper-pagination {
-			top: 98%!important;
+			top: 97.5%!important;
 		}
 	}
 	&__title {

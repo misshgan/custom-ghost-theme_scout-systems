@@ -289,6 +289,17 @@ html {
   margin: 4rem auto 0;
   cursor: pointer;
   border-radius: 32px;
+  transition: all 0s;
+}
+.load-more-button.loading {
+  background-color: #3D3E52;
+  border-color: transparent;
+  background-image: url(/assets/images/icon-loading.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 75%;
+  color: transparent !important;
+  cursor: default;
 }
 
 /* HEADER */
@@ -4528,6 +4539,18 @@ html {
     padding-bottom: 1rem;
   }
 }
+@media (max-width: 768px) {
+  .tech-hero.academy {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media (max-width: 450px) {
+  .tech-hero.academy {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 .tech-hero.academy .tech-hero__ellipse1 {
   left: -16%;
   top: -86%;
@@ -4544,9 +4567,6 @@ html {
   width: 47.1rem;
   z-index: 0;
   transform: rotate(274deg);
-}
-.tech-hero.academy .w1340.swiper {
-  padding: 0 3rem;
 }
 .tech-hero.academy .tech-hero__categories {
   margin: 3.2rem auto 0;
@@ -4610,7 +4630,7 @@ html {
   flex-wrap: wrap;
   -moz-column-gap: 20px;
        column-gap: 20px;
-  row-gap: 55px;
+  row-gap: 20px;
 }
 @media (max-width: 768px) {
   .page-academy__feed {

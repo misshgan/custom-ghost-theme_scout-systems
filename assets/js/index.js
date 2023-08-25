@@ -605,6 +605,7 @@ if (window.location.pathname.includes('/academy/') || window.location.pathname.i
 	}
 
 	function fetchPostsByTag(tag, page, limit) {
+		loadMoreButton.classList.add('loading')
 		let tagFilter = '';
 		if (tag != 'all') {
 			tagFilter = `tag:${tag}`;
@@ -676,6 +677,7 @@ if (window.location.pathname.includes('/academy/') || window.location.pathname.i
 					</div>
 					`;
 					postsContainer.appendChild(postElement);
+					loadMoreButton.classList.remove('loading')
 				});
 
 				// Check if there are more posts to load

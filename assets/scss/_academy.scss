@@ -5,6 +5,16 @@
 		padding-bottom: 1rem;
 	}
 
+	@media (max-width:768px) {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	@media (max-width: 450px) {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
 	.tech-hero__ellipse1 {
 		left: -16%;
 		top: -86%;
@@ -22,10 +32,6 @@
 		transform: rotate(274deg);
 	}
 	.w1340 {
-
-		&.swiper {
-			padding: 0 3rem;
-		}
 	}
 	.tech-hero__text {
 	}
@@ -98,7 +104,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		column-gap: 20px;
-		row-gap: 55px;
+		row-gap: 20px;
 
 		@media (max-width:768px) {
 			row-gap: 3rem;

@@ -53,27 +53,25 @@
 					{{content}}
 				</div>
 				<div class="post-body__right-footer">
-					{{#get "authors"}}
-						{{#foreach authors limit='1'}}
-							<div class="post-body__author-card">
-								<div class="post-body__author-image">
-									{{#if profile_image}}
-										<img src="{{profile_image}}" alt="author image">
-									{{else}}
-										<img src="{{asset "assets/images/post/author-placholder.webp"}}" alt="author image">
-									{{/if}}
-								</div>
-								<div class="post-body__author-description">
-									<h2 class="post-body__author-name">{{name}}</h2>
-									{{#if bio}}
-										<p class="post-body__author-bio">{{bio}}</p>
-									{{else}}
-										<p class="post-body__author-bio">This author doesn't have any BIO for now.</p>
-									{{/if}}
-								</div>
+					{{#foreach authors limit='1'}}
+						<div class="post-body__author-card">
+							<div class="post-body__author-image">
+								{{#if profile_image}}
+									<img src="{{profile_image}}" alt="author image">
+								{{else}}
+									<img src="{{asset "assets/images/post/author-placholder.webp"}}" alt="author image">
+								{{/if}}
 							</div>
-						{{/foreach}}
-					{{/get}}
+							<div class="post-body__author-description">
+								<h2 class="post-body__author-name">{{name}}</h2>
+								{{#if bio}}
+									<p class="post-body__author-bio">{{bio}}</p>
+								{{else}}
+									<p class="post-body__author-bio">This author doesn't have any BIO for now.</p>
+								{{/if}}
+							</div>
+						</div>
+					{{/foreach}}
 				</div>
 				<div class="side-panel__mobile">
 					{{#if @custom.post_cta_image}}

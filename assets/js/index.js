@@ -422,7 +422,7 @@ copyLinkButtons.forEach(button => {
 
 /* ACADEMY PAGE POSTS LOAD */
 
-if (window.location.pathname.includes('/academy/') || window.location.pathname.includes('/blog/')) {
+if (window.location.pathname.includes('/academy/') || window.location.pathname.includes('/blog/') || window.location.pathname.includes('/software-updates/')) {
 	const postsContainer = document.getElementById('posts-container');
 	const categoryButtons = document.querySelectorAll('.tech-hero__category');
 	const loadMoreButton = document.getElementById('load-more-button'); // Load more button element
@@ -448,6 +448,8 @@ if (window.location.pathname.includes('/academy/') || window.location.pathname.i
 			tagFilter = `tag:academy`;
 		} else if (window.location.pathname.includes('/blog/')) {
 			tagFilter = `tag:hash-blog`;
+		} else if (window.location.pathname.includes('/software-updates/')) {
+			tagFilter = `tag:software-updates`;
 		}
 		const apiKey = '4c6802d178d7a0d297d9cc7e4b'; // Replace with your actual API key
 		const apiUrl = 'https://scout-systems-inc.ghost.io/ghost/api/v3/content/';

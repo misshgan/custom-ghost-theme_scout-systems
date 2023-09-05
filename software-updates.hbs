@@ -1,0 +1,29 @@
+{{!< default}}
+
+{{#contentFor "title"}}{{@site.title}} - Software Updates{{plural pagination.page empty='' singular='' plural=' – (Page %)'}}{{/contentFor}}
+
+<div class="tech-hero academy">
+	<div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
+	<div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
+	<div class="w1340 academy-swiper">
+		<div class="tech-hero__text">
+			<h1 class="tech-hero__title">Software Updates</h1>
+			<p class="tech-hero__subtitle">Find all of the latest software release notes and brand new features!</p>
+		</div>
+		<div class="tech-hero__categories" style="color: #fff;">
+			<div data-tag="all" class="tech-hero__category active">All</div>
+			<div data-tag="hq-updates" class="tech-hero__category">HQ Updates</div>
+            <div data-tag="compass-updates" class="tech-hero__category">Compass Updates</div>
+            <div data-tag="ai-updates" class="tech-hero__category">API Updates</div>
+		</div>
+	</div>
+</div>
+
+<div class="page-academy">
+	<div class="w1340">
+		<div id="posts-container" class="page-academy__feed">
+			
+		</div>
+		<div id="load-more-button" class="load-more-button default-button_green">LOAD MORE</div>
+	</div>
+</div>

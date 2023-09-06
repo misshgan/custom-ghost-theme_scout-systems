@@ -1,5 +1,8 @@
 {{!< default}}
 
+{{#contentFor "title"}}{{@site.title}} - Shop Floor Software{{/contentFor}}
+
+{{> structure/form-popup}}
 
 <div class="ar-block1 landing-page">
 	<div class="w1340">
@@ -16,6 +19,287 @@
 		</div>
 		<div class="ar-block1__right">
 			<video src="https://scoutweb.blob.core.windows.net/assets/Factory%20Final%201080p_16.mp4"  muted autoplay loop playsinline style="pointer-events: none;"></video>
+		</div>
+	</div>
+</div>
+
+<div class="landing-stats">
+	<div class="w1340">
+		<div class="landing-stats__card stats-card">
+			<span class="stats-card__amount">400+</span>
+			<h3 class="stats-card__title">Projects completed</h3>
+			<p class="stats-card__description">We’ve helped build over 400 amazing projects.</p>
+		</div>
+
+		<div class="landing-stats__card stats-card">
+			<span class="stats-card__amount">600%</span>
+			<h3 class="stats-card__title">Return on investment</h3>
+			<p class="stats-card__description">Our customers have reported an average of ~600% ROI.</p>
+		</div>
+
+		<div class="landing-stats__card stats-card">
+			<span class="stats-card__amount">10k</span>
+			<h3 class="stats-card__title">Global downloads</h3>
+			<p class="stats-card__description">Our free UI kit has been downloaded over 100k times.</p>
+		</div>
+
+		<div class="landing-stats__card stats-card">
+			<span class="stats-card__amount">200+</span>
+			<h3 class="stats-card__title">5-star reviews</h3>
+			<p class="stats-card__description">We’re proud of our 5-star rating with over 200 reviews.</p>
+		</div>
+	</div>
+</div>
+
+<div class="tech-u-accordion landing-page">
+	<div class="tech-u-accordion__ellipse1">{{> images/ellipse1}}</div>
+	<div class="tech-u-accordion__ellipse2">{{> images/ellipse1}}</div>
+	<div class="w1340">
+		<div class="tech-u-accordion__left">
+			<div class="tech-u-accordion__item">
+				<div class="tech-u-accordion__item-header active">
+					<h2 class="tech-u-accordion__title">Compass</h2>
+					<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
+				</div>
+
+				<div class="tech-u-accordion__body">
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Used by Operators on Production Floor</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Provides Daily Build Schedule</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Easy to follow Digital Work Instructions</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">In-Line Quality Assurance</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Data Collection & Analysis</h3>
+					</div>
+				</div>
+			</div>
+			<div class="tech-u-accordion__item">
+				<div class="tech-u-accordion__item-header">
+					<h2 class="tech-u-accordion__title">HQ</h2>
+					<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
+				</div>
+
+				<div class="tech-u-accordion__body">
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">For Managers and Office Staff</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Control / Adjust Schedule</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Update Work Instructions</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Access Production Reports</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">See Live Time Statuses</h3>
+					</div>
+				</div>
+			</div>
+			<div class="tech-u-accordion__item">
+				<div class="tech-u-accordion__item-header">
+					<h2 class="tech-u-accordion__title">Tracker</h2>
+					<div class="tech-u-accordion__indicator">{{> icons/minus}}{{> icons/plus}}</div>
+				</div>
+
+				<div class="tech-u-accordion__body">
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Near-Universal Edge Device</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Works with Legacy and Modern Machines</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Add to Test Equipment to Validate Results</h3>
+					</div>
+					<div class="tech-u-accordion__list-item">
+						{{> icons/checkmark}}
+						<h3 class="tech-u-accordion__list-title">Touchless Software Navigation</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tech-u-accordion__right">
+			<div class="tech-u-accordion__img tech-u-accordion__img-1 active"><img src="{{asset "assets/images/tech-overview/Digital Work Instruction Still.png"}}" alt="digital work instruction image"></div>
+			<div class="tech-u-accordion__img tech-u-accordion__img-2"><img src="{{asset "assets/images/tech-overview/Dashboard Still Photo 1.png"}}" alt="dashboard still image"></div>
+			<div class="tech-u-accordion__img tech-u-accordion__img-3"><img src="{{asset "assets/images/tech-overview/Press Brake.png"}}" alt="press brake image"></div>
+		</div>
+	</div>
+</div>
+
+<div class="home">
+	<div class="w1340">
+		<div class="testimonials swiper">
+			<h2 class="testimonials__title">Testimonials</h2>
+			<div class="testimonials__body swiper-wrapper">
+				<div class="testimonials__card t-card swiper-slide">
+					<img class="t-card__photo" src="{{asset "assets/images/testimonials/Northwest Automatics Square.png"}}" alt="company image">
+					<h3 class="t-card__title">Greg N.</h3>
+					<p class="t-card__company">Northwest Automatics, Inc.</p>
+					<p class="t-card__text">“We now have an accurate accounting of the time it takes to manufacturer specific parts. We have identified non value added time issues and made adjustments and improvements to increase production.”</p>
+				</div>
+				<div class="testimonials__card t-card swiper-slide">
+					<img class="t-card__photo" src="{{asset "assets/images/testimonials/Gunderson Square.png"}}" alt="company image">
+					<h3 class="t-card__title">Charles B.</h3>
+					<p class="t-card__company">Gunderson</p>
+					<p class="t-card__text">“We now have an accurate accounting of the time it takes to manufacturer specific parts. We have identified non value added time issues and made adjustments and improvements to increase production.”</p>
+				</div>
+				<div class="testimonials__card t-card swiper-slide">
+					<img class="t-card__photo" src="{{asset "assets/images/testimonials/Sunstream Square.png"}}" alt="company image">
+					<h3 class="t-card__title">Scott M.</h3>
+					<p class="t-card__company">Sunstream Boatlifts</p>
+					<p class="t-card__text">“The software is easy to learn and manipulate. It is great that it can track very detailed information or it can be used in a more generic way, the choice is yours. I also like that it is always up to date due to being cloud based and there is nothing to download or keep track of.”</p>
+				</div>
+				<div class="testimonials__card t-card swiper-slide">
+					<img class="t-card__photo" src="{{asset "assets/images/testimonials/TCA Square.png"}}" alt="company image">
+					<h3 class="t-card__title">Eli T.</h3>
+					<p class="t-card__company">Technical Cable Applications</p>
+					<p class="t-card__text">“Our experience with Scout Systems has been very much worthwhile. You will get a wealth of good data to make informed and intelligent decisions in whatever your process entails.”</p>
+				</div>
+				<div class="testimonials__card t-card swiper-slide">
+					<img class="t-card__photo" src="{{asset "assets/images/testimonials/Milgard.png"}}" alt="company image">
+					<h3 class="t-card__title">Gary N.</h3>
+					<p class="t-card__company">Milgard</p>
+					<p class="t-card__text">“Built-in reports help do a deep dive into where delays, quality issues, or people/process opportunities exist. With some guidance from the Scout team, I've been able to quickly process reports and provide them to my leadership, prompting questions like, 'what else can you show us?!'”</p>
+				</div>
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev">{{>icons/small-arrow-left}}</div>
+			<div class="swiper-button-next">{{>icons/small-arrow-right}}</div>
+		</div>
+	</div>
+</div>
+
+<div class="tech-hero pricing landing-page">
+	<div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
+	<div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
+	<div class="w1340">
+		<div class="tech-hero__text">
+			<h1 class="tech-hero__title">ready to get started</h1>
+		</div>
+		<div class="tech-hero__blocks">
+			<div class="tech-hero__block1">
+				<h2 class="tech-hero__block1-title">Accelerator</h2>
+				<p class="tech-hero__block1-subtitle">Stay ahead in the race of innovation with ease and confidence</p>
+				<span class="tech-hero__block1-price">$5000</span>
+			</div>
+			<div class="tech-hero__block2">
+				<h3 class="tech-hero__block2-title">Program Includes:</h3>
+				<div class="tech-hero__block2-item"><div class="tech-hero__block2-icon">{{> icons/check-mark-green}}</div> 3-Month Program Guided by a Dedicated Customer Success Representative</div>
+				<div class="tech-hero__block2-item"><div class="tech-hero__block2-icon">{{> icons/check-mark-green}}</div> Access to PRO Tier</div>
+				<div class="tech-hero__block2-item"><div class="tech-hero__block2-icon">{{> icons/check-mark-green}}</div> Up to 20 Compass Stations</div>
+			</div>
+			<div class="tech-hero__block3">
+				<div style="cursor: pointer;" class="default-button_green runScriptButton">Get started</div>
+				<div class="tech-hero__block3-description"> 
+					<div>{{> icons/info}}</div>
+					<p>We believe in the power of our program so much that we offer a money-back guarantee if you’re not completely satisfied</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ar-block5 landing-page">
+	<div class="ar-block5__shadow1">{{> images/shadow1}}</div>
+	<div class="ar-block5__shadow2">{{> images/shadow1}}</div>
+	<div class="w1340">
+		<h2 class="ar-block5__title">We focus on your Biggest Challenges</h2>
+		<p class="ar-block5__subtitle">Too many vendors fixate on the fancy bells & whistles their offering can do, but that doesn't necessarily effect your bottom line.</p>
+		<div class="ar-block5__image">
+			<img src="{{asset "assets/images/accelerator/block-5-image.png"}}" alt="challenges image">
+			<div class="ar-block5__info1">
+				<div class="ar-block5__info1-item">
+					{{> icons/check-mark-green}}
+					Missing out on large contracts?
+				</div>
+				<div class="ar-block5__info1-item">
+					{{> icons/check-mark-green}}
+					Struggling to find skilled labor?
+				</div>
+				<div class="ar-block5__info1-item">
+					{{> icons/check-mark-green}}
+					Customers are demanding greater quality?
+				</div>
+				<div class="ar-block5__info1-item">
+					{{> icons/check-mark-green}}
+					Relying on Over Time to keep up?
+				</div>
+				<div class="ar-block5__info1-item">
+					{{> icons/check-mark-green}}
+					Challenged to keep up with inflation?
+				</div>
+			</div>
+			<div class="ar-block5__info2">
+				Understanding your organization's overarching objectives enables us to support you in achieving them. We tailor our platform configuration and training materials to align with your specific needs. <span class="ar-block5__info2_green">This approach has resulted in a 92% success rate for new projects.</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ar-block2 landing-page">
+	<div class="ar-block2__shadow1">{{> images/shadow1}}</div>
+	<div class="w1340">
+		<div class="ar-block2__image">
+			<img src="{{asset 'assets/images/floor-management/timeline.png'}}" alt="timeline image">
+		</div>
+		<div class="ar-block2__description">
+			Customer Success Representatives will work with your staff to find easy improvement projects, while fine tuning the platform to better fit your operations, and most importantly <br>
+			<span class="ar-block2__description_green">achieve a surplus value within 90 days.</span>
+		</div>
+		<a href="{{@site.url}}/pricing/" class="default-button green">pricing</a>
+	</div>
+</div>
+
+<div class="ar-block3 landing-page">
+	<div class="w1340">
+		<h2 class="ar-block3__title">Our Methods are Unlike any Other SaaS</h2>
+		<p class="ar-block3__subtitle">Over the years, we have conducted installations across the globe in various types of factories, evaluating what worked and what didn't. Through extensive testing and experimentation, we identified the most effective playbook for ensuring a successful project rollout. The key element is aligning the project with the manufacturer's pain points.</p>
+	</div>
+</div>
+
+<div class="tech-video-white">
+	<div class="w1340">
+		<video src="https://scoutweb.blob.core.windows.net/assets/Combined-Testimonials-Final.mp4" controls preload="none"></video>
+	</div>
+</div>
+
+<div class="ar-block6" style="margin-top: 5rem;">
+	<div class="ar-block6__factory">
+		<img src="{{asset "assets/images/accelerator/factory-2.webp"}}" alt="factory image">
+	</div>
+	<div class="w1340">
+		<div class="ar-block6__content">
+			<h2 class="ar-block6__title">Money-Back Guarantee</h2>
+			<div class="ar-block6__description">
+				<p>At Scout Systems, we stand behind the power of our Accelerator Program. We are so confident in its success that we offer a unique guarantee: if at any point during the 90 days you feel that the program isn't meeting your expectations, we will promptly cancel our services and provide you with a full refund.</p>
+				<p>Our goal is not just to be a short-term solution but a long-term strategic partner, supporting your manufacturing journey every step of the way. With our cutting-edge technology and unwavering commitment to your success, we're eager to demonstrate that our offering is truly second to none. Your satisfaction is our top priority.</p>
+			</div>
+			<a href="{{@site.url}}/pricing/" class="default-button green">pricing</a>
 		</div>
 	</div>
 </div>

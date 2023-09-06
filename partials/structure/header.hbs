@@ -1,140 +1,142 @@
 <header class="header">
 	<a href="{{@site.url}}" class="header__logo">{{>icons/logo-white}}</a>
-	<div class="mobile-menu-open"><img src="{{asset 'assets/images/mobile-menu-open.svg'}}" alt="mobile menu open icon"></div>
-	<nav class="header__nav">
-		<div class="header__link header-dropdown-target">technology <span class="dropdown-target-arrow">{{>icons/small-arrow-down}}</span>
-			<div class="header__dropdown h-dropdown tech-dropdown">
-				<a href="{{@site.url}}/tech-overview" class="h-dropdown__banner">
-					{{>icons/dropdown-logo}}
-					<span class="h-dropdown__banner-title">Tech overview</span>
-					{{>icons/arrow-right}}
-				</a>
-				<div class="h-dropdown__links">
-					<a href="{{@site.url}}/platform-capabilities/" class="h-dropdown__link">Features</a>
-					<a href="{{@site.url}}/work-instructions/" class="h-dropdown__link">Work instructions</a>
-					<a href="{{@site.url}}/shop-floor-management/" class="h-dropdown__link">Shop floor management</a>
-					<a href="{{@site.url}}/data-collection/" class="h-dropdown__link">Data collection</a>
-					<a href="{{@site.url}}/root-cause-analysis/" class="h-dropdown__link">Root cause analysis</a>
-					<a href="{{@site.url}}/industrial-iot/" class="h-dropdown__link">industrial iot</a>
-				</div>
-			</div>
-		</div>
-		<div class="header__link header-dropdown-target">resources <span class="dropdown-target-arrow">{{>icons/small-arrow-down}}</span>
-			<div class="header__dropdown h-dropdown resources-dropdown">
-				<a href="{{@site.url}}/accelerator/" class="h-dropdown__banner">
-					{{>icons/dropdown-logo}}
-					<span class="h-dropdown__banner-title">Accelerator Program</span>
-					{{>icons/arrow-right}}
-				</a>
-				<div class="h-dropdown__links">
-					<a href="{{@site.url}}/blog" class="h-dropdown__link">Blog</a>
-					<a href="{{@site.url}}/academy" class="h-dropdown__link">Academy</a>
-					<a href="{{@site.url}}/manufacturing-glossary/" class="h-dropdown__link">Glossary</a>
-				</div>
-			</div>
-		</div>
-		<a href="{{@site.url}}/pricing" class="header__link">PRICING</a>
-		<div class="header__link header-dropdown-target">about us <span class="dropdown-target-arrow">{{>icons/small-arrow-down}}</span>
-			<div class="header__dropdown h-dropdown about-us-dropdown">
-				<div class="h-dropdown__links">
-					<a href="{{@site.url}}/industries-served/" class="h-dropdown__link">Industries Served</a>
-					<span class="h-dropdown__link contact">Contact Us</span>
-					<div class="contact-us__cards dropdown">
-						<div class="contact-us__card">
-							<div class="contact-us__card-img">{{> icons/chat}}</div>
-							<div class="contact-us__card-text">
-								<h3 class="contact-us__card-title">Email:</h3>
-								<p class="contact-us__card-description">info@scout.systems</p>
-							</div>
-						</div>
-						<div class="contact-us__card">
-							<div class="contact-us__card-img">{{> icons/map-marker}}</div>
-							<div class="contact-us__card-text">
-								<h3 class="contact-us__card-title">Office:</h3>
-								<p class="contact-us__card-description">3902 West Valley Hwy. N. Suite 104 <br> Auburn, WA 98001, USA</p>
-							</div>
-						</div>
-						<div class="contact-us__card">
-							<div class="contact-us__card-img">{{> icons/phone}}</div>
-							<div class="contact-us__card-text">
-								<h3 class="contact-us__card-title">Phone:</h3>
-								<p class="contact-us__card-description">Mon-Fri from 8am - 5pm <br> +1 253 329 2460</p>
-							</div>
-						</div>
+	{{^is "shop-floor-software"}}
+		<div class="mobile-menu-open"><img src="{{asset 'assets/images/mobile-menu-open.svg'}}" alt="mobile menu open icon"></div>
+		<nav class="header__nav">
+			<div class="header__link header-dropdown-target">technology <span class="dropdown-target-arrow">{{>icons/small-arrow-down}}</span>
+				<div class="header__dropdown h-dropdown tech-dropdown">
+					<a href="{{@site.url}}/tech-overview" class="h-dropdown__banner">
+						{{>icons/dropdown-logo}}
+						<span class="h-dropdown__banner-title">Tech overview</span>
+						{{>icons/arrow-right}}
+					</a>
+					<div class="h-dropdown__links">
+						<a href="{{@site.url}}/platform-capabilities/" class="h-dropdown__link">Features</a>
+						<a href="{{@site.url}}/work-instructions/" class="h-dropdown__link">Work instructions</a>
+						<a href="{{@site.url}}/shop-floor-management/" class="h-dropdown__link">Shop floor management</a>
+						<a href="{{@site.url}}/data-collection/" class="h-dropdown__link">Data collection</a>
+						<a href="{{@site.url}}/root-cause-analysis/" class="h-dropdown__link">Root cause analysis</a>
+						<a href="{{@site.url}}/industrial-iot/" class="h-dropdown__link">industrial iot</a>
 					</div>
-					<a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLJdg0x%2BA8JB9S6KB8iaAx440f898ylNEtcv2g1YsQqQEjIxKd5cvRiOVd7EaOwF9nyDgHPIrnCLXl5%2FOktHSwNyOdaaVpdVj2fY9lzeJDQ6EPunHJq83tP7bXIWDOVHcgKxeUlwsZm72DWj9oFDOWat2qj0pUxMvPYfRGMc7oZMvS%2FYZiOY&webInteractiveContentId=128943797352&portalId=41638633" target="_blank" class="default-button_green">Schedule Consultation</a>
 				</div>
 			</div>
-		</div>
-	</nav>
-	<nav class="mobile-nav">
-		<div class="mobile-nav__close"><img src="{{asset 'assets/images/icons8-close-dark.svg'}}" alt="icon close"></div>
-		<div class="mobile-nav__item">
-			<div class="mobile-nav__item-header">
-				<a href="{{@site.url}}" class="mobile-nav__title">Home</a>
-			</div>
-		</div>
-		<div class="mobile-nav__item">
-			<div class="mobile-nav__item-header">
-				<div class="mobile-nav__title">Technology</div>
-				<div class="mobile-nav__item-body">
-					<a href="{{@site.url}}/tech-overview/" class="mobile-nav__link">Technology Overview</a>
-					<a href="{{@site.url}}/platform-capabilities/" class="mobile-nav__link">Features</a>
-					<a href="{{@site.url}}/work-instructions/" class="mobile-nav__link">Work Instructions</a>
-					<a href="{{@site.url}}/shop-floor-management/" class="mobile-nav__link">Shop Floor Management</a>
-					<a href="{{@site.url}}/data-collection/" class="mobile-nav__link">Data Collection</a>
-					<a href="{{@site.url}}/root-cause-analysis/" class="mobile-nav__link">Root Cause Analysis</a>
-					<a href="{{@site.url}}/industrial-iot/" class="mobile-nav__link">Industrial Iot</a>
-				</div>
-			</div>
-		</div>
-		<div class="mobile-nav__item">
-			<div class="mobile-nav__item-header">
-				<div class="mobile-nav__title">Resources</div>
-				<div class="mobile-nav__item-body">
-					<a href="{{@site.url}}/accelerator/" class="mobile-nav__link">Accelerator Program</a>
-					<a href="{{@site.url}}/blog/" class="mobile-nav__link">Blog</a>
-					<a href="{{@site.url}}/academy/" class="mobile-nav__link">Academy</a>
-					<a href="{{@site.url}}/glossary/" class="mobile-nav__link">Glossary</a>
-				</div>
-			</div>
-		</div>
-		<div class="mobile-nav__item">
-			<div class="mobile-nav__item-header">
-				<a href="{{@site.url}}/pricing/" class="mobile-nav__title">Pricing</a>
-			</div>
-		</div>
-		<div class="mobile-nav__item">
-			<div class="mobile-nav__item-header">
-				<div class="mobile-nav__title">About Us</div>
-				<div class="mobile-nav__item-body">
-					<a href="{{@site.url}}/accelerator/" class="mobile-nav__link">Accelerator Program</a>
-					<div class="contact-us__cards dropdown">
-						<div class="contact-us__card">
-							<div class="contact-us__card-img">{{> icons/chat}}</div>
-							<div class="contact-us__card-text">
-								<h3 class="contact-us__card-title">Email:</h3>
-								<p class="contact-us__card-description">info@scout.systems</p>
-							</div>
-						</div>
-						<div class="contact-us__card">
-							<div class="contact-us__card-img">{{> icons/map-marker}}</div>
-							<div class="contact-us__card-text">
-								<h3 class="contact-us__card-title">Office:</h3>
-								<p class="contact-us__card-description">3902 West Valley Hwy. N. Suite 104 <br> Auburn, WA 98001, USA</p>
-							</div>
-						</div>
-						<div class="contact-us__card">
-							<div class="contact-us__card-img">{{> icons/phone}}</div>
-							<div class="contact-us__card-text">
-								<h3 class="contact-us__card-title">Phone:</h3>
-								<p class="contact-us__card-description">Mon-Fri from 8am - 5pm <br> +1 253 329 2460</p>
-							</div>
-						</div>
+			<div class="header__link header-dropdown-target">resources <span class="dropdown-target-arrow">{{>icons/small-arrow-down}}</span>
+				<div class="header__dropdown h-dropdown resources-dropdown">
+					<a href="{{@site.url}}/accelerator/" class="h-dropdown__banner">
+						{{>icons/dropdown-logo}}
+						<span class="h-dropdown__banner-title">Accelerator Program</span>
+						{{>icons/arrow-right}}
+					</a>
+					<div class="h-dropdown__links">
+						<a href="{{@site.url}}/blog" class="h-dropdown__link">Blog</a>
+						<a href="{{@site.url}}/academy" class="h-dropdown__link">Academy</a>
+						<a href="{{@site.url}}/manufacturing-glossary/" class="h-dropdown__link">Glossary</a>
 					</div>
-					<a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLJdg0x%2BA8JB9S6KB8iaAx440f898ylNEtcv2g1YsQqQEjIxKd5cvRiOVd7EaOwF9nyDgHPIrnCLXl5%2FOktHSwNyOdaaVpdVj2fY9lzeJDQ6EPunHJq83tP7bXIWDOVHcgKxeUlwsZm72DWj9oFDOWat2qj0pUxMvPYfRGMc7oZMvS%2FYZiOY&webInteractiveContentId=128943797352&portalId=41638633" target="_blank" class="default-button_green">Schedule Consultation</a>
 				</div>
 			</div>
-		</div>
-	</nav>
+			<a href="{{@site.url}}/pricing" class="header__link">PRICING</a>
+			<div class="header__link header-dropdown-target">about us <span class="dropdown-target-arrow">{{>icons/small-arrow-down}}</span>
+				<div class="header__dropdown h-dropdown about-us-dropdown">
+					<div class="h-dropdown__links">
+						<a href="{{@site.url}}/industries-served/" class="h-dropdown__link">Industries Served</a>
+						<span class="h-dropdown__link contact">Contact Us</span>
+						<div class="contact-us__cards dropdown">
+							<div class="contact-us__card">
+								<div class="contact-us__card-img">{{> icons/chat}}</div>
+								<div class="contact-us__card-text">
+									<h3 class="contact-us__card-title">Email:</h3>
+									<p class="contact-us__card-description">info@scout.systems</p>
+								</div>
+							</div>
+							<div class="contact-us__card">
+								<div class="contact-us__card-img">{{> icons/map-marker}}</div>
+								<div class="contact-us__card-text">
+									<h3 class="contact-us__card-title">Office:</h3>
+									<p class="contact-us__card-description">3902 West Valley Hwy. N. Suite 104 <br> Auburn, WA 98001, USA</p>
+								</div>
+							</div>
+							<div class="contact-us__card">
+								<div class="contact-us__card-img">{{> icons/phone}}</div>
+								<div class="contact-us__card-text">
+									<h3 class="contact-us__card-title">Phone:</h3>
+									<p class="contact-us__card-description">Mon-Fri from 8am - 5pm <br> +1 253 329 2460</p>
+								</div>
+							</div>
+						</div>
+						<a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLJdg0x%2BA8JB9S6KB8iaAx440f898ylNEtcv2g1YsQqQEjIxKd5cvRiOVd7EaOwF9nyDgHPIrnCLXl5%2FOktHSwNyOdaaVpdVj2fY9lzeJDQ6EPunHJq83tP7bXIWDOVHcgKxeUlwsZm72DWj9oFDOWat2qj0pUxMvPYfRGMc7oZMvS%2FYZiOY&webInteractiveContentId=128943797352&portalId=41638633" target="_blank" class="default-button_green">Schedule Consultation</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<nav class="mobile-nav">
+			<div class="mobile-nav__close"><img src="{{asset 'assets/images/icons8-close-dark.svg'}}" alt="icon close"></div>
+			<div class="mobile-nav__item">
+				<div class="mobile-nav__item-header">
+					<a href="{{@site.url}}" class="mobile-nav__title">Home</a>
+				</div>
+			</div>
+			<div class="mobile-nav__item">
+				<div class="mobile-nav__item-header">
+					<div class="mobile-nav__title">Technology</div>
+					<div class="mobile-nav__item-body">
+						<a href="{{@site.url}}/tech-overview/" class="mobile-nav__link">Technology Overview</a>
+						<a href="{{@site.url}}/platform-capabilities/" class="mobile-nav__link">Features</a>
+						<a href="{{@site.url}}/work-instructions/" class="mobile-nav__link">Work Instructions</a>
+						<a href="{{@site.url}}/shop-floor-management/" class="mobile-nav__link">Shop Floor Management</a>
+						<a href="{{@site.url}}/data-collection/" class="mobile-nav__link">Data Collection</a>
+						<a href="{{@site.url}}/root-cause-analysis/" class="mobile-nav__link">Root Cause Analysis</a>
+						<a href="{{@site.url}}/industrial-iot/" class="mobile-nav__link">Industrial Iot</a>
+					</div>
+				</div>
+			</div>
+			<div class="mobile-nav__item">
+				<div class="mobile-nav__item-header">
+					<div class="mobile-nav__title">Resources</div>
+					<div class="mobile-nav__item-body">
+						<a href="{{@site.url}}/accelerator/" class="mobile-nav__link">Accelerator Program</a>
+						<a href="{{@site.url}}/blog/" class="mobile-nav__link">Blog</a>
+						<a href="{{@site.url}}/academy/" class="mobile-nav__link">Academy</a>
+						<a href="{{@site.url}}/glossary/" class="mobile-nav__link">Glossary</a>
+					</div>
+				</div>
+			</div>
+			<div class="mobile-nav__item">
+				<div class="mobile-nav__item-header">
+					<a href="{{@site.url}}/pricing/" class="mobile-nav__title">Pricing</a>
+				</div>
+			</div>
+			<div class="mobile-nav__item">
+				<div class="mobile-nav__item-header">
+					<div class="mobile-nav__title">About Us</div>
+					<div class="mobile-nav__item-body">
+						<a href="{{@site.url}}/accelerator/" class="mobile-nav__link">Accelerator Program</a>
+						<div class="contact-us__cards dropdown">
+							<div class="contact-us__card">
+								<div class="contact-us__card-img">{{> icons/chat}}</div>
+								<div class="contact-us__card-text">
+									<h3 class="contact-us__card-title">Email:</h3>
+									<p class="contact-us__card-description">info@scout.systems</p>
+								</div>
+							</div>
+							<div class="contact-us__card">
+								<div class="contact-us__card-img">{{> icons/map-marker}}</div>
+								<div class="contact-us__card-text">
+									<h3 class="contact-us__card-title">Office:</h3>
+									<p class="contact-us__card-description">3902 West Valley Hwy. N. Suite 104 <br> Auburn, WA 98001, USA</p>
+								</div>
+							</div>
+							<div class="contact-us__card">
+								<div class="contact-us__card-img">{{> icons/phone}}</div>
+								<div class="contact-us__card-text">
+									<h3 class="contact-us__card-title">Phone:</h3>
+									<p class="contact-us__card-description">Mon-Fri from 8am - 5pm <br> +1 253 329 2460</p>
+								</div>
+							</div>
+						</div>
+						<a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLJdg0x%2BA8JB9S6KB8iaAx440f898ylNEtcv2g1YsQqQEjIxKd5cvRiOVd7EaOwF9nyDgHPIrnCLXl5%2FOktHSwNyOdaaVpdVj2fY9lzeJDQ6EPunHJq83tP7bXIWDOVHcgKxeUlwsZm72DWj9oFDOWat2qj0pUxMvPYfRGMc7oZMvS%2FYZiOY&webInteractiveContentId=128943797352&portalId=41638633" target="_blank" class="default-button_green">Schedule Consultation</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	{{/is}}
 </header>

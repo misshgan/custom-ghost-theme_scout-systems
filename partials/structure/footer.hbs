@@ -2,26 +2,28 @@
 	<div class="w1340">
 		<div class="footer__body">
 			<div class="footer__logo">{{>icons/logo-white}}</div>
-			<div class="footer__nav">
-				<h4 class="footer__nav-title">Technology</h4>
-				<a href="{{@site.url}}/tech-overview/" class="footer__nav-link">Tech overview</a>
-				<a href="{{@site.url}}/platform-capabilities/" class="footer__nav-link">Features</a>
-				<a href="{{@site.url}}/work-instructions/" class="footer__nav-link">Work instructions</a>
-				<a href="{{@site.url}}/shop-floor-management/" class="footer__nav-link">Shop floor management</a>
-			</div>
-			<div class="footer__nav" >
-				<h4 class="footer__nav-title" style="color:transparent">.</h4>
-				<a href="{{@site.url}}/data-collection/" class="footer__nav-link">Data collection</a>
-				<a href="{{@site.url}}/root-cause-analysis/" class="footer__nav-link">Root cause analysis</a>
-				<a href="{{@site.url}}/industrial-iot/" class="footer__nav-link">Industrial iot</a>
-			</div>
-			<div class="footer__nav">
-				<h4 class="footer__nav-title">RESOURCES</h4>
-				<a href="{{@site.url}}/accelerator/" class="footer__nav-link">Accelerator program</a>
-				<a href="{{@site.url}}/academy/" class="footer__nav-link">Academy</a>
-				<a href="{{@site.url}}/blog/" class="footer__nav-link">Blog</a>
-				<a href="{{@site.url}}/software-updates/" class="footer__nav-link">Release logs</a>
-			</div>
+			{{^is 'shop-floor-software'}}
+				<div class="footer__nav">
+					<h4 class="footer__nav-title">Technology</h4>
+					<a href="{{@site.url}}/tech-overview/" class="footer__nav-link">Tech overview</a>
+					<a href="{{@site.url}}/platform-capabilities/" class="footer__nav-link">Features</a>
+					<a href="{{@site.url}}/work-instructions/" class="footer__nav-link">Work instructions</a>
+					<a href="{{@site.url}}/shop-floor-management/" class="footer__nav-link">Shop floor management</a>
+				</div>
+				<div class="footer__nav" >
+					<h4 class="footer__nav-title" style="color:transparent">.</h4>
+					<a href="{{@site.url}}/data-collection/" class="footer__nav-link">Data collection</a>
+					<a href="{{@site.url}}/root-cause-analysis/" class="footer__nav-link">Root cause analysis</a>
+					<a href="{{@site.url}}/industrial-iot/" class="footer__nav-link">Industrial iot</a>
+				</div>
+				<div class="footer__nav">
+					<h4 class="footer__nav-title">RESOURCES</h4>
+					<a href="{{@site.url}}/accelerator/" class="footer__nav-link">Accelerator program</a>
+					<a href="{{@site.url}}/academy/" class="footer__nav-link">Academy</a>
+					<a href="{{@site.url}}/blog/" class="footer__nav-link">Blog</a>
+					<a href="{{@site.url}}/software-updates/" class="footer__nav-link">Release logs</a>
+				</div>
+			{{/is}}
 			<div class="footer__nav">
 				<h4 class="footer__nav-title">Contacts</h4>
 				<span style="pointer-events: none;" href="#" class="footer__nav-link">(+1) 253 329 2460</span>

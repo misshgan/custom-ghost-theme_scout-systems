@@ -7,7 +7,7 @@ const windowWidth = window.innerWidth;
 
 const swiperConfigurations = [
   {
-    condition: window.location.pathname === '/',
+    condition: window.location.pathname === '/' || window.location.pathname === '/shop-floor-software/',
     selector: '.testimonials',
 	wrapperSelector: '.testimonials__body',
 	slideSelector: '.testimonials__card',

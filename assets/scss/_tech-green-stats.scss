@@ -4,6 +4,7 @@
 	padding: 10rem 0;
 	position: relative;
 	overflow: hidden;
+	z-index: 10;
 
 	@media (max-width:768px) {
 		border-radius: 32px;
@@ -162,5 +163,39 @@
 		@media (max-width:768px) {
 			font-size: 1.6rem;
 		}
+	}
+}
+
+.tech-green-stats.white {
+	background: $white;
+	border-radius: 0;
+	padding: 10rem 0;
+	position: relative;
+	overflow: visible;
+	z-index: 0;
+
+	.tech-green-stats__shadow1 {
+		position: absolute;
+		left: -35rem;
+		bottom: -45rem;
+		rotate: 180deg;
+	}
+
+	// .tech-green-stats__shadow2 {
+	// 	position: absolute;
+	// 	right: -35rem;
+	// 	bottom: -5rem
+	// }
+
+	.tech-green-stats__title {
+		color: $black_100;
+	}
+
+	.tech-green-stats__card-title {
+		color: $black_100;
+	}
+
+	.tech-green-stats__card-description {
+		color: $black_100;
 	}
 }

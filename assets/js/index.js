@@ -28,6 +28,23 @@ const swiperConfigurations = [
     },
   },
   {
+    condition: window.location.pathname === '/',
+    selector: '.tech-customers__swiper',
+	wrapperSelector: '.tech-customers__cards',
+	slideSelector: '.tech-customers__card',
+    config: {
+      direction: 'horizontal',
+	  slidesPerView: 3,
+	//   centeredSlides: true,
+	  spaceBetween: windowWidth > 768 ? 30 : 20,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+    },
+  },
+  {
     condition: window.location.pathname === '/industrial-iot/',
     selector: '.tech-big-slider__content',
 	wrapperSelector: '.tech-big-slider__cards',
@@ -48,7 +65,7 @@ const swiperConfigurations = [
     },
   },
   {
-    condition: (window.location.pathname === '/tech-overview/' || window.location.pathname === '/root-cause-analysis/') && windowWidth < 601,
+    condition: (window.location.pathname === '/tech-overview/' || window.location.pathname === '/root-cause-analysis/' || window.location.pathname === '/') && windowWidth < 601,
     selector: '.tech-track-swiper',
 	wrapperSelector: '.tech-track__cards',
 	slideSelector: '.tech-track__card',

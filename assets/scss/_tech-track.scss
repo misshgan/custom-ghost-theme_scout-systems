@@ -1,5 +1,19 @@
 .tech-track {
 	padding: 10rem 0;
+	position: relative;
+
+	&__shadow1 {
+		position: absolute;
+		top: -15rem;
+		left: -35rem;
+		rotate: 180deg;
+	}
+
+	&__shadow2 {
+		position: absolute;
+		right: -40rem;
+		bottom: -7.5rem
+	}
 
 	@media (max-width:768px) {
 		padding: 6rem 0;
@@ -13,6 +27,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		position: relative;
+		z-index: 5;
 
 		&.swiper {
 			padding: 0 2rem 4rem;
@@ -70,7 +86,7 @@
 			margin-bottom: 4.5rem;
 		}
 
-		img {
+		img,video  {
 			width: 100%;
 			object-fit: cover;
 		}

@@ -173,6 +173,18 @@
 .ar-block2 {
 	margin: 3.6rem 0 10rem;
 
+	&.ar-block2-home {
+		margin: 10rem 0;
+
+		.ar-block2__image {
+			margin-bottom: 0;
+
+			img {
+				position: relative;
+			}
+		}
+	}
+
 	@media (max-width:768px) {
 		margin: 0 0 4rem;
 	}

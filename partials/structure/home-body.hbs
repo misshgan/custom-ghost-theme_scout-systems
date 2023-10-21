@@ -1,57 +1,88 @@
 <div class="home">
 
-	<div class="popular">
-		<div class="w1340">
-			<h2 class="popular__title">Popular platform offerings</h2>
-			<div class="popular__cards">
-				<a href="{{@site.url}}/work-instructions/" class="popular__card">
-					<img class="popular__card-img" src="{{asset "assets/images/popular1.png"}}" alt="card image">
-					<h3 class="popular__card-title">Work Instructions</h3>
-				</a>
-				<a href="{{@site.url}}/shop-floor-management/" class="popular__card">
-					<img class="popular__card-img" src="{{asset "assets/images/popular2.png"}}" alt="card image">
-					<h3 class="popular__card-title">shop floor management</h3>
-				</a>
-				<a href="{{@site.url}}/data-collection/" class="popular__card">
-					<img class="popular__card-img" src="{{asset "assets/images/popular3.png"}}" alt="card image">
-					<h3 class="popular__card-title">data collection</h3>
-				</a>
-				<a href="{{@site.url}}/root-cause-analysis/" class="popular__card">
-					<img class="popular__card-img" src="{{asset "assets/images/popular4.png"}}" alt="card image">
-					<h3 class="popular__card-title">root cause analysis</h3>
-				</a>
-				<a href="{{@site.url}}/industrial-iot/" class="popular__card">
-					<img class="popular__card-img" src="{{asset "assets/images/popular5.png"}}" alt="card image">
-					<h3 class="popular__card-title">industrial ioT</h3>
-				</a>
-			</div>
-		</div>
-	</div>
-
 	<div class="become">
 		<div class="home-shadow-1">{{>images/shadow1}}</div>
 		<div class="home-shadow-2">{{>images/shadow2}}</div>
 
 		<div class="w1340">
 			<div class="become-content">
-				<h2 class="become__title">Become a Smart Factory</h2>
-				<p class="become__subtitle">Change is always great on paper, but tough to make real in a factory stuck in the last century. We have the solution. Scout System’s platform enables vertically integrated manufacturers to optimize their process with a universal solution.</p>
-				<a class="learn-more-button" href="{{@site.url}}/tech-overview/">Learn more <span class="green-arrow">{{>icons/arrow-right}}</span></a>
+				<h2 class="become__title">THE SMART FACTORY ADVANTAGE</h2>
+				<p class="become__subtitle">You are actively paying money to handicap your facility if you are not a Smart Factory. The hidden costs of analog processes dwarf the cost to implement new digital technology. Before considering the benefits of big data analytics, machine learning, and artificial intelligence, simply eliminating the need for paper will expose new opportunities of automation. 
+				<br>
+				<br>
+				Smart Factories have a massive advantage due to their lower cost in producing with higher quality. What may have worked historically, can now be a liability. We strive to give our customers a leg up on their competition, with a value-focused personalized touch.</p>
+				<a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLJdg0x%2BA8JB9S6KB8iaAx440f898ylNEtcv2g1YsQqQEjIxKd5cvRiOVd7EaOwF9nyDgHPIrnCLXl5%2FOktHSwNyOdaaVpdVj2fY9lzeJDQ6EPunHJq83tP7bXIWDOVHcgKxeUlwsZm72DWj9oFDOWat2qj0pUxMvPYfRGMc7oZMvS%2FYZiOY&webInteractiveContentId=128943797352&portalId=41638633" target="_blank" class="default-button_green">Schedule Consultation</a>
 				<div class="home-factory"><img src="{{asset "assets/images/factory-image.webp"}}" alt="factory image"></div>
 			</div>
 		</div>
 	</div>
 
-	<div class="home-big-video">
+	<div class="tech-green-stats">
+
+		{{> structure/form-popup}}
+
+		<div class="tech-green-stats__ellipse1">{{> images/tech-ellipse-stats}}</div>
+		<div class="tech-green-stats__ellipse2">{{> images/tech-ellipse-stats}}</div>
 		<div class="w1340">
-			<video src="https://scoutweb.blob.core.windows.net/assets/Scout-Systems-Manufacturing-Software-Compressed.mp4" controls preload="none" poster="{{asset "assets/images/video-thumb.png"}}"></video>
-			<div class="video-shadow">
-				{{>images/video-shadow}}
+			<div class="tech-green-stats__left">
+				<h2 class="tech-green-stats__title">CATCH UP WITH INNOVATION AND IMPRESS CUSTOMERS</h2>
+				<div style="cursor: pointer;" class="default-button_green runScriptButton">GET STARTED TODAY</div>
+			</div>
+			<div class="tech-green-stats__right">
+				<div class="tech-green-stats__card">
+					<div class="tech-green-stats__card-img">{{> icons/tech-green-stats-icon1 color='white'}}</div>
+					<div class="tech-green-stats__card-text">
+						<h3 class="tech-green-stats__card-title">Reduce Operational Costs</h3>
+						<p class="tech-green-stats__card-description">Experience a 5-15% increase in your capacity due to automating high labor tasks and reducing waste.</p>
+					</div>
+				</div>
+				<div class="tech-green-stats__card">
+					<div class="tech-green-stats__card-img">{{> icons/tech-green-stats-icon2 color='white'}}</div>
+					<div class="tech-green-stats__card-text">
+						<h3 class="tech-green-stats__card-title">Secure Tribal Knowledge</h3>
+						<p class="tech-green-stats__card-description">Rapidly create work instructions, simplify revision control, and reduce training time for new employees.</p>
+					</div>
+				</div>
+				<div class="tech-green-stats__card">
+					<div class="tech-green-stats__card-img">{{> icons/tech-green-stats-icon3 color='white'}}</div>
+					<div class="tech-green-stats__card-text">
+						<h3 class="tech-green-stats__card-title">Improve Quality</h3>
+						<p class="tech-green-stats__card-description">Implement inline quality assurance methods to reduce defect occurrences and lower the cost of quality.</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	{{>structure/cta}}
+	{{> structure/technology/tech-customers}}
+
+	<div class="landing-stats">
+		<div class="w1340">
+			<div class="landing-stats__card stats-card">
+				<span class="stats-card__amount">30M+</span>
+				<h3 class="stats-card__title">Products Built</h3>
+				<p class="stats-card__description">Our customers have unparalleled operational visibility.</p>
+			</div>
+
+			<div class="landing-stats__card stats-card">
+				<span class="stats-card__amount">4.5M+</span>
+				<h3 class="stats-card__title">Dollars of Waste Analyzed</h3>
+				<p class="stats-card__description">Our platform identifies cost saving opportunities.</p>
+			</div>
+
+			<div class="landing-stats__card stats-card">
+				<span class="stats-card__amount">1M+</span>
+				<h3 class="stats-card__title">Work Orders Monitored</h3>
+				<p class="stats-card__description">We're proud of our 99.99% cloud server uptime.</p>
+			</div>
+
+			<div class="landing-stats__card stats-card">
+				<span class="stats-card__amount">400k+</span>
+				<h3 class="stats-card__title">Instructions Created</h3>
+				<p class="stats-card__description">We've simplified Securing Tribal Knowledge.</p>
+			</div>
+		</div>
+	</div>
 
 	<div class="w1340">
 		<div class="testimonials swiper">
@@ -96,4 +127,94 @@
 			<div class="swiper-button-next">{{>icons/small-arrow-right}}</div>
 		</div>
 	</div>
+
+	<div class="tech-track">
+		<div class="tech-track__shadow1">{{> images/shadow1}}</div>
+		<div class="tech-track__shadow2">{{> images/shadow2}}</div>
+		<div class="w1340 tech-track-swiper">
+			<h2 class="tech-track__title">The Future is Digital</h2>
+			<p class="tech-track__subtitle">This is obvious. The question you should consider is if you want to take
+			on this task on your own, or partner with a company that survives by making
+			Manufacturers succeed. With over a 90% success rate - taking customers from
+			onboarding through to value discovery - chances are this will work for you and
+			pay for itself at the same time.</p>
+			<div class="tech-track__img">
+				<video src="https://scoutweb.blob.core.windows.net/assets/Scout-Systems-Manufacturing-Software-Compressed.mp4" controls preload="none" poster="{{asset "assets/images/video-thumb.png"}}"></video>
+			</div>
+			<div class="tech-track__cards">
+				<div class="tech-track__card">
+					<div class="tech-track__card-icon">{{> icons/tech-track-icon1}}</div>
+					<h3 class="tech-track__card-title">Are You Falling Behind?</h3>
+					<p class="tech-track__card-description">The pace of new technology is accelerating. AI is here and many haven’t even caught up to IoT.</p>
+				</div>
+				<div class="tech-track__card">
+					<div class="tech-track__card-icon">{{> icons/tech-track-icon2}}</div>
+					<h3 class="tech-track__card-title">Catching up is Daunting</h3>
+					<p class="tech-track__card-description">Assuming you’re up to the challenge, where do you start? What kind of resources are needed?</p>
+				</div>
+				<div class="tech-track__card">
+					<div class="tech-track__card-icon">{{> icons/tech-track-icon3}}</div>
+					<h3 class="tech-track__card-title">Our Unique Approach</h3>
+					<p class="tech-track__card-description">We listen to customers' challenges and help implement systematic change, while targeting a ROI.</p>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+
+	<div class="tech-green-stats white">
+
+		{{> structure/form-popup}}
+
+		<div class="tech-green-stats__shadow1">{{> images/shadow1}}</div>
+		{{!-- <div class="tech-green-stats__shadow2">{{> images/shadow1}}</div> --}}
+		<div class="w1340">
+			<div class="tech-green-stats__left">
+				<h2 class="tech-green-stats__title">DIGITAL TRANSITION MADE EASY</h2>
+				<div style="cursor: pointer;" class="default-button_green runScriptButton">GET STARTED TODAY</div>
+			</div>
+			<div class="tech-green-stats__right">
+				<div class="tech-green-stats__card">
+					<div class="tech-green-stats__card-img">{{> icons/tech-green-stats-icon1 color='dark'}}</div>
+					<div class="tech-green-stats__card-text">
+						<h3 class="tech-green-stats__card-title">Rapid Deployment</h3>
+						<p class="tech-green-stats__card-description">Configure, Install and get Trained after only a few hours. You will have 100% visibility of your plant within days.</p>
+					</div>
+				</div>
+				<div class="tech-green-stats__card">
+					<div class="tech-green-stats__card-img">{{> icons/tech-green-stats-icon2 color='dark'}}</div>
+					<div class="tech-green-stats__card-text">
+						<h3 class="tech-green-stats__card-title">Strong Momentum</h3>
+						<p class="tech-green-stats__card-description">Our experts will provide continuous guidance, allowing your staff to keep their focus on your factory.</p>
+					</div>
+				</div>
+				<div class="tech-green-stats__card">
+					<div class="tech-green-stats__card-img">{{> icons/tech-green-stats-icon3 color='dark'}}</div>
+					<div class="tech-green-stats__card-text">
+						<h3 class="tech-green-stats__card-title">Realized Opportunities</h3>
+						<p class="tech-green-stats__card-description">In less than 3 months, you will experience improvements that can be quantified; use the data to validate your investment.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ar-block2 ar-block2-home">
+		<div class="w1340">
+			<div class="ar-block2__image">
+				<img src="{{asset 'assets/images/floor-management/timeline.png'}}" alt="timeline image">
+			</div>
+		</div>
+	</div>
+
+	{{!-- <div class="home-big-video">
+		<div class="w1340">
+			<video src="https://scoutweb.blob.core.windows.net/assets/Scout-Systems-Manufacturing-Software-Compressed.mp4" controls preload="none" poster="{{asset "assets/images/video-thumb.png"}}"></video>
+			<div class="video-shadow">
+				{{>images/video-shadow}}
+			</div>
+		</div>
+	</div> --}}
+
+	{{>structure/cta}}
 </div>

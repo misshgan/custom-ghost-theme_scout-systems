@@ -369,6 +369,7 @@ html {
   border-radius: 0 0 4.2rem 4.2rem;
   padding-bottom: 8.6rem;
   overflow: hidden;
+  z-index: 11;
 }
 @media (max-width: 700px) {
   .hero {
@@ -898,7 +899,7 @@ html {
 }
 @media (min-width: 1800px) {
   .home .home-factory {
-    right: -35%;
+    right: -40%;
     top: 0;
   }
 }
@@ -2454,6 +2455,12 @@ html {
 }
 .tech-track .learn-more-button {
   margin-top: auto;
+}
+
+.tech-track_home .tech-track__img {
+  box-shadow: none;
+  border-radius: 2.4rem;
+  overflow: hidden;
 }
 
 .tech-green-cards {

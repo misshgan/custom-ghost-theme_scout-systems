@@ -159,3 +159,23 @@
 	.green-arrow {
 	}
 }
+
+.tech-green-cards.white {
+	background: $white;
+
+	.tech-green-cards__card-title, .tech-green-cards__card-description {
+		color: $black_100;
+	}
+
+	.tech-green-cards__card-text {
+		width: 45%;
+	}
+
+	.tech-green-cards__card-img {
+		width: 60%;
+	}
+
+	.tech-green-cards__card:not(:last-child) {
+		margin-bottom: 10rem;
+	}
+}

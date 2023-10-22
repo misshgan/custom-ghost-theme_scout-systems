@@ -1791,6 +1791,11 @@ html {
   bottom: -45rem;
   rotate: 180deg;
 }
+.tech-green-stats.white .tech-green-stats__shadow2 {
+  position: absolute;
+  right: -35rem;
+  bottom: -5rem;
+}
 .tech-green-stats.white .tech-green-stats__title {
   color: #333447;
 }
@@ -1799,6 +1804,10 @@ html {
 }
 .tech-green-stats.white .tech-green-stats__card-description {
   color: #333447;
+}
+
+.tech-green-stats.tech .tech-green-stats__card-description {
+  margin-bottom: 2rem;
 }
 
 .tech-u-accordion {
@@ -2457,6 +2466,9 @@ html {
   margin-top: auto;
 }
 
+.tech-track_home {
+  overflow: hidden;
+}
 .tech-track_home .tech-track__img {
   box-shadow: none;
   border-radius: 2.4rem;
@@ -2629,6 +2641,22 @@ html {
   color: #FFFFFF !important;
   border-bottom-color: #FFFFFF;
 }
+.tech-green-cards.white {
+  background: #FFFFFF;
+}
+.tech-green-cards.white .tech-green-cards__card-title, .tech-green-cards.white .tech-green-cards__card-description {
+  color: #333447;
+}
+.tech-green-cards.white .tech-green-cards__card-text {
+  width: 45%;
+}
+.tech-green-cards.white .tech-green-cards__card-img {
+  width: 60%;
+}
+.tech-green-cards.white .tech-green-cards__card:not(:last-child) {
+  margin-bottom: 10rem;
+}
+
 .tech-white-cards-1 {
   position: relative;
   padding: 10rem 0;
@@ -3686,6 +3714,10 @@ html {
 }
 .tech-white-cards-3__card-list-item:not(:last-child) {
   margin-bottom: 1.2rem;
+}
+
+.tech-white-cards-3_tech .tech-white-cards-3__card-title {
+  width: auto;
 }
 
 .page * {

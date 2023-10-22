@@ -200,7 +200,8 @@
 	}
 }
 
-.tech-green-stats.tech {
+.tech-green-stats.tech.white {
+	overflow: hidden;
 	.tech-green-stats__card-description {
 		margin-bottom: 2rem;
 	}

@@ -34,7 +34,14 @@ const swiperConfigurations = [
 	slideSelector: '.tech-customers__card',
     config: {
       direction: 'horizontal',
-	  slidesPerView: 3,
+	  slidesPerView: 
+	  	windowWidth > 768 
+		? 3 
+		: windowWidth < 768 && windowWidth > 500
+		? 2 
+		: windowWidth < 500 
+		? 1 
+		: 1,
 	//   centeredSlides: true,
 	  spaceBetween: windowWidth > 768 ? 30 : 20,
       autoplay: {

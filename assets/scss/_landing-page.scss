@@ -155,7 +155,7 @@
 
         @media (max-width:768px) {
             flex-wrap: wrap;
-            row-gap: 2rem;
+            row-gap: 3rem;
         }
     }
 
@@ -165,11 +165,11 @@
 .stats-card {
     width: 24%;
 
-    @media (max-width:768px) {
+    @media (max-width:800px) {
         width: 32%;
     }
 
-    @media (max-width:550px) {
+    @media (max-width:650px) {
         width: 48%;
     }
 
@@ -190,11 +190,19 @@
 
         font-size: 1.8rem;
         font-weight: 700;
+
+        @media (max-width:1200px) {
+            font-size: 2rem;
+        }
     }
     &__description {
         color: $black_90;
 
         font-size: 1.8rem;
         font-weight: 400;
+
+        @media (max-width:1200px) {
+            font-size: 2rem;
+        }
     }
 }

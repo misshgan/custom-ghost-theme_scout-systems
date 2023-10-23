@@ -152,7 +152,7 @@
 		font-weight: 600;
 
 		@media (max-width:768px) {
-			font-size: 2.4rem;
+			font-size: 2.8rem;
 		}
 	}
 	&__card-description {
@@ -161,7 +161,7 @@
 		font-weight: 400;
 
 		@media (max-width:768px) {
-			font-size: 1.6rem;
+			font-size: 2rem;
 		}
 	}
 }
@@ -174,11 +174,19 @@
 	overflow: visible;
 	z-index: 0;
 
+	@media (max-width:600px) {
+		padding: 6rem 0;
+	}
+
 	.tech-green-stats__shadow1 {
 		position: absolute;
 		left: -35rem;
 		bottom: -45rem;
 		rotate: 180deg;
+
+		@media (max-width:600px) {
+			left: -50rem;
+		}
 	}
 
 	.tech-green-stats__shadow2 {
@@ -202,6 +210,10 @@
 
 .tech-green-stats.tech.white {
 	overflow: hidden;
+
+	@media (max-width:600px) {
+		padding: 6rem 0;
+	}
 	.tech-green-stats__card-description {
 		margin-bottom: 2rem;
 	}

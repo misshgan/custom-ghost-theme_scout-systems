@@ -63,10 +63,6 @@
 		font-weight: 400;
 		line-height: 1.4;
 
-		@media (max-width:768px) {
-			font-size: 1.8rem;
-		}
-
 		@media (max-width:500px) {
 			margin-bottom: 2.4rem;
 		}
@@ -115,10 +111,6 @@
 		text-align: center;
 		font-size: 3.2rem;
 		font-weight: 600;
-
-		@media (max-width:768px) {
-			font-size: 2.8rem;
-		}
 	}
 	&__card-description {
 		margin-bottom: 2rem;
@@ -129,7 +121,7 @@
 		font-weight: 400;
 
 		@media (max-width:768px) {
-			font-size: 1.6rem;
+			font-size: 2rem;
 		}
 	}
 	.learn-more-button {
@@ -139,7 +131,19 @@
 
 
 .tech-track_home {
-	overflow: hidden;
+	position: relative;
+    z-index: 1;
+
+	@media (max-width:500px) {
+		padding-bottom: 0;
+	}
+
+	.tech-track__subtitle {
+		@media (max-width:550px) {
+			margin-bottom: 1rem;
+		}
+	}
+	
 	.tech-track__img {
 		box-shadow: none;
 		border-radius: 2rem;
@@ -149,11 +153,56 @@
 		@media (min-width:1800px) {
 			height: 36.6rem;
 		}
+
+		@media (max-width:1024px) {
+			width: 75%;
+		}
+
+		@media (max-width:768px) {
+			width: 100%;
+		}
+
+		@media (max-width:550px) {
+			margin-bottom: 1rem;
+		}
+
+		@media (max-width:425px) {
+			height: 33rem;
+		}
+
+		@media (max-width:400px) {
+			height: 30rem;
+		}
+	}
+
+	.tech-track__shadow1 {
+		@media (max-width:1024px) {
+			left: -43rem;
+			position: absolute;
+			rotate: 180deg;
+			top: -53rem;
+		}
+
+		@media (max-width:600px) {
+			left: -55rem;
+		}
+	}
+
+	.tech-track__shadow2 {
+		@media (max-width:1024px) {
+			bottom: -24.5rem;
+			position: absolute;
+			right: -40rem;
+		}
+		@media (max-width:600px) {
+			right: -50rem;
+		}
 	}
 }
 
 .tech-track_tech {
 	padding: 10rem 0 7rem;
+	overflow: hidden;
 
 	.tech-track__img {
 		margin-bottom: 0;

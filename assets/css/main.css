@@ -118,6 +118,7 @@ html {
   width: max-content;
   margin-right: 2rem;
   padding: 1.6rem 2.4rem;
+  display: block;
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 1.28;
@@ -136,7 +137,12 @@ html {
   background: #0A8058;
   border-color: #0A8058;
 }
-@media (max-width: 450px) {
+@media (max-width: 500px) {
+  .default-button_green {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
   .default-button_green {
     width: 100%;
     text-align: center;
@@ -168,8 +174,9 @@ html {
   background: #98E4CB;
   border-color: #0A8058;
 }
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .default-button {
+    font-size: 2rem;
     width: 100%;
     text-align: center;
     margin-right: 0;
@@ -375,6 +382,7 @@ html {
   padding-bottom: 8.6rem;
   overflow: hidden;
   z-index: 11;
+  background: #333447;
 }
 @media (max-width: 700px) {
   .hero {
@@ -452,11 +460,6 @@ html {
   color: #C7C8DA;
   max-width: 90rem;
 }
-@media only screen and (max-width: 37.5em) {
-  .hero__subtitle {
-    font-size: 1.6rem;
-  }
-}
 .hero .hero__buttons {
   display: flex;
   width: -moz-max-content;
@@ -467,7 +470,7 @@ html {
   display: flex;
   align-items: center;
 }
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .hero .hero__buttons {
     flex-direction: column;
     width: 100%;
@@ -485,7 +488,7 @@ html {
   display: flex;
   align-items: center;
 }
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .hero__buttons {
     flex-direction: column;
     width: 100%;
@@ -757,7 +760,6 @@ html {
 @media (max-width: 600px) {
   .home {
     border-radius: 0px 0px 1.2rem 1.2rem;
-    padding-bottom: 4rem;
   }
 }
 .home .popular {
@@ -930,7 +932,7 @@ html {
   .home .home-factory {
     right: -14rem;
     width: 80rem;
-    bottom: -35rem;
+    bottom: -42rem;
   }
 }
 @media (max-width: 500px) {
@@ -938,7 +940,12 @@ html {
     bottom: unset;
     right: -51%;
     width: 174%;
-    top: 56%;
+    top: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .home .home-factory {
+    top: 81%;
   }
 }
 .home .become-content {
@@ -958,7 +965,7 @@ html {
     margin-bottom: 23rem;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .home .become-content {
     padding-top: 7rem;
   }
@@ -1165,13 +1172,6 @@ html {
 }
 @media (max-width: 500px) {
   .home .cta__factory {
-    left: -7%;
-    top: 56%;
-    width: 142%;
-  }
-}
-@media (max-width: 450px) {
-  .home .cta__factory {
     left: -6%;
     top: 61%;
     width: 150%;
@@ -1270,12 +1270,22 @@ html {
   color: #333447;
   margin-bottom: 0.4rem;
 }
+@media (max-width: 1200px) {
+  .home .testimonials .t-card__title {
+    font-size: 2rem;
+  }
+}
 .home .testimonials .t-card__company {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.28;
   color: #757575;
   margin-bottom: 2rem;
+}
+@media (max-width: 1200px) {
+  .home .testimonials .t-card__company {
+    font-size: 1.8rem;
+  }
 }
 .home .testimonials .t-card__text {
   font-weight: 600;
@@ -1768,7 +1778,7 @@ html {
 }
 @media (max-width: 768px) {
   .tech-green-stats__card-title {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
 }
 .tech-green-stats__card-description {
@@ -1778,7 +1788,7 @@ html {
 }
 @media (max-width: 768px) {
   .tech-green-stats__card-description {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
 
@@ -1790,11 +1800,21 @@ html {
   overflow: visible;
   z-index: 0;
 }
+@media (max-width: 600px) {
+  .tech-green-stats.white {
+    padding: 6rem 0;
+  }
+}
 .tech-green-stats.white .tech-green-stats__shadow1 {
   position: absolute;
   left: -35rem;
   bottom: -45rem;
   rotate: 180deg;
+}
+@media (max-width: 600px) {
+  .tech-green-stats.white .tech-green-stats__shadow1 {
+    left: -50rem;
+  }
 }
 .tech-green-stats.white .tech-green-stats__shadow2 {
   position: absolute;
@@ -1813,6 +1833,11 @@ html {
 
 .tech-green-stats.tech.white {
   overflow: hidden;
+}
+@media (max-width: 600px) {
+  .tech-green-stats.tech.white {
+    padding: 6rem 0;
+  }
 }
 .tech-green-stats.tech.white .tech-green-stats__card-description {
   margin-bottom: 2rem;
@@ -2399,11 +2424,6 @@ html {
   font-weight: 400;
   line-height: 1.4;
 }
-@media (max-width: 768px) {
-  .tech-track__subtitle {
-    font-size: 1.8rem;
-  }
-}
 @media (max-width: 500px) {
   .tech-track__subtitle {
     margin-bottom: 2.4rem;
@@ -2456,11 +2476,6 @@ html {
   font-size: 3.2rem;
   font-weight: 600;
 }
-@media (max-width: 768px) {
-  .tech-track__card-title {
-    font-size: 2.8rem;
-  }
-}
 .tech-track__card-description {
   margin-bottom: 2rem;
   color: #3D3E52;
@@ -2470,7 +2485,7 @@ html {
 }
 @media (max-width: 768px) {
   .tech-track__card-description {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
 .tech-track .learn-more-button {
@@ -2478,7 +2493,18 @@ html {
 }
 
 .tech-track_home {
-  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 500px) {
+  .tech-track_home {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 550px) {
+  .tech-track_home .tech-track__subtitle {
+    margin-bottom: 1rem;
+  }
 }
 .tech-track_home .tech-track__img {
   box-shadow: none;
@@ -2491,9 +2517,60 @@ html {
     height: 36.6rem;
   }
 }
+@media (max-width: 1024px) {
+  .tech-track_home .tech-track__img {
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  .tech-track_home .tech-track__img {
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  .tech-track_home .tech-track__img {
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 425px) {
+  .tech-track_home .tech-track__img {
+    height: 33rem;
+  }
+}
+@media (max-width: 400px) {
+  .tech-track_home .tech-track__img {
+    height: 30rem;
+  }
+}
+@media (max-width: 1024px) {
+  .tech-track_home .tech-track__shadow1 {
+    left: -43rem;
+    position: absolute;
+    rotate: 180deg;
+    top: -53rem;
+  }
+}
+@media (max-width: 600px) {
+  .tech-track_home .tech-track__shadow1 {
+    left: -55rem;
+  }
+}
+@media (max-width: 1024px) {
+  .tech-track_home .tech-track__shadow2 {
+    bottom: -24.5rem;
+    position: absolute;
+    right: -40rem;
+  }
+}
+@media (max-width: 600px) {
+  .tech-track_home .tech-track__shadow2 {
+    right: -50rem;
+  }
+}
 
 .tech-track_tech {
   padding: 10rem 0 7rem;
+  overflow: hidden;
 }
 .tech-track_tech .tech-track__img {
   margin-bottom: 0;
@@ -4966,6 +5043,11 @@ html {
 .ar-block2.ar-block2-home {
   margin: 10rem 0;
 }
+@media (max-width: 600px) {
+  .ar-block2.ar-block2-home {
+    margin: 1.4rem 0 8rem;
+  }
+}
 .ar-block2.ar-block2-home .ar-block2__image {
   margin-bottom: 0;
 }
@@ -5998,12 +6080,12 @@ html {
 }
 
 .tech-hero.page-404 {
-  padding: 0;
-  height: 103vh;
   border-radius: 0;
   display: flex;
-  align-items: center;
+  min-height: 103vh;
   justify-content: center;
+  padding: 0;
+  padding-top: 23rem;
 }
 .tech-hero.page-404 .tech-hero__ellipse1 {
   top: -38%;
@@ -6050,6 +6132,7 @@ html {
   color: #FFFFFF;
   font-size: 3.2rem;
   font-weight: 400;
+  margin-bottom: 3rem;
 }
 .tech-hero.page-404 .default-button_green {
   display: block;
@@ -6204,19 +6287,19 @@ html {
 @media (max-width: 768px) {
   .landing-stats .w1340 {
     flex-wrap: wrap;
-    row-gap: 2rem;
+    row-gap: 3rem;
   }
 }
 
 .stats-card {
   width: 24%;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .stats-card {
     width: 32%;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   .stats-card {
     width: 48%;
   }
@@ -6235,15 +6318,30 @@ html {
   font-size: 1.8rem;
   font-weight: 700;
 }
+@media (max-width: 1200px) {
+  .stats-card__title {
+    font-size: 2rem;
+  }
+}
 .stats-card__description {
   color: #3D3E52;
   font-size: 1.8rem;
   font-weight: 400;
 }
+@media (max-width: 1200px) {
+  .stats-card__description {
+    font-size: 2rem;
+  }
+}
 
 .tech-customers {
   padding: 10rem 0;
   position: relative;
+}
+@media (max-width: 768px) {
+  .tech-customers {
+    padding: 6rem 0;
+  }
 }
 .tech-customers__wrapper {
   display: flex;
@@ -6257,6 +6355,13 @@ html {
   position: absolute;
   right: -33rem;
 }
+@media (max-width: 600px) {
+  .tech-customers__shadow {
+    bottom: -10rem;
+    position: absolute;
+    right: -47rem;
+  }
+}
 .tech-customers__swiper-container {
   width: 100%;
   background: url(/assets/images/tech-customers/tech-customers-bg.jpg);
@@ -6267,6 +6372,17 @@ html {
   overflow: hidden;
   padding: 10rem 2rem;
   margin-bottom: 4.2rem;
+}
+@media (max-width: 768px) {
+  .tech-customers__swiper-container {
+    padding: 4rem 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .tech-customers__swiper-container {
+    padding: 2rem;
+    border-radius: 1.6rem;
+  }
 }
 .tech-customers__card.swiper-slide {
   background: #FFFFFF;
@@ -6287,4 +6403,10 @@ html {
   font-size: 3.2rem;
   font-weight: 600;
   line-height: 1.1;
+}
+@media (max-width: 600px) {
+  .tech-customers__text {
+    padding: 0;
+    font-size: 2.6rem;
+  }
 }

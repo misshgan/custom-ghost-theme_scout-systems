@@ -1,11 +1,10 @@
 .tech-hero.page-404 {
-	padding: 0;
-	height: 103vh;
 	border-radius: 0;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    min-height: 103vh;
+    justify-content: center;
+    padding: 0;
+    padding-top: 23rem;
 
 	.tech-hero__ellipse1 {
 		top: -38%;
@@ -53,6 +52,7 @@
 		color: $white;
 		font-size: 3.2rem;
 		font-weight: 400;
+		margin-bottom: 3rem;
 	}
 	.default-button_green {
 		display: block;

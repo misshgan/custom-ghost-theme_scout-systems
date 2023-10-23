@@ -11,7 +11,6 @@
 
 	@media (max-width:600px) {
 		border-radius: 0px 0px 1.2rem 1.2rem;
-		padding-bottom: 4rem;
 	}
 
 	background: $white;
@@ -193,21 +192,19 @@
 		@media (max-width:600px) {
 			right: -14rem;
 			width: 80rem;
-			bottom: -35rem;
+			bottom: -42rem;
 		}
 
 		@media (max-width:500px) {
 			bottom: unset;
 			right: -51%;
 			width: 174%;
-			top: 56%
+			top: 80%
 		}
 
-		// @media (max-width:400px) {
-		// 	right: -21rem;
-		// 	width: 70rem;
-		// 	bottom: -32rem;
-		// }
+		@media (max-width:400px) {
+			top: 81%
+		}
 	}
 
 	.become-content {
@@ -225,7 +222,7 @@
 			margin-bottom: 23rem;
 		}
 
-		@media (max-width:450px) {
+		@media (max-width:500px) {
 			padding-top: 7rem;
 		}
 	}
@@ -437,13 +434,13 @@
 				width: 121%;
 			}
 
-			@media (max-width:500px) {
-				left: -7%;
-				top: 56%;
-				width: 142%;
-			}
+			// @media (max-width:500px) {
+			// 	left: -7%;
+			// 	top: 56%;
+			// 	width: 142%;
+			// }
 
-			@media (max-width:450px) {
+			@media (max-width:500px) {
 				left: -6%;
 				top: 61%;
 				width: 150%;
@@ -554,6 +551,10 @@
 			color: $black_100;
 			
 			margin-bottom: 0.4rem;
+
+			@media (max-width:1200px) {
+				font-size: 2rem;
+			}
 		}
 		.t-card__company {
 			font-weight: 400;
@@ -563,6 +564,10 @@
 			color: $grey_100;	
 			
 			margin-bottom: 2rem;
+
+			@media (max-width:1200px) {
+				font-size: 1.8rem;
+			}
 		}
 		.t-card__text {
 			font-weight: 600;

@@ -75,6 +75,7 @@
 	padding-bottom: 8.6rem;
 	overflow: hidden;
 	z-index: 11;
+	background: $black_100;
 
 	@media (max-width:700px) {
 		border-radius: 0px 0px 2.2rem 2.2rem;
@@ -150,10 +151,6 @@
 
 		color: $grey_50;
 		max-width: 90rem;
-
-		@include respond(600px) {
-			font-size: 1.6rem;
-		}
 	}
 
 	.hero__buttons {
@@ -165,7 +162,7 @@
 		display: flex;
 		align-items: center;
 	
-		@media (max-width:450px) {
+		@media (max-width:500px) {
 			flex-direction: column;
 			width: 100%;
 			margin-top: 8rem;
@@ -182,7 +179,7 @@
 	display: flex;
 	align-items: center;
 
-	@media (max-width:450px) {
+	@media (max-width:500px) {
 		flex-direction: column;
 		width: 100%;
 	}

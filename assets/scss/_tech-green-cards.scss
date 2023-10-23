@@ -173,6 +173,13 @@
 
 	.tech-green-cards__card-img {
 		width: 60%;
+		height: 41rem;
+		border-radius: 2rem;
+		overflow: hidden;
+
+		@media (min-width:1800px) {
+			height: 36.3rem;
+		}
 	}
 
 	.tech-green-cards__card:not(:last-child) {

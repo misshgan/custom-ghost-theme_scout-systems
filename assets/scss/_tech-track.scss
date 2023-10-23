@@ -142,7 +142,20 @@
 	overflow: hidden;
 	.tech-track__img {
 		box-shadow: none;
-		border-radius: 2.4rem;
+		border-radius: 2rem;
 		overflow: hidden;
+		height: 40.6rem;
+
+		@media (min-width:1800px) {
+			height: 36.6rem;
+		}
+	}
+}
+
+.tech-track_tech {
+	padding: 10rem 0 7rem;
+
+	.tech-track__img {
+		margin-bottom: 0;
 	}
 }

@@ -161,6 +161,10 @@
 			display: block;
 		}
 
+		&.video {
+			height: 36rem;
+		}
+
 		@media (max-width:768px) {
 			border-radius: 32px;
 		}

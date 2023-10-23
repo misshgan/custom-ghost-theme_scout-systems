@@ -19,7 +19,7 @@
 	<div class="tech-big-photo__ellipse">{{> images/tech-big-photo-ellipse}}</div>
 	<div class="w1340">
 		<div class="tech-big-photo__img iot">
-			<img src="{{asset "assets/images/industrial-iot/hardware-tracker.png"}}" alt="tech hardware tracker">
+			<img src="{{asset "assets/images/industrial-iot/hardware-tracker-min.webp"}}" alt="tech hardware tracker">
 		</div>
 		<h3 class="tech-big-photo__text">This rugged, opto-isolated edge device is designed to handle nearly any production environment.</h3>
 	</div>
@@ -136,7 +136,12 @@
 			</div>
 		</div>
 		<div class="tech-u-accordion__right">
-			<div class="tech-u-accordion__img active"><video src="{{asset "assets/images/industrial-iot/tracker-video.mp4"}}"  muted autoplay loop playsinline style="pointer-events: none;"></div>
+			<div class="tech-u-accordion__img video active">
+				{{!-- <video src="{{asset "assets/images/industrial-iot/tracker-video.mp4"}}"  muted autoplay loop playsinline style="pointer-events: none;"> --}}
+				<iframe src="https://player.vimeo.com/video/877275744?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479&autoplay=1&autopause=1&loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="width:100%;height:100%;" title="Tracker"></iframe>
+				</div>
+
+			
 		</div>
 	</div>
 </div>

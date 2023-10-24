@@ -4,6 +4,7 @@
 	padding: 19rem 0;
 	position: relative;
 	overflow: hidden;
+	z-index: 1;
 
 	@media (max-width:768px) {
 		padding: 19rem 0 14rem;

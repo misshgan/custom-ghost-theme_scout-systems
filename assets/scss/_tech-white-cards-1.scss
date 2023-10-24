@@ -6,14 +6,11 @@
 		padding: 6rem 0;
 	}
 
-	@media (max-width:450px) {
-		padding: 4rem 0;
-	}
-
 	&__shadow {
+		bottom: -157%;
+		left: -58%;
 		position: absolute;
-		bottom: -70%;
-		left: -19%;
+		width: 100%;
 
 		svg {
 			width: 100%;
@@ -21,25 +18,27 @@
 			object-fit: cover;
 		}
 
-		@media (max-width:1200px) {
-		    bottom: unset;
-			left: -22%;
-			position: absolute;
-			width: 56%;
-			top: 3%;
-		}
-
-		@media (max-width:768px) {
-			bottom: auto;
-			left: -25%;
-			position: absolute;
-			top: 17%;
-			width: 60%;
+		@media (max-width:1024px) {
+			bottom: unset;
+			top: 20%;
 		}
 
 		@media (max-width:600px) {
-			display: none;
+			width: 143%;
+			left: -73%;
 		}
+
+		// @media (max-width:768px) {
+		// 	bottom: auto;
+		// 	left: -25%;
+		// 	position: absolute;
+		// 	top: 17%;
+		// 	width: 60%;
+		// }
+
+		// @media (max-width:600px) {
+		// 	display: none;
+		// }
 	}
 
 	.w1340 {
@@ -82,7 +81,7 @@
 		line-height: 1.4;
 
 		@media (max-width:768px) {
-			font-size: 1.8rem;
+			font-size: 2rem;
 		}
 	}
 	&__right {

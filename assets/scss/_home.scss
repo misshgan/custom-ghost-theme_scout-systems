@@ -121,43 +121,39 @@
 
 	.home-shadow-1 {
 		position: absolute;
-		right: -22rem;
-		top: -42.4rem;
-		width: 60rem;
+		right: -40%;
+		top: -89%;
+		width: 100%;
 
-		svg {
-			width: 100%;
+
+		@media (max-width:768px) {
+			right: -41%;
+			top: -57%;
+			width: 113%;
 		}
 
-
-		@media (max-width:900px) {
-			width: 45rem;
-			top: -50rem;
-		}
-
-		@media (max-width:600px) {
-			right: unset;
-			left: -22rem;
+		@media (max-width:500px) {
+			right: -48%;
+			top: -44%;
+			width: 127%;
 		}
 	}
 	.home-shadow-2 {
+		bottom: -89%;
+		left: -41%;
 		position: absolute;
-		bottom: -65%;
-		left: -20rem;
-
-		width: 50rem;
-
-		svg {
-			width: 100%;
-		}
+		width: 82%;
 
 		@media (max-width:900px) {
-			bottom: -70%;
+			bottom: -51%;
+			left: -38%;
+			position: absolute;
+			width: 89%;
 		}
 
 		@media (max-width:600px) {
-			left: unset;
-			right: -22rem;
+			// left: unset;
+			// right: -22rem;
 		}
 	}
 	.home-factory {

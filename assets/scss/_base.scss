@@ -69,12 +69,23 @@ body.not-scroll {
 	overflow: hidden;
 }
 
-.video-js {
-	width: 100%;
-	height: 35rem;
+.show-mobile {
+	display: none !important;
+
+	@media (max-width:500px) {
+		display: block !important;
+	}
+}
+
+.show-desktop {
+	@media (max-width:500px) {
+		display: none !important;
+	}
 }
 
 html {
+	overflow-x: hidden;
+
 	// This defines what 1 rem is 
 	font-size: 62.5% !important; // 1rem = 10px; 10px/16px = 62.5%
 

@@ -100,12 +100,26 @@ const swiperConfigurations = [
     },
   },
   {
-    condition: window.location.pathname === '/data-collection/' && windowWidth < 769,
+    condition: window.location.pathname === '/data-collection/' && windowWidth < 900,
     selector: '.tech-white-cards-3-swiper',
 	wrapperSelector: '.tech-white-cards-3__cards',
 	slideSelector: '.tech-white-cards-3__card',
     config: {
-      slidesPerView: windowWidth > 450 ? 2 : 1,
+      slidesPerView: windowWidth > 500 ? 2 : 1,
+      spaceBetween: 20,
+      direction: 'horizontal',
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    },
+  },
+  {
+    condition: window.location.pathname === '/tech-overview/' && windowWidth < 900,
+    selector: '.tech-white-cards-3-swiper_tech',
+	wrapperSelector: '.tech-white-cards-3__cards',
+	slideSelector: '.tech-white-cards-3__card',
+    config: {
+      slidesPerView: windowWidth > 768 ? 3 : (windowWidth > 500 && windowWidth < 769) ? 2 : windowWidth < 500 ? 1 : 1,
       spaceBetween: 20,
       direction: 'horizontal',
       pagination: {

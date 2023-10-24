@@ -3,10 +3,11 @@
 	position: relative;
 
 	&__shadow1 {
+		left: -52rem;
 		position: absolute;
-		top: -15rem;
-		left: -35rem;
 		rotate: 180deg;
+		top: -39rem;
+		width: 100rem;
 	}
 
 	&__shadow2 {
@@ -129,13 +130,21 @@
 	}
 }
 
+.tech-track_tech {
+	padding: 10rem 0 7rem;
+
+	.tech-track__img {
+		margin-bottom: 0;
+	}
+}
+
 
 .tech-track_home {
 	position: relative;
     z-index: 1;
 
 	@media (max-width:500px) {
-		padding-bottom: 0;
+		padding: 6rem 0 3rem;
 	}
 
 	.tech-track__subtitle {
@@ -176,15 +185,18 @@
 	}
 
 	.tech-track__shadow1 {
-		@media (max-width:1024px) {
-			left: -43rem;
-			position: absolute;
-			rotate: 180deg;
-			top: -53rem;
-		}
+		left: -47%;
+		position: absolute;
+		rotate: 180deg;
+		top: -54%;
+		width: 80%;
 
 		@media (max-width:600px) {
-			left: -55rem;
+			left: -54%;
+			position: absolute;
+			rotate: 180deg;
+			top: -15%;
+			width: 124%;
 		}
 	}
 
@@ -197,14 +209,5 @@
 		@media (max-width:600px) {
 			right: -50rem;
 		}
-	}
-}
-
-.tech-track_tech {
-	padding: 10rem 0 7rem;
-	overflow: hidden;
-
-	.tech-track__img {
-		margin-bottom: 0;
 	}
 }

@@ -42,7 +42,7 @@
 			pointer-events: none;
 			color: $black_100;
 
-			font-size: 1.4rem;
+			font-size: 1.8rem;
 			font-weight: 400;
 			text-decoration: none;
 
@@ -126,7 +126,6 @@
 		}
 
 		@media (max-width:600px) {
-			font-size: 1.6rem;
 			margin-bottom: 2.4rem;
 		}
 	}
@@ -171,7 +170,7 @@
 		margin-bottom: 0.2rem;
 
 		color: #787882;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		font-weight: 400;
 	}
 	&__link {
@@ -180,7 +179,7 @@
 		padding: 10px 16px;
 
 		color: #525D67;
-		font-size: 1.4rem;
+		font-size: 1.8rem;
 		font-weight: 400;
 
 		border-radius: 24px;

@@ -499,10 +499,6 @@
 
 		font-size: 1.8rem;
 		font-weight: 400;
-
-		@media (max-width:768px) {
-			font-size: 1.6rem;
-		}
 	}
 	.default-button_green {
 		margin-top: 5.7rem;
@@ -557,7 +553,6 @@
 		font-weight: 400;
 
 		@media (max-width:768px) {
-			font-size: 1.6rem;
 			margin-bottom: 2rem;
 		}
 	}
@@ -778,10 +773,6 @@
 			@media (max-width:768px) {
 				margin-bottom: 2.2rem;
 			}
-		}
-
-		@media (max-width:768px) {
-			font-size: 1.6rem;
 		}
 	}
 	.default-button.green {

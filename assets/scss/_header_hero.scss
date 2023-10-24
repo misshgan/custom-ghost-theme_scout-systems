@@ -52,7 +52,7 @@
 	}
 	&__link {
 		font-weight: 600;
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 		line-height: 1.28;
 
 		text-transform: uppercase;
@@ -277,7 +277,7 @@
 		width: max-content;
 
 		font-weight: 700;
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 		line-height: 1.28;
 		
 		letter-spacing: 0.08em;
@@ -309,6 +309,10 @@
 		color: $black_100 !important;
 
 		transition: all .3s;
+
+		@media (max-width:1200px) {
+			font-size: 1.8rem;
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 1.2rem;
@@ -380,9 +384,13 @@
 	}
 	.contact-us__card-title {
 		font-size: 1.6rem;
+
+		@media (max-width:1200px) {
+			font-size: 1.8rem;
+		}
 	}
 	.contact-us__card-description {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 	}
 }
 

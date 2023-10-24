@@ -152,6 +152,10 @@
 		font-weight: 400;
 		text-decoration: none;
 
+		@media (max-width:1200px) {
+			font-size: 1.8rem;
+		}
+
 		&:not(:last-child) {
 			margin-right: 1.2rem;
 		}

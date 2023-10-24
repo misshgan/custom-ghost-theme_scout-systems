@@ -61,7 +61,7 @@
 		}
 	}
 	&__nav-title {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		line-height: 1.28;
 		
 		letter-spacing: 0.1em;
@@ -79,7 +79,7 @@
 		max-width: 16.5rem;
 
 		font-weight: 400;
-		font-size: 1.4rem;
+		font-size: 1.8rem;
 		line-height: 1.28;
 		
 		color: $grey_20 !important;
@@ -133,7 +133,7 @@
 	&__copy-text {
 
 		font-weight: 400;
-		font-size: 1.4rem;
+		font-size: 1.8rem;
 		line-height: 1.28;
 		
 		color: $grey_90 !important;
@@ -145,8 +145,6 @@
 		@media (max-width:475px) {
 			display: flex;
 			flex-direction: column;
-
-			font-size: 1.6rem;
 
 			&:last-child {
 				margin-left: 0;

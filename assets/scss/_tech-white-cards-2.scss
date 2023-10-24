@@ -53,6 +53,10 @@
 		font-size: 1.6rem;
 		font-weight: 400;
 		line-height: 1.18;
+
+		@media (max-width:1200px) {
+			font-size: 1.8rem;
+		}
 	}
 	&__cards {
 		display: flex;
@@ -96,9 +100,5 @@
 		color: $black_90;
 		font-size: 1.8rem;
 		font-weight: 400;
-
-		@media (max-width:768px) {
-			font-size: 1.6rem;
-		}
 	}
 }

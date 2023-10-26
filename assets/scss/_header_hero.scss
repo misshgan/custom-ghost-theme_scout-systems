@@ -383,14 +383,14 @@
 		
 	}
 	.contact-us__card-title {
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 
 		@media (max-width:1200px) {
-			font-size: 1.8rem;
+			font-size: 2rem;
 		}
 	}
 	.contact-us__card-description {
-		font-size: 1.4rem;
+		font-size: 1.8rem;
 	}
 }
 
@@ -442,12 +442,41 @@
 			margin-bottom: 1.4rem;
 		}
 	}
+	&__item_dropdown {
+		
+		.mobile-nav__title {
+			position: relative;
+			width: max-content;
+			margin-left: auto;
+			margin-right: auto;
+			transition: all .3s;
+
+			&::after {
+				position: absolute;
+				content: '';
+				width: 1.6rem;
+				height: 1.6rem;
+				top: calc(50% - 0.8rem);
+				right: -3.6rem;
+				background-image: url(/assets/images/arrow-down-dark.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			&.active {
+				&::after {
+					rotate: 180deg;
+				}
+			}
+		}
+	}
 	&__item-header {
 	}
 	&__title {
 		text-align: center;
 		font-weight: 600;
-		font-size: 4.2rem;
+		font-size: 3.6rem;
 		line-height: 1.28;
 
 		text-transform: uppercase;
@@ -456,7 +485,7 @@
 
 	&__title.active + .mobile-nav__item-body {
 		max-height: 400px;
-		padding: 3rem 0;
+		padding: 2rem 0;
 	}
 	&__item-body {
 		max-height: 0;
@@ -472,14 +501,14 @@
 	&__link {
 		display: block;
 		font-weight: 400;
-		font-size: 2.8rem;
+		font-size: 2.6rem;
 		line-height: 1.28;
 
 		text-transform: capitalize;
 		color: $black_90 !important;
 
 		&:not(:last-child) {
-			margin-bottom: 1.2rem;
+			margin-bottom: 1rem;
 		}
 	}
 	.contact-us__cards {

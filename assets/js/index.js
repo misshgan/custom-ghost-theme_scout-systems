@@ -225,6 +225,7 @@ const dropdowns = document.querySelectorAll('.h-dropdown');
 
 // Function to toggle active class on a dropdown and its target
 function toggleDropdown(index) {
+	
     dropdowns[index].classList.toggle('active');
     dropdownTargets[index].classList.toggle('active');
 }

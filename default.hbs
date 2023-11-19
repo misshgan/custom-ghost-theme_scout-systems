@@ -5,8 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta name="description" content="{{block 'meta-description'}}">
-
     <link rel="stylesheet" href="{{asset "built/index.css"}}" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
@@ -19,6 +17,8 @@
 	<link href="https://vjs.zencdn.net/8.6.0/video-js.css" rel="stylesheet" />
 
     <title>{{{block "title"}}}</title>
+	<meta name="description" content="{{block 'meta-description'}}">
+
 
     {{ghost_head}}
     {{!-- Outputs important meta data and settings, should always be in <head> --}}

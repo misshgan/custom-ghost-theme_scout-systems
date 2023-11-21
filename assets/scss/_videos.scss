@@ -1,0 +1,16 @@
+.page-videos {
+
+    padding: 5rem 0;
+
+    &__cards {
+        display: flex;
+        column-gap: 2%;
+    }
+
+    .video-card {
+        position: relative;
+        overflow: hidden;
+        width: 32%;
+        height: 22rem;
+    }
+}

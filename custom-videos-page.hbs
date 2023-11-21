@@ -1,0 +1,63 @@
+{{!< default}}
+
+{{#post}}
+    <div class="tech-hero academy">
+        <div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
+        <div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
+        <div class="w1340 academy-swiper">
+            <div class="tech-hero__text">
+                <h1 class="tech-hero__title">Academy</h1>
+                <p class="tech-hero__subtitle">A repository of tutorial blogs on how to use our software</p>
+            </div>
+            <div class="tech-hero__categories" style="color: #fff;">
+                <div data-category="all" class="tech-hero__category active">All</div>
+                <div data-category="conversations" class="tech-hero__category">CONVERSATIONS</div>
+                <div data-category="live-demo" class="tech-hero__category">LIVE DEMOS</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="page-videos">
+        <div class="w1340">
+            <div class="page-videos__cards">
+                {{content}}
+            </div>
+        </div>
+    </div>
+{{/post}}
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all category buttons and video cards
+        var categoryButtons = document.querySelectorAll('.tech-hero__category');
+        var videoCards = document.querySelectorAll('.video-card');
+
+        // Add click event listener to each category button
+        categoryButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                // Remove 'active' class from all buttons
+                categoryButtons.forEach(function (btn) {
+                    btn.classList.remove('active');
+                });
+
+                // Add 'active' class to the clicked button
+                button.classList.add('active');
+
+                // Get the category value from the clicked button
+                var category = button.getAttribute('data-category');
+
+                // Show/hide video cards based on the selected category
+                videoCards.forEach(function (card) {
+                    var cardCategory = card.getAttribute('data-category-name');
+                    if (category === 'all' || cardCategory === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>

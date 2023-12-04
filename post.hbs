@@ -92,21 +92,29 @@
 		</div>
 	</div>
 	{{#has tag="academy"}}
-		{{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}+tag:academy" as |related|}}
-		{{#if related}}
+		
 		<div class="post-footer">
 			<div class="w1340 post-swiper">
 				<h2 class="post-footer__title">Read next</h2>
 				<div class="post-footer__cards">
-					{{#foreach related}}
-						{{> card}}
-					{{/foreach}}
+					{{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}+tags:[{{tags[1].slug}}]" as |related|}}
+					{{#if related}}
+						{{#foreach related}}
+							{{> card}}
+						{{/foreach}}
+					{{/if}}
+					{{/get}}
+					{{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}+tags:academy" as |related|}}
+					{{#if related}}
+						{{#foreach related}}
+							{{> card}}
+						{{/foreach}}
+					{{/if}}
+					{{/get}}
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
 		</div>
-		{{/if}}
-		{{/get}}
 
 		<chat-bot platform_id="cfa51ac4-c913-4621-823c-588ea399ba0b" user_id="65e721a0-6df2-428e-b3f3-c9262477969f" chatbot_id="31adc5d1-bc97-4d80-b759-74297692d725"><a href="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral">[chatbot]</a></chat-bot>
 
@@ -118,21 +126,28 @@
 	{{/has}}
 
 	{{#has tag="#blog"}}
-		{{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}+tag:hash-blog" as |related|}}
-		{{#if related}}
 		<div class="post-footer">
 			<div class="w1340 post-swiper">
 				<h2 class="post-footer__title">Read next</h2>
 				<div class="post-footer__cards">
-					{{#foreach related}}
-						{{> card}}
-					{{/foreach}}
+					{{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}+tags:[{{tags[1].slug}}]" as |related|}}
+					{{#if related}}
+						{{#foreach related}}
+							{{> card}}
+						{{/foreach}}
+					{{/if}}
+					{{/get}}
+					{{#get "posts" include="tags,authors" limit="3" filter="id:-{{id}}+tags:hash-blog" as |related|}}
+					{{#if related}}
+						{{#foreach related}}
+							{{> card}}
+						{{/foreach}}
+					{{/if}}
+					{{/get}}
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
 		</div>
-		{{/if}}
-		{{/get}}
 
 		<style>
 			.post-hero__tags > a {

@@ -101,9 +101,9 @@ html {
 	// 	font-size: 43% !important; // 1 rem = 7px; 7/16 = 43%
 	// }
 
-	@include respond(big-desktop) {
-		font-size: 75% !important; // 1rem = 12px; 12/16px = 75%
-	}
+	// @include respond(big-desktop) {
+	// 	font-size: 75% !important; // 1rem = 12px; 12/16px = 75%
+	// }
 
 	scroll-behavior: smooth;
 }

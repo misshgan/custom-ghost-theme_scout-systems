@@ -27,11 +27,6 @@ html {
     font-size: 56.25% !important;
   }
 }
-@media only screen and (min-width: 112.5em) {
-  html {
-    font-size: 75% !important;
-  }
-}
 
 /* Colors */
 /* Fonts */
@@ -4513,7 +4508,7 @@ html {
   line-height: 1.55; /* 155.556% */
 }
 .post-body__left {
-  width: 29.25%;
+  width: 24%;
   position: sticky;
   top: 2.4rem;
   height: -moz-max-content;

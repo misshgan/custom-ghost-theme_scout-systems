@@ -4683,6 +4683,10 @@ html {
 .post-footer__cards.swiper-wrapper {
   gap: unset;
 }
+.post-footer__card:nth-child(4), .post-footer__card:nth-child(5), .post-footer__card:nth-child(6) {
+  display: none;
+}
+
 .post-card {
   width: 31.9%;
   border-radius: 12px;
@@ -4690,9 +4694,6 @@ html {
   display: flex;
   flex-direction: column;
   border: 1px solid #C7C8DA;
-}
-.post-card:nth-child(4), .post-card:nth-child(5), .post-card:nth-child(6) {
-  display: none;
 }
 .post-card__image {
   height: 22.5rem;

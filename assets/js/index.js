@@ -521,7 +521,7 @@ if (window.location.pathname.includes('/academy/') || window.location.pathname.i
 					.join('');
 		
 					const postElement = document.createElement('div');
-					postElement.className = 'post-footer__card post-card'; // Apply your existing class
+					postElement.className = 'post-card'; // Apply your existing class
 					postElement.innerHTML = `
 					<a href='${post.url}' class="post-card__image">
 					<img src="${post.feature_image || '/assets/images/placeholder.png'}" alt="feature image">

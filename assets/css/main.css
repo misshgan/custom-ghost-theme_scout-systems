@@ -6628,6 +6628,9 @@ body.hq-landing * {
 body.hq-landing {
   overflow: hidden;
 }
+body.hq-landing .italic {
+  font-style: italic;
+}
 
 .hq-landing-main-wrapper {
   padding: 4rem 0;
@@ -6736,6 +6739,80 @@ body.hq-landing {
   transform: translateX(-50%);
 }
 .landing-hero .green {
-  color: #0A8058;
+  color: #0a8058;
   font-style: italic;
+}
+
+.hq-landing-cta-1 {
+  background-color: #0B3527;
+  border-radius: 0 0 4.2rem 4.2rem;
+  padding: 10rem 0 12rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.hq-landing-cta-1__ellipse-1 {
+  position: absolute;
+  top: -25rem;
+  left: 15%;
+  z-index: 0;
+}
+.hq-landing-cta-1__ellipse-2 {
+  position: absolute;
+  width: 431.632px;
+  height: 431.632px;
+  transform: rotate(-35.298deg);
+  bottom: 20rem;
+  right: -10rem;
+  z-index: 0;
+}
+.hq-landing-cta-1 .hq-landing-content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.hq-landing-cta-1__title {
+  font-size: 9rem;
+  font-weight: 800;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+.hq-landing-cta-1__title span.margin-left {
+  margin-left: 5rem;
+}
+.hq-landing-cta-1__title span:last-child {
+  display: inline-block;
+  width: 100%;
+  text-align: end;
+}
+.hq-landing-cta-1__subtitles {
+  margin-top: 8.5rem;
+  display: flex;
+  -moz-column-gap: 11.5rem;
+       column-gap: 11.5rem;
+}
+.hq-landing-cta-1__subtitles p {
+  padding-left: 7.5rem;
+  position: relative;
+  font-size: 4.4rem;
+  font-weight: 600;
+  line-height: 1.11;
+  z-index: 1;
+}
+.hq-landing-cta-1__subtitles p::after {
+  content: url("data:image/svg+xml,%3Csvg width='130' height='118' viewBox='0 0 130 118' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40.468 117.7L9.096 94.853L36.717 65.868L0.571 50.864L16.939 17.446L46.265 33.132L44.56 0.395982H85.48L83.775 33.132L113.101 17.446L129.128 50.864L92.982 65.868L120.603 94.853L89.231 117.7L65.02 84.623L40.468 117.7Z' fill='%230A8058' fill-opacity='0.2'/%3E%3C/svg%3E%0A");
+  position: absolute;
+  top: -2.6rem;
+  left: 0;
+  z-index: -1;
+}
+.hq-landing-cta-1 .button {
+  padding: 6rem 10rem;
+  margin: 9rem auto 0;
+  border-radius: 1rem;
+  background-color: #14BD84;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 7rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }

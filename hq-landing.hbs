@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	{{> fonts-landing}}
+
+   <title>{{@site.title}} - Free HQ</title>
+
+   <link rel="stylesheet" href="{{asset "built/index.css"}}" />
+
+    {{ghost_head}}
+    {{!-- Outputs important meta data and settings, should always be in <head> --}}
+
+</head>
+
+<body class="{{body_class}} hq-landing">
+    
+    <div class="hq-landing-main-wrapper">
+
+        {{!-- {{> structure/form-popup form_id="9756ac78-5731-4410-a723-4eca6a2f707f"}} --}}
+
+        <header class="landing-header">
+            <div class="hq-landing-content-wrapper">
+                <img src="{{@site.logo}}" alt="Site's logo" class="logo">
+                <div style="cursor: pointer;" class="button runScriptButton">Get access now</div>
+            </div>
+        </header>
+
+        <main>
+            <section class="landing-hero">
+                {{> images/landing-shadow classes="landing-hero__shadow-1"}}
+                {{> images/landing-shadow classes="landing-hero__shadow-2"}}
+                {{> images/landing-shadow classes="landing-hero__shadow-3"}}
+                <div class="hq-landing-content-wrapper">
+                    <h1 class="landing-hero__title">
+                        Ditch Word/Excel/<br>PowerPoint for a <br> <span class="green">FREE Software Suite</span> <span class="landing-hero__title-group">{{> icons/arrow-right-down-big}} <span>designed for Manufacturers!</span></span>
+                    </h1>
+                    <div class="landing-hero__cards">
+                        <p class="landing-hero__card">
+                            What you produce is only as good as the tools you use, the same goes for creating work instructions.
+                        </p>
+                        <p class="landing-hero__card">You wouldn’t use a wrench to fasten a screw, so why would you use the incorrect software to make your work instructions?</p>
+                        <p class="landing-hero__card">Using Microsoft Word or similar platforms may yield an instruction but they take more effort to do, lack standardization, and we all know revision control is an absolute nightmare.</p>
+                        <p class="landing-hero__card">These legacy platforms were the standard in manufacturing, mostly because they were readily available.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    {{ghost_foot}}
+
+    <script src="{{asset "built/index.js"}}" defer></script>
+    
+</body>
+</html>

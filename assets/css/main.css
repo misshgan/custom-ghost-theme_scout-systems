@@ -30,8 +30,12 @@ html {
 
 /* Colors */
 /* Fonts */
-* {
+body * {
   font-family: "Source Sans 3" !important;
+}
+
+body.hq-landing * {
+  font-family: "Kanit", sans-serif !important;
 }
 
 .green-arrow {
@@ -6619,4 +6623,119 @@ html {
   font-size: 2.8rem;
   font-weight: 600;
   color: #333447;
+}
+
+body.hq-landing {
+  overflow: hidden;
+}
+
+.hq-landing-main-wrapper {
+  padding: 4rem 0;
+  color: #202024;
+}
+
+.hq-landing-content-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.landing-header .hq-landing-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+}
+.landing-header .logo {
+  width: 22rem;
+}
+.landing-header .button {
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 2.4rem 2.8rem;
+  border-radius: 1rem;
+  background: #14BD84;
+}
+
+.landing-hero {
+  margin-top: 8.5rem;
+  position: relative;
+}
+.landing-hero svg[class] {
+  position: absolute;
+  z-index: 0;
+  filter: blur(100px);
+}
+.landing-hero__shadow-1 {
+  width: 728.699px;
+  height: 849.543px;
+  transform: rotate(165deg);
+  right: -48rem;
+  top: -38rem;
+}
+.landing-hero__shadow-2 {
+  rotate: 165deg;
+  left: -10rem;
+  bottom: 45rem;
+}
+.landing-hero__shadow-3 {
+  bottom: 0;
+  right: 0;
+}
+.landing-hero .hq-landing-content-wrapper {
+  position: relative;
+  z-index: 5;
+}
+.landing-hero__title {
+  font-size: 11rem;
+  font-weight: 800;
+  line-height: 0.95;
+}
+.landing-hero__title-group {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  font-style: italic;
+}
+.landing-hero__title-group svg {
+  transform: rotate(45deg);
+}
+.landing-hero__title-group span {
+  margin-left: auto;
+  width: -moz-min-content;
+  width: min-content;
+  text-align: end;
+}
+.landing-hero__cards {
+  max-width: 61rem;
+  margin: 0 auto;
+  padding: 15rem 0 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5.5rem;
+}
+.landing-hero__card {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.26;
+  padding: 3.6rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  position: relative;
+  filter: drop-shadow(3px 3px 20px rgba(0, 0, 0, 0.08)) drop-shadow(-3px -3px 20px rgba(0, 0, 0, 0.08));
+}
+.landing-hero__card:not(:first-child)::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='58' height='56' viewBox='0 0 58 56' fill='none'%3E%3Cpath d='M29.9103 0.38726L29.7282 44.9855M52.3272 22.3272L26.1644 48.4903M33.8304 50.7382L5.48149 22.5185' stroke='%230A8058' stroke-width='14'/%3E%3C/svg%3E");
+  position: absolute;
+  top: -4.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.landing-hero .green {
+  color: #0A8058;
+  font-style: italic;
 }

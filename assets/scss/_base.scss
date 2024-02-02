@@ -127,8 +127,12 @@ $white: #FFFFFF;
 
 $font_1: 'Source Sans 3';
 
-* {
+body * {
 	font-family: $font_1 !important;
+}
+
+body.hq-landing * {
+	font-family: 'Kanit', sans-serif !important;
 }
 
 .green-arrow {

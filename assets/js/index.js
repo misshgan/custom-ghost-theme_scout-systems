@@ -598,7 +598,7 @@ if (window.location.pathname.includes('/academy/') || window.location.pathname.i
 
 
 
-/* TECH OVERVIEW FORM */ 
+/* Handle popup form */ 
 
 window.addEventListener('load', function(){
 	const runFormBtns = document.querySelectorAll('.runScriptButton');

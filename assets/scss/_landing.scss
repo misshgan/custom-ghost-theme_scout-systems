@@ -137,6 +137,7 @@ body.hq-landing {
     color: #fff;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 
     &__ellipse-1 {
         position: absolute;
@@ -214,6 +215,18 @@ body.hq-landing {
 
 .hq-landing-partners {
     padding: 15rem 5rem;
+    position: relative;
+
+    &__shadow {
+        position: absolute;
+        z-index: 0;
+        filter: blur(100px);
+        width: 730.836px;
+        height: 961.236px;
+        transform: rotate(158.883deg);
+        top: -40rem;
+        right: -30rem;
+    }
 
     &__cards {
         align-items: center;

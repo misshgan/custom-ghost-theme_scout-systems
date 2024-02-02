@@ -6750,6 +6750,7 @@ body.hq-landing .italic {
   color: #fff;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 .hq-landing-cta-1__ellipse-1 {
   position: absolute;
@@ -6819,6 +6820,17 @@ body.hq-landing .italic {
 
 .hq-landing-partners {
   padding: 15rem 5rem;
+  position: relative;
+}
+.hq-landing-partners__shadow {
+  position: absolute;
+  z-index: 0;
+  filter: blur(100px);
+  width: 730.836px;
+  height: 961.236px;
+  transform: rotate(158.883deg);
+  top: -40rem;
+  right: -30rem;
 }
 .hq-landing-partners__cards {
   align-items: center;

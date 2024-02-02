@@ -195,6 +195,21 @@ const swiperConfigurations = [
       },
     },
   },
+  {
+    condition: window.location.pathname === '/free-hq/',
+    selector: '.hq-landing-partners__swiper',
+	wrapperSelector: '.hq-landing-partners__cards',
+	slideSelector: '.hq-landing-partners__card',
+    config: {
+      slidesPerView: 3,
+      spaceBetween: 150,
+      direction: 'horizontal',
+	  autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    },
+  },
   // Add more configurations as needed
 ];
 

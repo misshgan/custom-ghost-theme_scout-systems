@@ -10,6 +10,7 @@
    <title>{{@site.title}} - Free HQ</title>
 
    <link rel="stylesheet" href="{{asset "built/index.css"}}" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
     {{ghost_head}}
     {{!-- Outputs important meta data and settings, should always be in <head> --}}
@@ -56,11 +57,42 @@
                 <div class="hq-landing-content-wrapper">
                     <h2 class="hq-landing-cta-1__title">Today, you have the <br> <span class="margin-left">opportunity</span> <br> to use world class <br> <span class="italic">work instruction <br> software for free!</span></h2>
                     <div class="hq-landing-cta-1__subtitles">
-                        <p>This isn’t a trial, and there are no strings attached. <span class="italic"></span></p>
+                        <p>This isn’t a trial, and there are no strings attached. <span class="italic">No credit cards needed.</span></p>
                         <p>Get immediate access to our platform to use <span class="italic">FREE.</span></p>
                     </div>
                     <div style="cursor: pointer;" class="button runScriptButton">Sign Up</div>
                 </div>
+            </section>
+
+            <section class="hq-landing-partners">
+               <div class="hq-landing-partners__swiper">
+                    <div class="hq-landing-partners__cards">
+                        <div class="hq-landing-partners__card">
+                            <img src="{{asset "assets/images/tech-customers/logo-image-1.jpg"}}" alt="company logo image">
+                        </div>
+                        <div class="hq-landing-partners__card">
+                            <img src="{{asset "assets/images/tech-customers/logo-image-2.png"}}" alt="company logo image">
+                        </div>
+                        <div class="hq-landing-partners__card">
+                            <img src="{{asset "assets/images/tech-customers/logo-image-3.webp"}}" alt="company logo image">
+                        </div>
+                        <div class="hq-landing-partners__card">
+                            <img src="{{asset "assets/images/tech-customers/logo-image-4.svg"}}" alt="company logo image">
+                        </div>
+                        <div class="hq-landing-partners__card">
+                            <img src="{{asset "assets/images/tech-customers/logo-image-5.svg"}}" alt="company logo image">
+                        </div>
+                        <div class="hq-landing-partners__card">
+                            <img src="{{asset "assets/images/tech-customers/logo-image-6.svg"}}" alt="company logo image">
+                        </div>
+                        <div class="hq-landing-partners__card">
+                            <img src="{{asset "assets/images/tech-customers/logo-image-7.svg"}}" alt="company logo image">
+                        </div>
+                        <div class="hq-landing-partners__card">
+                            <img src="{{asset "assets/images/tech-customers/logo-image-8.png"}}" alt="company logo image">
+                        </div>
+                    </div>
+               </div>
             </section>
         </main>
     </div>
@@ -68,6 +100,7 @@
     {{ghost_foot}}
 
     <script src="{{asset "built/index.js"}}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     
 </body>
 </html>

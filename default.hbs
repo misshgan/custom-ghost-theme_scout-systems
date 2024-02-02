@@ -8,17 +8,10 @@
     <link rel="stylesheet" href="{{asset "built/index.css"}}" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-    <script src="{{asset "built/index.js"}}" defer></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-	
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link href="https://vjs.zencdn.net/8.6.0/video-js.css" rel="stylesheet" />
-
     <title>{{{block "title"}}}</title>
 	<meta name="description" content="{{block 'meta-description'}}">
 
+	{{> fonts}}
 
     {{ghost_head}}
     {{!-- Outputs important meta data and settings, should always be in <head> --}}
@@ -64,39 +57,14 @@
 {{ghost_foot}}
 {{!-- Outputs important scripts - should always be included before closing body tag --}}
 
-{{!-- Remove light header and put small if page is /accelerator/ --}}
-<script>
-	if (window.location.pathname.includes('/accelerator/')) {
-		const ghViewport = document.querySelector('.gh-viewport');
-		const header = document.createElement('div');
-		const oldHeader = document.querySelector('.header');
-		oldHeader.remove();
-		header.className = 'page__header';
-		header.innerHTML = `
-			<div class="w1340">
-				{{> structure/header}}
-			</div>`
-		ghViewport.insertBefore(header, ghViewport.firstChild)
-	}
-</script>
+<script src="{{asset "built/index.js"}}" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCFV4VR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <script src="https://chatsimple-widget.s3.us-east-2.amazonaws.com/chat-bot-loader.js" defer></script>
-
-<script>
-	if (window.location.pathname === '/academy/') {
-		const html = `<chat-bot platform_id="cfa51ac4-c913-4621-823c-588ea399ba0b" user_id="65e721a0-6df2-428e-b3f3-c9262477969f" chatbot_id="31adc5d1-bc97-4d80-b759-74297692d725"><a href="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral">[chatbot]</a></chat-bot>`;
-
-		document.body.insertAdjacentHTML('beforeend', html);
-	} else {
-		const html = `<chat-bot platform_id="8adf2d73-fbcd-44b0-8343-ef5e39c93a75" user_id="65e721a0-6df2-428e-b3f3-c9262477969f" chatbot_id="7dc4770b-4f36-4086-a451-f031a5e5547a" src="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral"></chat-bot>`;
-
-		document.body.insertAdjacentHTML('beforeend', html);
-	}
-</script>
 
 </body>
 </html>

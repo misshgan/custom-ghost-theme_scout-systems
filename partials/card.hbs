@@ -1,11 +1,11 @@
 <div class="post-footer__card post-card" data-tags="{{#primary_tag}}{{name}}{{/primary_tag}}">
 	{{#if feature_image}}
 		<a href="{{url}}" class="post-card__image">
-			<img src="{{feature_image}}" alt="feature image">
+			<img class="lazyload" src="{{asset 'assets/images/placeholder_loading.gif'}}" data-src="{{feature_image}}" alt="feature image">
 		</a>
 	{{else}}
 		<a href="{{url}}" class="post-card__image">
-			<img src="{{asset "assets/images/placeholder.png"}}" alt="feature image">
+			<img class="lazyload" src="{{asset 'assets/images/placeholder_loading.gif'}}" data-src="{{asset "assets/images/placeholder.png"}}" alt="feature image">
 		</a>
 	{{/if}}
 	<div class="post-card__header">

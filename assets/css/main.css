@@ -320,6 +320,25 @@ html {
   cursor: default;
 }
 
+/* Lazyload*/
+.lazyload {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 0.4s;
+}
+
+.lazyloading {
+  opacity: 0.75;
+  filter: blur(2px);
+  transition: all 0.4s;
+}
+
+.lazyloaded {
+  opacity: 1;
+  filter: blur(0);
+  transition: all 0.4s;
+}
+
 /* HEADER */
 .header {
   padding: 2.4rem 0;
@@ -4974,6 +4993,7 @@ html {
 
 .page-academy {
   padding: 6rem 0 10rem;
+  min-height: 70vh;
 }
 @media (max-width: 768px) {
   .page-academy {

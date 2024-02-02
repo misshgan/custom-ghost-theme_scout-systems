@@ -437,3 +437,25 @@ $font_1: 'Source Sans 3';
 		cursor: default;
 	}
 }
+
+/* Lazyload*/
+.lazyload {
+	opacity: 0;
+	filter: blur(5px);
+	transition: 
+	  all 0.4s;
+  }
+  
+  .lazyloading {
+	opacity: 0.75;
+	filter: blur(2px);
+	transition: 
+	  all 0.4s;
+  }
+  
+  .lazyloaded {
+	opacity: 1;
+	filter: blur(0);
+	transition: 
+	  all 0.4s;
+  }

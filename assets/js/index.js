@@ -3,6 +3,10 @@
 // Import CSS
 import "../css/index.css";
 
+import 'lazysizes';
+// import a plugin
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+
 const windowWidth = window.innerWidth;
 
 const swiperConfigurations = [
@@ -524,7 +528,7 @@ if (window.location.pathname.includes('/academy/') || window.location.pathname.i
 					postElement.className = 'post-card'; // Apply your existing class
 					postElement.innerHTML = `
 					<a href='${post.url}' class="post-card__image">
-					<img src="${post.feature_image || '/assets/images/placeholder.png'}" alt="feature image">
+					<img class="lazyload" src="${post.feature_image || '/assets/images/placeholder.png'}" data-src="${post.feature_image || '/assets/images/placeholder.png'}" alt="feature image">
 					</a>
 					<div class="post-card__header">
 						<div class="post-card__tags">${tagsHtml}</div>
@@ -656,3 +660,37 @@ if (window.innerWidth < 769) {
 		})
 	}
 }
+
+
+// Remove light header and put small if page is /accelerator/
+
+function handleHeaderChange() {
+	if (window.location.pathname.includes('/accelerator/')) {
+		const ghViewport = document.querySelector('.gh-viewport');
+		const header = document.createElement('div');
+		const oldHeader = document.querySelector('.header');
+		oldHeader.remove();
+		header.className = 'page__header';
+		header.innerHTML = `
+			<div class="w1340">
+				{{> structure/header}}
+			</div>`
+		ghViewport.insertBefore(header, ghViewport.firstChild)
+	}
+}
+
+handleHeaderChange();
+
+function handleChatBot() {
+	if (window.location.pathname === '/academy/') {
+		const html = `<chat-bot platform_id="cfa51ac4-c913-4621-823c-588ea399ba0b" user_id="65e721a0-6df2-428e-b3f3-c9262477969f" chatbot_id="31adc5d1-bc97-4d80-b759-74297692d725"><a href="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral">[chatbot]</a></chat-bot>`;
+
+		document.body.insertAdjacentHTML('beforeend', html);
+	} else {
+		const html = `<chat-bot platform_id="8adf2d73-fbcd-44b0-8343-ef5e39c93a75" user_id="65e721a0-6df2-428e-b3f3-c9262477969f" chatbot_id="7dc4770b-4f36-4086-a451-f031a5e5547a" src="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral"></chat-bot>`;
+
+		document.body.insertAdjacentHTML('beforeend', html);
+	}
+}
+
+handleChatBot();

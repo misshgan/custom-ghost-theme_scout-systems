@@ -598,3 +598,49 @@ body.hq-landing {
         }
     }
 }
+
+
+.hq-landing-video {
+    padding: 15rem 0;
+    position: relative;
+
+    &__shadow-1, &__shadow-2 {
+        filter: blur(100px);
+        position: absolute;
+        z-index: 0;
+    }
+
+    &__shadow-1 {
+        width: 730.836px;
+        height: 1158.534px;
+        transform: rotate(158.883deg);
+        top: 0;
+        left: -25rem;
+    }
+
+    &__shadow-2 {
+        width: 730.836px;
+        height: 961.236px;
+        transform: rotate(158.883deg);
+        bottom: -25rem;
+        right: -20rem;
+    }
+
+    .hq-landing-content-wrapper {
+        position: relative;
+        z-index: 1;
+
+    }
+
+    h2 {
+        max-width: 97.5rem;
+        margin: 0 auto;
+        font-size: 9rem;
+        font-weight: 800;
+        line-height: 0.82;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+    
+}

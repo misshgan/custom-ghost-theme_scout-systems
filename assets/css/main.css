@@ -7227,17 +7227,42 @@ body.hq-landing .italic {
 .hq-landing-why-give {
   margin-top: 15rem;
 }
+@media (max-width: 600px) {
+  .hq-landing-why-give {
+    margin-top: 10rem;
+  }
+}
 .hq-landing-why-give h2 {
   font-size: 9rem;
   font-weight: 800;
   line-height: 0.82;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .hq-landing-why-give h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 1100px) {
+  .hq-landing-why-give h2 br {
+    display: none;
+  }
+}
 .hq-landing-why-give h2 span.first {
   margin-left: 35%;
 }
+@media (max-width: 1100px) {
+  .hq-landing-why-give h2 span.first {
+    margin-left: 0;
+  }
+}
 .hq-landing-why-give h2 span.second {
   margin-left: 5%;
+}
+@media (max-width: 1100px) {
+  .hq-landing-why-give h2 span.second {
+    margin-left: 0;
+  }
 }
 .hq-landing-why-give h2 span.second span {
   color: #0a8058;
@@ -7246,10 +7271,20 @@ body.hq-landing .italic {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .hq-landing-why-give h2 span.third {
+    display: inline;
+  }
+}
 .hq-landing-why-give h2 span.third svg {
   width: 135.861px;
   height: 135.861px;
   transform: rotate(135deg);
+}
+@media (max-width: 1024px) {
+  .hq-landing-why-give h2 span.third svg {
+    display: none;
+  }
 }
 .hq-landing-why-give ul {
   margin: 0 auto;
@@ -7260,15 +7295,41 @@ body.hq-landing .italic {
   row-gap: 8rem;
   list-style-type: none;
 }
+@media (max-width: 768px) {
+  .hq-landing-why-give ul {
+    margin-top: 10rem;
+  }
+}
+@media (max-width: 600px) {
+  .hq-landing-why-give ul {
+    margin-top: 8rem;
+    row-gap: 6rem;
+  }
+}
 .hq-landing-why-give ul li {
   position: relative;
   z-index: 1;
   padding-left: 4rem;
 }
+@media (max-width: 768px) {
+  .hq-landing-why-give ul li {
+    padding-left: 3rem;
+  }
+}
 .hq-landing-why-give ul li p {
   font-size: 4.4rem;
   font-weight: 600;
   line-height: 1.11;
+}
+@media (max-width: 768px) {
+  .hq-landing-why-give ul li p {
+    font-size: 3.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .hq-landing-why-give ul li p {
+    font-size: 2.4rem;
+  }
 }
 .hq-landing-why-give ul li::after {
   color: rgba(10, 128, 88, 0.3);
@@ -7282,6 +7343,11 @@ body.hq-landing .italic {
   left: 0;
   position: absolute;
   z-index: 0;
+}
+@media (max-width: 768px) {
+  .hq-landing-why-give ul li::after {
+    font-size: 16rem;
+  }
 }
 .hq-landing-why-give ul li:first-child::after {
   content: "1";

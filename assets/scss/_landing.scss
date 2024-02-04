@@ -644,3 +644,137 @@ body.hq-landing {
     }
     
 }
+
+
+.hq-landing-learn {
+    padding-bottom: 10rem;
+    position: relative;
+
+    .hq-landing-content-wrapper {
+        max-width: 103.1rem;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__shadow-1, &__shadow-2 {
+        filter: blur(100px);
+        position: absolute;
+        z-index: 0;
+    }
+
+    &__shadow-1 {
+        width: 730.836px;
+        height: 961.236px;
+        transform: rotate(158.883deg);
+
+        bottom: 20rem;
+        left: -20rem
+    }
+
+    &__shadow-2 {
+        width: 730.836px;
+        height: 961.236px;
+        transform: rotate(47.695deg);
+
+        bottom: -35rem;
+        right: -10rem;
+    } 
+    h2 {
+        font-size: 9rem;
+        font-weight: 800;
+        line-height: 0.82;
+        text-transform: uppercase;
+        
+    }
+
+    h3 {
+        margin-top: 7rem;
+        font-size: 6rem;
+        font-weight: 800;
+        line-height: 0.82;
+        text-transform: uppercase;
+    }
+
+    ul {
+        margin-top: 7rem;
+        margin-bottom: 15rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 8rem;
+        list-style-type: none;
+
+        li {
+            position: relative;
+            z-index: 1;
+            padding-left: 2rem;
+
+            p {
+                font-size: 4.4rem;
+                font-weight: 600;
+                line-height: 1.11;
+            }
+        }
+
+        li::after {
+            color: rgba(10, 128, 88, 0.3);
+            text-align: center;
+            font-family: "Kanit", sans-serif;
+            font-size: 16rem;
+            font-weight: 800;
+            line-height: 74px; /* 37% */
+            text-transform: uppercase;
+            top: -2rem;
+            left: -2rem;
+            position: absolute;
+            z-index: 0;
+        }
+
+        li:first-child::after {
+            content: "1";
+        }
+
+        li:nth-child(2)::after {
+            content: "2";
+        }
+
+        li:nth-child(3)::after {
+            content: "3";
+        }
+    }
+
+    .first {
+
+        span {
+            color: #0a8058;
+        }
+    }
+    .second {
+        color: #0a8058;
+        display: block;
+        text-align: end;
+    }
+    .italic {
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+    }
+
+    div > p {
+        max-width: 96.5rem;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 7rem;
+        font-weight: 700;
+        line-height: 0.75;
+        text-transform: uppercase;
+
+        .italic {
+            color: #0a8058;
+        }
+    }
+}
+

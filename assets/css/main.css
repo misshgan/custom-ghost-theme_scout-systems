@@ -7181,3 +7181,111 @@ body.hq-landing .italic {
   text-align: center;
   margin-bottom: 6rem;
 }
+
+.hq-landing-learn {
+  padding-bottom: 10rem;
+  position: relative;
+}
+.hq-landing-learn .hq-landing-content-wrapper {
+  max-width: 103.1rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.hq-landing-learn__shadow-1, .hq-landing-learn__shadow-2 {
+  filter: blur(100px);
+  position: absolute;
+  z-index: 0;
+}
+.hq-landing-learn__shadow-1 {
+  width: 730.836px;
+  height: 961.236px;
+  transform: rotate(158.883deg);
+  bottom: 20rem;
+  left: -20rem;
+}
+.hq-landing-learn__shadow-2 {
+  width: 730.836px;
+  height: 961.236px;
+  transform: rotate(47.695deg);
+  bottom: -35rem;
+  right: -10rem;
+}
+.hq-landing-learn h2 {
+  font-size: 9rem;
+  font-weight: 800;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+.hq-landing-learn h3 {
+  margin-top: 7rem;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+.hq-landing-learn ul {
+  margin-top: 7rem;
+  margin-bottom: 15rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8rem;
+  list-style-type: none;
+}
+.hq-landing-learn ul li {
+  position: relative;
+  z-index: 1;
+  padding-left: 2rem;
+}
+.hq-landing-learn ul li p {
+  font-size: 4.4rem;
+  font-weight: 600;
+  line-height: 1.11;
+}
+.hq-landing-learn ul li::after {
+  color: rgba(10, 128, 88, 0.3);
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-size: 16rem;
+  font-weight: 800;
+  line-height: 74px; /* 37% */
+  text-transform: uppercase;
+  top: -2rem;
+  left: -2rem;
+  position: absolute;
+  z-index: 0;
+}
+.hq-landing-learn ul li:first-child::after {
+  content: "1";
+}
+.hq-landing-learn ul li:nth-child(2)::after {
+  content: "2";
+}
+.hq-landing-learn ul li:nth-child(3)::after {
+  content: "3";
+}
+.hq-landing-learn .first span {
+  color: #0a8058;
+}
+.hq-landing-learn .second {
+  color: #0a8058;
+  display: block;
+  text-align: end;
+}
+.hq-landing-learn div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+}
+.hq-landing-learn div > p {
+  max-width: 96.5rem;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 0.75;
+  text-transform: uppercase;
+}
+.hq-landing-learn div > p .italic {
+  color: #0a8058;
+}

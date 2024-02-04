@@ -7079,3 +7079,67 @@ body.hq-landing .italic {
   text-transform: uppercase;
   color: #0a8058;
 }
+
+.hq-landing-cta-2 {
+  margin-top: 10rem;
+  background-color: #0b3527;
+  border-radius: 0 0 4.2rem 4.2rem;
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.hq-landing-cta-2 .hq-landing-content-wrapper {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.hq-landing-cta-2__ellipse-1, .hq-landing-cta-2__ellipse-2 {
+  position: absolute;
+}
+.hq-landing-cta-2__ellipse-1 {
+  width: 543px;
+  height: 543px;
+  top: -26rem;
+  left: 10%;
+}
+.hq-landing-cta-2__ellipse-2 {
+  width: 431.632px;
+  height: 431.632px;
+  transform: rotate(-35.298deg);
+  bottom: -30rem;
+  right: -5rem;
+}
+.hq-landing-cta-2 .button {
+  padding: 6rem 10rem;
+  margin: 9rem auto 0;
+  border-radius: 1rem;
+  background-color: #14bd84;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.hq-landing-cta-2__header {
+  position: relative;
+}
+.hq-landing-cta-2__header p {
+  position: absolute;
+  width: 45%;
+  top: 0;
+  right: 0;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 0.9;
+}
+.hq-landing-cta-2 h2 {
+  font-size: 9rem;
+  font-weight: 800;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+.hq-landing-cta-2 h2 span:last-child {
+  display: block;
+  margin-left: 27.5%;
+  margin-top: 1rem;
+}

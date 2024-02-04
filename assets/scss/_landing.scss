@@ -415,7 +415,8 @@ body.hq-landing {
     margin-top: 15rem;
     position: relative;
 
-    &__shadow-1, &__shadow-2 {
+    &__shadow-1,
+    &__shadow-2 {
         position: absolute;
         z-index: 0;
         filter: blur(100px);
@@ -443,7 +444,7 @@ body.hq-landing {
         position: relative;
         z-index: 1;
     }
-    
+
     h2 {
         margin: 0 auto;
         max-width: 104.5rem;
@@ -486,7 +487,6 @@ body.hq-landing {
     }
 }
 
-
 .hq-landing-whats-in {
     margin-top: 15rem;
 
@@ -523,5 +523,78 @@ body.hq-landing {
         text-transform: uppercase;
         color: #0a8058;
     }
-    
+}
+
+.hq-landing-cta-2 {
+    margin-top: 10rem;
+    background-color: #0b3527;
+    border-radius: 0 0 4.2rem 4.2rem;
+    padding: 10rem 0;
+    position: relative;
+    overflow: hidden;
+
+    .hq-landing-content-wrapper {
+        color: #fff;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__ellipse-1,
+    &__ellipse-2 {
+        position: absolute;
+    }
+
+    &__ellipse-1 {
+        width: 543px;
+        height: 543px;
+        top: -26rem;
+        left: 10%;
+    }
+
+    &__ellipse-2 {
+        width: 431.632px;
+        height: 431.632px;
+        transform: rotate(-35.298deg);
+        bottom: -30rem;
+        right: -5rem;
+    }
+
+    .button {
+        padding: 6rem 10rem;
+        margin: 9rem auto 0;
+        border-radius: 1rem;
+        background-color: #14bd84;
+        width: max-content;
+        font-size: 7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__header {
+        position: relative;
+
+        p {
+            position: absolute;
+            width: 45%;
+            top: 0;
+            right: 0;
+
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 0.9;
+        }
+    }
+
+    h2 {
+        font-size: 9rem;
+        font-weight: 800;
+        line-height: 0.82;
+        text-transform: uppercase;
+
+        span:last-child {
+            display: block;
+            margin-left: 27.5%;
+            margin-top: 1rem;
+        }
+    }
 }

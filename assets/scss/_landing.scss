@@ -391,6 +391,14 @@ body.hq-landing {
     padding: 15rem 5rem;
     position: relative;
 
+    @media (max-width:1024px) {
+        padding: 10rem 3rem;
+    }
+
+    @media (max-width:600px) {
+        padding: 7.5rem 3rem;
+    }
+
     &__shadow {
         position: absolute;
         z-index: 0;

@@ -7026,6 +7026,16 @@ body.hq-landing .italic {
   padding: 15rem 5rem;
   position: relative;
 }
+@media (max-width: 1024px) {
+  .hq-landing-partners {
+    padding: 10rem 3rem;
+  }
+}
+@media (max-width: 600px) {
+  .hq-landing-partners {
+    padding: 7.5rem 3rem;
+  }
+}
 .hq-landing-partners__shadow {
   position: absolute;
   z-index: 0;

@@ -196,18 +196,31 @@ const swiperConfigurations = [
     },
   },
   {
-    condition: window.location.pathname === '/free-work-instruction-software/',
+    condition: window.location.pathname === '/free-hq/',
     selector: '.hq-landing-partners__swiper',
 	wrapperSelector: '.hq-landing-partners__cards',
 	slideSelector: '.hq-landing-partners__card',
     config: {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 150,
       direction: 'horizontal',
 	  autoplay: {
         delay: 2500,
         disableOnInteraction: false,
       },
+	  breakpoints: {
+		450: {
+		  slidesPerView: 2,
+		  spaceBetween: 50
+		},
+		768: {
+			slidesPerView: 3,
+		  spaceBetween: 75
+		},
+		1024: {
+		  spaceBetween: 150
+		}
+	  }
     },
   },
   // Add more configurations as needed

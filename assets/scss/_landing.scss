@@ -852,6 +852,10 @@ body.hq-landing {
 .hq-landing-whats-in {
     margin-top: 15rem;
 
+    @media (max-width:768px) {
+        margin-top: 10rem;
+    }
+
     .hq-landing-content-wrapper {
         position: relative;
         z-index: 1;
@@ -866,10 +870,19 @@ body.hq-landing {
         line-height: 0.82;
         text-transform: uppercase;
 
+        @media (max-width:600px) {
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+
         span {
             color: #0a8058;
             display: block;
             text-align: end;
+
+            @media (max-width:600px) {
+                text-align: unset;
+            }
         }
     }
 
@@ -877,6 +890,14 @@ body.hq-landing {
         font-size: 4.4rem;
         font-weight: 600;
         line-height: 1.22;
+
+        @media (max-width:1024px) {
+            font-size: 3.2rem;
+        }
+
+        @media (max-width:600px) {
+            font-size: 2.6rem;
+        }
     }
 
     p:last-child {

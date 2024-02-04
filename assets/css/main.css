@@ -7472,6 +7472,11 @@ body.hq-landing .italic {
 .hq-landing-whats-in {
   margin-top: 15rem;
 }
+@media (max-width: 768px) {
+  .hq-landing-whats-in {
+    margin-top: 10rem;
+  }
+}
 .hq-landing-whats-in .hq-landing-content-wrapper {
   position: relative;
   z-index: 1;
@@ -7485,15 +7490,36 @@ body.hq-landing .italic {
   line-height: 0.82;
   text-transform: uppercase;
 }
+@media (max-width: 600px) {
+  .hq-landing-whats-in h2 {
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+}
 .hq-landing-whats-in h2 span {
   color: #0a8058;
   display: block;
   text-align: end;
 }
+@media (max-width: 600px) {
+  .hq-landing-whats-in h2 span {
+    text-align: unset;
+  }
+}
 .hq-landing-whats-in p {
   font-size: 4.4rem;
   font-weight: 600;
   line-height: 1.22;
+}
+@media (max-width: 1024px) {
+  .hq-landing-whats-in p {
+    font-size: 3.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .hq-landing-whats-in p {
+    font-size: 2.6rem;
+  }
 }
 .hq-landing-whats-in p:last-child {
   margin-top: 2rem;

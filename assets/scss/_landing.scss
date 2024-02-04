@@ -6,7 +6,7 @@ body.hq-landing {
     }
 }
 .hq-landing-main-wrapper {
-    padding: 4rem 0;
+    padding: 4rem 0 0;
     color: #202024;
 }
 
@@ -599,12 +599,12 @@ body.hq-landing {
     }
 }
 
-
 .hq-landing-video {
     padding: 15rem 0;
     position: relative;
 
-    &__shadow-1, &__shadow-2 {
+    &__shadow-1,
+    &__shadow-2 {
         filter: blur(100px);
         position: absolute;
         z-index: 0;
@@ -630,6 +630,9 @@ body.hq-landing {
         position: relative;
         z-index: 1;
 
+        video {
+            width: 100%;
+        }
     }
 
     h2 {
@@ -642,9 +645,7 @@ body.hq-landing {
         text-align: center;
         margin-bottom: 6rem;
     }
-    
 }
-
 
 .hq-landing-learn {
     padding-bottom: 10rem;
@@ -657,7 +658,8 @@ body.hq-landing {
         z-index: 1;
     }
 
-    &__shadow-1, &__shadow-2 {
+    &__shadow-1,
+    &__shadow-2 {
         filter: blur(100px);
         position: absolute;
         z-index: 0;
@@ -669,7 +671,7 @@ body.hq-landing {
         transform: rotate(158.883deg);
 
         bottom: 20rem;
-        left: -20rem
+        left: -20rem;
     }
 
     &__shadow-2 {
@@ -679,13 +681,12 @@ body.hq-landing {
 
         bottom: -35rem;
         right: -10rem;
-    } 
+    }
     h2 {
         font-size: 9rem;
         font-weight: 800;
         line-height: 0.82;
         text-transform: uppercase;
-        
     }
 
     h3 {
@@ -744,7 +745,6 @@ body.hq-landing {
     }
 
     .first {
-
         span {
             color: #0a8058;
         }
@@ -778,3 +778,67 @@ body.hq-landing {
     }
 }
 
+.hq-landing-cta-3 {
+    background-color: #0b3527;
+    padding: 10rem 0;
+    position: relative;
+    overflow: hidden;
+
+    .hq-landing-content-wrapper {
+        color: #fff;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__ellipse-1,
+    &__ellipse-2 {
+        position: absolute;
+    }
+
+    &__ellipse-1 {
+        width: 543px;
+        height: 543px;
+        top: -26rem;
+        left: 10%;
+    }
+
+    &__ellipse-2 {
+        width: 431.632px;
+        height: 431.632px;
+        transform: rotate(-35.298deg);
+        bottom: -30rem;
+        right: -5rem;
+    }
+
+    .button {
+        padding: 6rem 10rem;
+        margin: 9rem auto 0;
+        border-radius: 1rem;
+        background-color: #14bd84;
+        width: max-content;
+        font-size: 7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__header {
+        position: relative;
+        display: flex;
+        column-gap: 3.5rem;
+
+        p {
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 1.07;
+        }
+    }
+
+    h2 {
+        font-size: 9.5rem;
+        font-weight: 800;
+        line-height: 1.11;
+        text-transform: uppercase;
+        min-width: 54rem;
+        font-style: italic;
+    }
+}

@@ -733,6 +733,10 @@ body.hq-landing {
     margin-top: 15rem;
     position: relative;
 
+    @media (max-width:768px) {
+        margin-top: 10rem;
+    }
+
     &__shadow-1,
     &__shadow-2 {
         position: absolute;
@@ -747,6 +751,15 @@ body.hq-landing {
 
         top: -40rem;
         right: -35rem;
+
+        @media (max-width:768px) {
+            width: 331.296px;
+            height: 403.078px;
+            transform: rotate(158.883deg);
+
+            top: -15rem;
+            right: -10rem;
+        }
     }
 
     &__shadow-2 {
@@ -756,6 +769,14 @@ body.hq-landing {
 
         bottom: -40rem;
         left: -20rem;
+
+        @media (max-width:768px) {
+            width: 331.296px;
+            height: 403.078px;
+
+            left: -10rem;
+            bottom: -30rem;
+        }
     }
 
     .hq-landing-content-wrapper {
@@ -772,10 +793,24 @@ body.hq-landing {
         line-height: 0.82;
         text-transform: uppercase;
 
+        @media (max-width:900px) {
+            text-align: center;
+        }
+        
+        br {
+            @media (max-width:900px) {
+                display: none;
+            }
+        }
+
         span {
             color: #0a8058;
             display: block;
             text-align: end;
+
+            @media (max-width:900px) {
+                text-align: unset;
+            }
         }
     }
 
@@ -786,6 +821,10 @@ body.hq-landing {
         flex-direction: column;
         row-gap: 2rem;
         max-width: 96rem;
+
+        @media (max-width:768px) {
+            margin-top: 5rem;   
+        }
     }
     &__card {
         font-size: 3rem;
@@ -798,6 +837,11 @@ body.hq-landing {
         filter: drop-shadow(3px 3px 20px rgba(0, 0, 0, 0.08)) drop-shadow(-3px -3px 20px rgba(0, 0, 0, 0.08));
         border-radius: 2rem;
         max-width: 61rem;
+
+        @media (max-width:768px) {
+            font-size: 2.4rem;
+            padding: 2.6rem 1.2rem;
+        }
     }
 
     &__card:nth-child(2) {

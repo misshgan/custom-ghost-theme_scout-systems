@@ -7362,6 +7362,11 @@ body.hq-landing .italic {
   margin-top: 15rem;
   position: relative;
 }
+@media (max-width: 768px) {
+  .hq-landing-reviews {
+    margin-top: 10rem;
+  }
+}
 .hq-landing-reviews__shadow-1, .hq-landing-reviews__shadow-2 {
   position: absolute;
   z-index: 0;
@@ -7374,12 +7379,29 @@ body.hq-landing .italic {
   top: -40rem;
   right: -35rem;
 }
+@media (max-width: 768px) {
+  .hq-landing-reviews__shadow-1 {
+    width: 331.296px;
+    height: 403.078px;
+    transform: rotate(158.883deg);
+    top: -15rem;
+    right: -10rem;
+  }
+}
 .hq-landing-reviews__shadow-2 {
   width: 730.836px;
   height: 961.236px;
   transform: rotate(158.883deg);
   bottom: -40rem;
   left: -20rem;
+}
+@media (max-width: 768px) {
+  .hq-landing-reviews__shadow-2 {
+    width: 331.296px;
+    height: 403.078px;
+    left: -10rem;
+    bottom: -30rem;
+  }
 }
 .hq-landing-reviews .hq-landing-content-wrapper {
   position: relative;
@@ -7393,10 +7415,25 @@ body.hq-landing .italic {
   line-height: 0.82;
   text-transform: uppercase;
 }
+@media (max-width: 900px) {
+  .hq-landing-reviews h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 900px) {
+  .hq-landing-reviews h2 br {
+    display: none;
+  }
+}
 .hq-landing-reviews h2 span {
   color: #0a8058;
   display: block;
   text-align: end;
+}
+@media (max-width: 900px) {
+  .hq-landing-reviews h2 span {
+    text-align: unset;
+  }
 }
 .hq-landing-reviews__cards {
   margin: 0 auto;
@@ -7405,6 +7442,11 @@ body.hq-landing .italic {
   flex-direction: column;
   row-gap: 2rem;
   max-width: 96rem;
+}
+@media (max-width: 768px) {
+  .hq-landing-reviews__cards {
+    margin-top: 5rem;
+  }
 }
 .hq-landing-reviews__card {
   font-size: 3rem;
@@ -7416,6 +7458,12 @@ body.hq-landing .italic {
   filter: drop-shadow(3px 3px 20px rgba(0, 0, 0, 0.08)) drop-shadow(-3px -3px 20px rgba(0, 0, 0, 0.08));
   border-radius: 2rem;
   max-width: 61rem;
+}
+@media (max-width: 768px) {
+  .hq-landing-reviews__card {
+    font-size: 2.4rem;
+    padding: 2.6rem 1.2rem;
+  }
 }
 .hq-landing-reviews__card:nth-child(2) {
   margin-left: auto;

@@ -6866,7 +6866,7 @@ body.hq-landing .italic {
   text-align: center;
 }
 .hq-landing-better__title span {
-  color: #0A8058;
+  color: #0a8058;
 }
 .hq-landing-better__subtitle {
   margin: 0 auto;
@@ -6883,7 +6883,7 @@ body.hq-landing .italic {
   margin-top: 2rem;
 }
 .hq-landing-better__subtitle .italic {
-  color: #0A8058;
+  color: #0a8058;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -6905,7 +6905,7 @@ body.hq-landing .italic {
   line-height: 1.13;
 }
 .hq-landing-better__card .italic, .hq-landing-better__text-below .italic {
-  color: #0A8058;
+  color: #0a8058;
   text-transform: uppercase;
   font-weight: 800;
 }
@@ -6932,7 +6932,7 @@ body.hq-landing .italic {
   margin-left: 5%;
 }
 .hq-landing-why-give h2 span.second span {
-  color: #0A8058;
+  color: #0a8058;
 }
 .hq-landing-why-give h2 span.third {
   display: flex;
@@ -6983,4 +6983,66 @@ body.hq-landing .italic {
 }
 .hq-landing-why-give ul li:nth-child(3)::after {
   content: "3";
+}
+.hq-landing-reviews {
+  margin-top: 15rem;
+  position: relative;
+}
+.hq-landing-reviews__shadow-1, .hq-landing-reviews__shadow-2 {
+  position: absolute;
+  z-index: 0;
+  filter: blur(100px);
+}
+.hq-landing-reviews__shadow-1 {
+  width: 730.836px;
+  height: 961.236px;
+  transform: rotate(158.883deg);
+  top: -40rem;
+  right: -35rem;
+}
+.hq-landing-reviews__shadow-2 {
+  width: 730.836px;
+  height: 961.236px;
+  transform: rotate(158.883deg);
+  bottom: -40rem;
+  left: -20rem;
+}
+.hq-landing-reviews .hq-landing-content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.hq-landing-reviews h2 {
+  margin: 0 auto;
+  max-width: 104.5rem;
+  font-size: 9rem;
+  font-weight: 800;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+.hq-landing-reviews h2 span {
+  color: #0a8058;
+  display: block;
+  text-align: end;
+}
+.hq-landing-reviews__cards {
+  margin: 0 auto;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  max-width: 96rem;
+}
+.hq-landing-reviews__card {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.26;
+  text-align: center;
+  padding: 3.6rem;
+  background-color: #fff;
+  filter: drop-shadow(3px 3px 20px rgba(0, 0, 0, 0.08)) drop-shadow(-3px -3px 20px rgba(0, 0, 0, 0.08));
+  border-radius: 2rem;
+  max-width: 61rem;
+}
+.hq-landing-reviews__card:nth-child(2) {
+  margin-left: auto;
 }

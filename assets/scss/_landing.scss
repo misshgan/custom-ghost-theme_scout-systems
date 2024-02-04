@@ -485,3 +485,43 @@ body.hq-landing {
         margin-left: auto;
     }
 }
+
+
+.hq-landing-whats-in {
+    margin-top: 15rem;
+
+    .hq-landing-content-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    h2 {
+        margin: 0 auto;
+        margin-bottom: 6rem;
+        max-width: 100.4rem;
+        font-size: 9rem;
+        font-weight: 800;
+        line-height: 0.82;
+        text-transform: uppercase;
+
+        span {
+            color: #0a8058;
+            display: block;
+            text-align: end;
+        }
+    }
+
+    p {
+        font-size: 4.4rem;
+        font-weight: 600;
+        line-height: 1.22;
+    }
+
+    p:last-child {
+        margin-top: 2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #0a8058;
+    }
+    
+}

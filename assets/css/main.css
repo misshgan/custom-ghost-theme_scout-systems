@@ -7046,3 +7046,36 @@ body.hq-landing .italic {
 .hq-landing-reviews__card:nth-child(2) {
   margin-left: auto;
 }
+
+.hq-landing-whats-in {
+  margin-top: 15rem;
+}
+.hq-landing-whats-in .hq-landing-content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.hq-landing-whats-in h2 {
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  max-width: 100.4rem;
+  font-size: 9rem;
+  font-weight: 800;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+.hq-landing-whats-in h2 span {
+  color: #0a8058;
+  display: block;
+  text-align: end;
+}
+.hq-landing-whats-in p {
+  font-size: 4.4rem;
+  font-weight: 600;
+  line-height: 1.22;
+}
+.hq-landing-whats-in p:last-child {
+  margin-top: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0a8058;
+}

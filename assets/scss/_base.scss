@@ -89,8 +89,10 @@ html {
 	// This defines what 1 rem is 
 	font-size: 62.5% !important; // 1rem = 10px; 10px/16px = 62.5%
 
-	@include respond(1200px) {
-		font-size: 56.25% !important; // 1 rem = 9 px; 9/16px = 56.25%
+	&:not(.hq-landing-html) {
+		@include respond(1200px) {
+			font-size: 56.25% !important; // 1 rem = 9 px; 9/16px = 56.25%
+		}
 	}
 
 	// @include respond(1000px) {

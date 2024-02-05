@@ -6303,6 +6303,10 @@ body.hq-landing * {
 .tech-hero.thank-you .tech-hero__title {
   font-size: 12rem;
 }
+.tech-hero.check-inbox .tech-hero__text {
+  max-width: 110rem;
+}
+
 .tech-u-accordion.landing-page {
   border-radius: 0px 0px 4.2rem 4.2rem;
   background: #0D6547;

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{asset "built/index.css"}}" />
+    <script src="{{asset "built/index.js"}}" defer></script>
+    
+    {{> fonts}}
+
+   <title>{{@site.title}} - Check your inbox!</title>
+
+    {{ghost_head}}
+    {{!-- Outputs important meta data and settings, should always be in <head> --}}
+
+</head>
+
+<body class="{{body_class}}">
+<div class="gh-viewport">
+
+{{> structure/header}}
+
+<div class="tech-hero page-404 thank-you check-inbox">
+	<div class="tech-hero__ellipse1">{{> images/tech-ellipse-black1}}</div>
+	<div class="tech-hero__ellipse2">{{> images/tech-ellipse-black2}}</div>
+	<div class="w1340">
+		<div class="tech-hero__text">
+			<h1 class="tech-hero__title">Check Your Inbox!</h1>
+            <br>
+			<p class="tech-hero__subtitle">That was easy. You're just 1 step away from full access to our HQ software. Go ahead and check your inbox. We need you to verify your email account.
+            <br>
+            We will also connect you with training materials, video tutorials, and access to 24/7 support. We're excited for you to get started!
+            <br>
+            <br>
+            - The Scout Systems Team</p>
+		</div>
+	</div>
+</div>
+
+</div>
+
+{{!-- <foot> --}}
+{{ghost_foot}}
+
+</body>
+</html>

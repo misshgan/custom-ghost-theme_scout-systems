@@ -1320,6 +1320,10 @@ body.hq-landing {
         line-height: 0.75;
         text-transform: uppercase;
 
+        @media (max-width:1024px) {
+            font-size: 5rem;
+        }
+
         @media (max-width:768px) {
             font-size: 4.2rem;
         }
@@ -1339,6 +1343,10 @@ body.hq-landing {
     padding: 10rem 0;
     position: relative;
     overflow: hidden;
+
+    @media (max-width:600px) {
+        padding: 6rem 0;
+    }
 
     .hq-landing-content-wrapper {
         color: #fff;
@@ -1375,6 +1383,19 @@ body.hq-landing {
         font-size: 7rem;
         font-weight: 700;
         text-transform: uppercase;
+
+        @media (max-width:1024px) {
+            font-size: 5.4rem;
+            padding: 4rem 6rem;
+        }
+
+        @media (max-width:600px) {
+            margin-top: 5rem;
+            width: 100%;
+            text-align: center;
+            padding: 2.8rem 2.4rem;
+            font-size: 3rem;
+        }
     }
 
     &__header {
@@ -1382,10 +1403,25 @@ body.hq-landing {
         display: flex;
         column-gap: 3.5rem;
 
+        @media (max-width:600px) {
+            flex-direction: column;
+            column-gap: unset;
+            row-gap: 3rem;
+            text-align: center;
+        }
+
         p {
             font-size: 4rem;
             font-weight: 500;
             line-height: 1.07;
+
+            @media (max-width:1024px) {
+                font-size: 3.2rem;
+            }
+
+            @media (max-width:600px) {
+                font-size: 2.6rem;
+            }
         }
     }
 
@@ -1396,5 +1432,9 @@ body.hq-landing {
         text-transform: uppercase;
         min-width: 54rem;
         font-style: italic;
+
+        @media (max-width:1024px) {
+            min-width: 45%;
+        }
     }
 }

@@ -196,7 +196,7 @@ const swiperConfigurations = [
     },
   },
   {
-    condition: window.location.pathname === '/free-hq/',
+    condition: window.location.pathname === '/free-work-instruction-software/',
     selector: '.hq-landing-partners__swiper',
 	wrapperSelector: '.hq-landing-partners__cards',
 	slideSelector: '.hq-landing-partners__card',

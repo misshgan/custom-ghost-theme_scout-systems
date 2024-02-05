@@ -916,6 +916,10 @@ body.hq-landing {
     position: relative;
     overflow: hidden;
 
+    @media (max-width:600px) {
+        padding: 6rem 0;
+    }
+
     .hq-landing-content-wrapper {
         color: #fff;
         position: relative;
@@ -932,6 +936,14 @@ body.hq-landing {
         height: 543px;
         top: -26rem;
         left: 10%;
+
+        @media (max-width:768px) {
+            width: 204px;
+            height: 204px;
+
+            top: -4.3rem;
+            left: -7.4rem;
+        }
     }
 
     &__ellipse-2 {
@@ -940,6 +952,15 @@ body.hq-landing {
         transform: rotate(-35.298deg);
         bottom: -30rem;
         right: -5rem;
+
+        @media (max-width:768px) {
+            width: 280.445px;
+            height: 280.445px;
+            transform: rotate(-35.298deg);
+
+            bottom: 15rem;
+            right: -15rem;
+        }
     }
 
     .button {
@@ -951,6 +972,19 @@ body.hq-landing {
         font-size: 7rem;
         font-weight: 700;
         text-transform: uppercase;
+
+        @media (max-width:1024px) {
+            font-size: 5.4rem;
+            padding: 4rem 6rem;
+        }
+
+        @media (max-width:600px) {
+            margin-top: 5rem;
+            width: 100%;
+            text-align: center;
+            padding: 2.8rem 2.4rem;
+            font-size: 3rem;
+        }
     }
 
     &__header {
@@ -965,6 +999,26 @@ body.hq-landing {
             font-size: 2.2rem;
             font-weight: 500;
             line-height: 0.9;
+
+            @media (max-width:1300px) {
+                width: 35%;
+            }
+
+            @media (max-width:1120px) {
+                width: 30%;
+            }
+
+            @media (max-width:1024px) {
+                width: 35%;
+            }
+
+            @media (max-width:900px) {
+                width: 100%;
+                position: static;
+                margin-top: 3rem;
+                text-align: center;
+                font-size: 2.6rem;
+            }
         }
     }
 
@@ -973,11 +1027,25 @@ body.hq-landing {
         font-weight: 800;
         line-height: 0.82;
         text-transform: uppercase;
+        
+        @media (max-width:900px) {
+            text-align: center;
+        }
+
+        br {
+            @media (max-width:900px) {
+                display: none;
+            }
+        }
 
         span:last-child {
             display: block;
             margin-left: 27.5%;
             margin-top: 1rem;
+
+            @media (max-width:1300px) {
+                margin-left: 0;
+            }
         }
     }
 }

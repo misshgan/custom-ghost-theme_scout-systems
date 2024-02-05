@@ -7536,6 +7536,11 @@ body.hq-landing .italic {
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 600px) {
+  .hq-landing-cta-2 {
+    padding: 6rem 0;
+  }
+}
 .hq-landing-cta-2 .hq-landing-content-wrapper {
   color: #fff;
   position: relative;
@@ -7550,12 +7555,29 @@ body.hq-landing .italic {
   top: -26rem;
   left: 10%;
 }
+@media (max-width: 768px) {
+  .hq-landing-cta-2__ellipse-1 {
+    width: 204px;
+    height: 204px;
+    top: -4.3rem;
+    left: -7.4rem;
+  }
+}
 .hq-landing-cta-2__ellipse-2 {
   width: 431.632px;
   height: 431.632px;
   transform: rotate(-35.298deg);
   bottom: -30rem;
   right: -5rem;
+}
+@media (max-width: 768px) {
+  .hq-landing-cta-2__ellipse-2 {
+    width: 280.445px;
+    height: 280.445px;
+    transform: rotate(-35.298deg);
+    bottom: 15rem;
+    right: -15rem;
+  }
 }
 .hq-landing-cta-2 .button {
   padding: 6rem 10rem;
@@ -7567,6 +7589,21 @@ body.hq-landing .italic {
   font-size: 7rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .hq-landing-cta-2 .button {
+    font-size: 5.4rem;
+    padding: 4rem 6rem;
+  }
+}
+@media (max-width: 600px) {
+  .hq-landing-cta-2 .button {
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+    padding: 2.8rem 2.4rem;
+    font-size: 3rem;
+  }
 }
 .hq-landing-cta-2__header {
   position: relative;
@@ -7580,16 +7617,55 @@ body.hq-landing .italic {
   font-weight: 500;
   line-height: 0.9;
 }
+@media (max-width: 1300px) {
+  .hq-landing-cta-2__header p {
+    width: 35%;
+  }
+}
+@media (max-width: 1120px) {
+  .hq-landing-cta-2__header p {
+    width: 30%;
+  }
+}
+@media (max-width: 1024px) {
+  .hq-landing-cta-2__header p {
+    width: 35%;
+  }
+}
+@media (max-width: 900px) {
+  .hq-landing-cta-2__header p {
+    width: 100%;
+    position: static;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2.6rem;
+  }
+}
 .hq-landing-cta-2 h2 {
   font-size: 9rem;
   font-weight: 800;
   line-height: 0.82;
   text-transform: uppercase;
 }
+@media (max-width: 900px) {
+  .hq-landing-cta-2 h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 900px) {
+  .hq-landing-cta-2 h2 br {
+    display: none;
+  }
+}
 .hq-landing-cta-2 h2 span:last-child {
   display: block;
   margin-left: 27.5%;
   margin-top: 1rem;
+}
+@media (max-width: 1300px) {
+  .hq-landing-cta-2 h2 span:last-child {
+    margin-left: 0;
+  }
 }
 
 .hq-landing-video {

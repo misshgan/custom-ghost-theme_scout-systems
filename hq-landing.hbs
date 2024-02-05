@@ -21,11 +21,11 @@
     
     <div class="hq-landing-main-wrapper">
 
-        {{> structure/form-popup form_id="9756ac78-5731-4410-a723-4eca6a2f707f"}}
+        {{> structure/form-popup form_id=true}}
 
         <header class="landing-header">
             <div class="hq-landing-content-wrapper">
-                {{> icons/logo-dark class='logo'}}
+                <a href="{{@site.url}}">{{> icons/logo-dark class='logo'}}</a>
                 <div style="cursor: pointer;" class="button runScriptButton">Get access now</div>
             </div>
         </header>

@@ -8,21 +8,45 @@
 		{{/if}}</h2>
 		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
 		{{#if form_id}}
+			<div class="popup-form__hubspot"></div>
 			<script>
 				const formContainer = document.querySelector('.popup-form-container');
-				
+
+				// Function to create HubSpot form
+				function createHubSpotForm() {
+					const hubspotContainer = document.querySelector('.popup-form__hubspot');
+					const hubspotForm = document.createElement('script');
+					hubspotForm.innerHTML = `
+						hbspt.forms.create({
+							region: "na1",
+							portalId: "41638633",
+							formId: "9756ac78-5731-4410-a723-4eca6a2f707f"
+						});
+					`
+					hubspotContainer.appendChild(hubspotForm)
+				}
+
+				// Function to remove HubSpot form
+				function removeHubSpotForm() {
+					const form = document.querySelector('.hbspt-form');
+					if (form) {
+						form.remove(); // Remove the form
+					}
+					const hubspotContainer = document.querySelector('.popup-form__hubspot');
+					hubspotContainer.innerHTML = '';
+				}
+
 				// Callback function to be executed when a mutation is observed
 				const mutationCallback = function(mutationsList, observer) {
 					for (const mutation of mutationsList) {
 						if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-							// Class attribute has changed
-							console.log('Class changed:', formContainer.classList);
-							
-							hbspt.forms.create({
-								region: "na1",
-								portalId: "41638633",
-								formId: `{{form_id}}`
-							});
+							if (formContainer.classList.contains('active')) {
+								// If formContainer has the active class
+								createHubSpotForm();
+							} else {
+								// If formContainer loses the active class
+								removeHubSpotForm();
+							}
 						}
 					}
 				};

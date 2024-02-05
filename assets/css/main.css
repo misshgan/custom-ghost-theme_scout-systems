@@ -6651,6 +6651,12 @@ body.hq-landing .italic {
     line-height: 1.1;
   }
 }
+body.hq-landing .button {
+  transition: all 0.3s;
+}
+body.hq-landing .button:hover {
+  transform: scale(0.95);
+}
 
 .hq-landing-main-wrapper {
   padding: 4rem 0 0;

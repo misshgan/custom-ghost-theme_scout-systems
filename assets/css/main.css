@@ -7057,6 +7057,7 @@ body.hq-landing .italic {
 }
 .hq-landing-partners__cards {
   align-items: center;
+  display: none;
 }
 .hq-landing-partners__card img {
   width: 100%;

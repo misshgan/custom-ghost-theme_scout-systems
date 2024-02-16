@@ -711,7 +711,7 @@ function handleHeaderChange() {
 	}
 }
 
-handleHeaderChange();
+// handleHeaderChange();
 
 function handleChatBot() {
 	if (window.location.pathname === '/academy/') {

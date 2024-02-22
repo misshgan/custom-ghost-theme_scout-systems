@@ -28,7 +28,7 @@
 <body class="{{body_class}}">
 <div class="gh-viewport">
 
-{{#is "page, tag, shop-floor-software"}}
+{{#is "tag, shop-floor-software"}}
 	{{^if 'custom-videos-page'}}
 		<div class="page__header">
 			<div class="w1340">
@@ -38,7 +38,7 @@
 	{{else}}
 		{{> structure/header}}
 	{{/if}}
-{{else is 'accelerator'}}
+{{else is 'accelerator, page'}}
 	<div class="page__header">
 		<div class="w1340">
 			{{> structure/header}}

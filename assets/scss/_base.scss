@@ -243,6 +243,8 @@ body.hq-landing * {
 	color: $white !important;
 	border: 1px solid $green_100;
 	background: $green_100;
+	position: relative;
+	z-index: 10;
 
 	transition: all .3s;
 

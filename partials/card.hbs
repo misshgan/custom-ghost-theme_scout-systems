@@ -13,7 +13,13 @@
 	</div>
 	<div class="post-card__body">
 		<h3 class="post-card__title"><a href="{{url}}">{{title}}</a></h3>
-		<div class="post-card__description">{{content}}</div>
+		<div class="post-card__description">
+			{{#if custom_excerpt}}
+				{{custom_excerpt}}
+			{{else}}
+				{{excerpt}}
+			{{/if}}
+		</div>
 	</div>
 	<div class="post-card__header-info">
 		{{#if reading_time}}

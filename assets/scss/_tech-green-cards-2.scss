@@ -70,6 +70,10 @@
 		display: flex;
 		justify-content: space-between;
 
+		& + p {
+			margin-top: 4rem;
+		}
+
 		@media (max-width:768px) {
 			margin-top: 4.5rem;
 		}

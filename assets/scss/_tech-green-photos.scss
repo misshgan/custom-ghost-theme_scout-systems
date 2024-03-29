@@ -24,6 +24,15 @@
 		}
 	}
 
+	&__buttons {
+		display: flex;
+		align-items: center;
+
+		@media (max-width:500px) {
+			flex-direction: column;
+		}
+	}
+
 	&__ellipse1 {
 		width: 43.2rem;
 		height: 43.2rem;

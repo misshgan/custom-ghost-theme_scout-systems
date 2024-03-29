@@ -90,17 +90,25 @@ const swiperConfigurations = [
     },
   },
   {
-    condition: window.location.pathname === '/work-instructions/' && windowWidth < 651,
+    condition: window.location.pathname === '/work-instruction-software/',
     selector: '.tech-white-cards-2-swiper',
 	wrapperSelector: '.tech-white-cards-2__cards',
 	slideSelector: '.tech-white-cards-2__card',
     config: {
-      slidesPerView: windowWidth > 550 ? 2 : 1,
+      slidesPerView: 1,
       spaceBetween: 30,
       direction: 'horizontal',
       pagination: {
         el: '.swiper-pagination',
       },
+	  breakpoints: {
+		550: {
+			slidesPerView: 2,
+		},
+		650: {
+			slidesPerView: 3,
+		},
+	  }
     },
   },
   {
@@ -156,7 +164,7 @@ const swiperConfigurations = [
 	slideSelector: '.tech-hero__category',
     config: {
       slidesPerView: 'auto',
-      spaceBetween: windowWidth < 500 ? 10 : 25,
+      spaceBetween: 10,
       direction: 'horizontal',
       navigation: {
         nextEl: '.swiper-button-next',
@@ -168,21 +176,7 @@ const swiperConfigurations = [
     },
   },
   {
-    condition: windowWidth < 1025 && windowWidth > 768,
-    selector: '.post-swiper',
-	wrapperSelector: '.post-footer__cards',
-	slideSelector: '.post-footer__card',
-    config: {
-      slidesPerView: 2,
-      spaceBetween: 25,
-      direction: 'horizontal',
-	  pagination: {
-        el: '.swiper-pagination',
-      },
-    },
-  },
-  {
-    condition: windowWidth < 769,
+    condition: true,
     selector: '.post-swiper',
 	wrapperSelector: '.post-footer__cards',
 	slideSelector: '.post-footer__card',
@@ -193,6 +187,14 @@ const swiperConfigurations = [
       pagination: {
         el: '.swiper-pagination',
       },
+	  breakpoints: {
+		768: {
+			slidesPerView: 2,
+		},
+		1024: {
+			slidesPerView: 3,
+		},
+	  }
     },
   },
   {
@@ -567,7 +569,7 @@ if (window.location.pathname.includes('/academy/') || window.location.pathname.i
 					</div>
 					<div class="post-card__body">
 						<h3 class="post-card__title"><a href="${post.url}">${post.title}</a></h3>
-						<div class="post-card__description">${post.html || ''}</div>
+						<div class="post-card__description">${post.custom_excerpt || post.excerpt}</div>
 					</div>
 					<div class="post-card__header-info">
 						${post.reading_time ? `<div class="post-card__read-time"> <img src="/assets/images/post/time.png" alt="reading time icon"> ${post.reading_time} minute read</div>` : ''}

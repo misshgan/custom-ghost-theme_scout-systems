@@ -583,13 +583,17 @@
 	padding-bottom: 15rem;
 
 	@media (max-width:768px) {
-		padding-bottom: 4rem;
+		padding: 0 3rem 4rem;
+	}
+
+	@media (max-width:450px) {
+		padding: 0 1.5rem 4rem;
 	}
 
 	.w1340 {
 
 		&.swiper {
-			padding: 0 3rem 4rem;
+			padding: 0 0 4rem;
 
 			.swiper-pagination {
 				top: 97%!important;

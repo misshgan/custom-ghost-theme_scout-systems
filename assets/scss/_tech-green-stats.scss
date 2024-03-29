@@ -167,12 +167,12 @@
 }
 
 .tech-green-stats.white {
-	background: $white;
+	background: transparent;
 	border-radius: 0;
 	padding: 10rem 0;
 	position: relative;
 	overflow: visible;
-	z-index: 0;
+	z-index: 5;
 
 	@media (max-width:600px) {
 		padding: 6rem 0;
